@@ -1,2 +1,3 @@
 *.log
 /configs/database.php
+.user.ini
