@@ -1,0 +1,46 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="?a=pay_list" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="user_box">
+			<div class="pay_ewm">
+				<h4><?php echo _lang('订单号')?></h4>
+				<p class="payid"><?php echo $payid ?></p>
+				<?php echo $ewm_tps ?>
+				<div class="ewm">
+					<ul>
+						<?php echo $ewm ?>
+					</ul>
+				</div>
+				<!-- <div class="btn">
+					<?php echo $btn ?>
+				</div> -->
+			</div>
+		</div>
+		<div class="tps">
+			<h4><?php echo $config['remark'] ?></h4>
+			<h4><?php echo _lang('提示')?>：</h4>
+			<p>1、<?php echo _lang('请按照上面提供的支付方式选择进行支付。如您已经在提交订单之前支付，请等待确认')?></p>
+			<p>2、<?php echo _lang('支付时，请备注订单号后6位（红色数字）')?></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+	//二维码切换
+	$('.btn a').click(function() {
+		$(this).addClass('a').siblings().removeClass('a');
+		$('.ewm li').eq($(this).index()).addClass('a').siblings().removeClass('a');
+	});
+});
+</script>
+<?php include template("footer"); ?>

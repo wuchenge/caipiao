@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)#/home -->
+<html lang="en" style="font-size: 50px;">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+  <link rel="shortcut icon" id="link-icon" href="https://pic.weilukeji.top/1/logo/saas_f8d07747-3b86-42bd-9eb4-12800acda42c.png" />
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+  <script type="text/javascript" charset="utf-8" async src="<?php echo JS_PATH?>5.98033.min.js"></script>
+  <title><?php echo _lang('云鼎国际')?></title>
+  <script type="text/javascript" charset="utf-8" async src="<?php echo JS_PATH?>13.b9b3d.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async src="<?php echo JS_PATH?>52.ea2a5.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async src="<?php echo JS_PATH?>42.10799.min.js"></script>
+  <script type="text/javascript" charset="utf-8" async src="<?php echo JS_PATH?>2.ada8e.min.js"></script>
+ </head>
+ <body> 
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="__ANTD_MOBILE_SVG_SPRITE_NODE__" style="display:none;overflow:hidden;width:0;height:0"> 
+   <defs> 
+    <symbol id="check" viewbox="0 0 44 44">
+     <path fill-rule="evenodd" d="M34.538 8L38 11.518 17.808 32 8 22.033l3.462-3.518 6.346 6.45z"></path>
+    </symbol>
+    <symbol id="check-circle" viewbox="0 0 48 48">
+     <path d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zM13.1 23.2l-2.2 2.1 10 9.9L38.1 15l-2.2-2-15.2 17.8-7.6-7.6z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="check-circle-o" viewbox="0 0 48 48">
+     <g fill-rule="evenodd">
+      <path d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm0-3c11.598 0 21-9.402 21-21S35.598 3 24 3 3 12.402 3 24s9.402 21 21 21z"></path>
+      <path d="M12.2 23.2L10 25.3l10 9.9L37.2 15 35 13 19.8 30.8z"></path>
+     </g>
+    </symbol>
+    <symbol id="cross" viewbox="0 0 44 44">
+     <path fill-rule="evenodd" d="M24.008 21.852l8.97-8.968L31.092 11l-8.97 8.968L13.157 11l-1.884 1.884 8.968 8.968-9.24 9.24 1.884 1.885 9.24-9.24 9.24 9.24 1.885-1.884-9.24-9.24z"></path>
+    </symbol>
+    <symbol id="cross-circle" viewbox="0 0 48 48">
+     <g fill-rule="evenodd">
+      <path d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm0-3c11.598 0 21-9.402 21-21S35.598 3 24 3 3 12.402 3 24s9.402 21 21 21z"></path>
+      <path d="M24.34 22.22l-7.775-7.775a1.5 1.5 0 1 0-2.12 2.12l7.773 7.775-7.774 7.775a1.5 1.5 0 1 0 2.12 2.12l7.775-7.773 7.774 7.774a1.5 1.5 0 1 0 2.12-2.12L26.46 24.34l7.774-7.774a1.5 1.5 0 1 0-2.12-2.12l-7.776 7.773z"></path>
+     </g>
+    </symbol>
+    <symbol id="cross-circle-o" viewbox="0 0 48 48">
+     <path d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zm.353-25.77l-7.593-7.593c-.797-.8-1.538-.822-2.263-.207-.724.614-.56 1.617-.124 2.067l7.852 7.847-7.72 7.723c-.727.728-.56 1.646-.066 2.177.493.532 1.553.683 2.31-.174l7.588-7.584 7.644 7.623c.796.798 1.608.724 2.21.145.605-.58.72-1.442-.074-2.24l-7.657-7.67 7.545-7.52c.81-.697.9-1.76.297-2.34-.92-.885-1.85-.338-2.264.078l-7.685 7.667z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="left" viewbox="0 0 44 44">
+     <defs>
+      <path id="a" d="M-129-845h24v24h-24z"></path>
+     </defs>
+     <clippath id="b">
+      <use xlink:href="#a" overflow="visible"></use>
+     </clippath>
+     <g clip-path="url(#b)">
+      <defs>
+       <path id="c" d="M-903-949H947V996H-903z"></path>
+      </defs>
+     </g>
+     <path d="M16.247 21.4L28.48 9.165l2.12 2.12-10.117 10.12L30.6 31.524l-2.12 2.12-12.233-12.232.007-.006z"></path>
+    </symbol>
+    <symbol id="right" viewbox="0 0 44 44">
+     <defs>
+      <path id="a" d="M-129-845h24v24h-24z"></path>
+     </defs>
+     <clippath id="b">
+      <use xlink:href="#a" overflow="visible"></use>
+     </clippath>
+     <g clip-path="url(#b)">
+      <defs>
+       <path id="c" d="M-903-949H947V996H-903z"></path>
+      </defs>
+     </g>
+     <path d="M30.6 21.4L18.37 9.165l-2.12 2.12 10.117 10.12-10.118 10.118 2.12 2.12 12.234-12.232-.005-.006z"></path>
+    </symbol>
+    <symbol id="down" viewbox="0 0 44 44">
+     <path d="M22.355 28.237l-11.483-10.9c-.607-.576-1.714-.396-2.48.41l.674-.71c-.763.802-.73 2.07-.282 2.496l11.37 10.793-.04.04 2.088 2.195L23.3 31.52l12.308-11.682c.447-.425.48-1.694-.282-2.496l.674.71c-.766-.806-1.873-.986-2.48-.41L22.355 28.237z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="up" viewbox="0 0 44 44">
+     <path fill="none" d="M-1-1h46v46H-1z"></path>
+     <defs>
+      <path id="a" d="M-129-845h24v24h-24z"></path>
+     </defs>
+     <clippath id="b">
+      <use xlink:href="#a"></use>
+     </clippath>
+     <g clip-path="url(#b)">
+      <defs>
+       <path id="c" d="M-903-949H947V996H-903z"></path>
+      </defs>
+     </g>
+     <path d="M23.417 14.23L11.184 26.46l2.12 2.12 10.12-10.117 10.118 10.118 2.12-2.12L23.43 14.228l-.006.005z"></path>
+    </symbol>
+    <symbol id="loading" viewbox="0 -2 59.75 60.25">
+     <path fill="#ccc" d="M29.69-.527C14.044-.527 1.36 12.158 1.36 27.806S14.043 56.14 29.69 56.14c15.65 0 28.334-12.686 28.334-28.334S45.34-.527 29.69-.527zm.185 53.75c-14.037 0-25.417-11.38-25.417-25.417S15.838 2.39 29.875 2.39s25.417 11.38 25.417 25.417-11.38 25.416-25.417 25.416z"></path>
+     <path fill="none" stroke="#108ee9" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M56.587 29.766c.37-7.438-1.658-14.7-6.393-19.552"></path>
+    </symbol>
+    <symbol id="search" viewbox="0 0 44 44">
+     <path d="M32.98 29.255l8.915 8.293L39.603 40l-8.86-8.242a15.952 15.952 0 0 1-10.753 4.147C11.16 35.905 4 28.763 4 19.952 4 11.142 11.16 4 19.99 4s15.99 7.142 15.99 15.952c0 3.472-1.112 6.685-3 9.303zm.05-9.21c0 7.123-5.7 12.918-12.88 12.918-7.176 0-13.015-5.795-13.015-12.918 0-7.12 5.84-12.917 13.017-12.917 7.178 0 12.88 5.797 12.88 12.917z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="ellipsis" viewbox="0 0 44 44">
+     <circle cx="21.888" cy="22" r="4.045"></circle>
+     <circle cx="5.913" cy="22" r="4.045"></circle>
+     <circle cx="37.863" cy="22" r="4.045"></circle>
+    </symbol>
+    <symbol id="ellipsis-circle" viewbox="0 0 44 44">
+     <g fill-rule="evenodd">
+      <path d="M22.13.11C10.05.11.255 9.902.255 21.983S10.05 43.86 22.13 43.86s21.875-9.795 21.875-21.876S34.21.11 22.13.11zm0 40.7c-10.396 0-18.825-8.43-18.825-18.826S11.735 3.16 22.13 3.16c10.396 0 18.825 8.428 18.825 18.824S32.525 40.81 22.13 40.81z"></path>
+      <circle cx="21.888" cy="22.701" r="2.445"></circle>
+      <circle cx="12.23" cy="22.701" r="2.445"></circle>
+      <circle cx="31.546" cy="22.701" r="2.445"></circle>
+     </g>
+    </symbol>
+    <symbol id="exclamation-circle" viewbox="0 0 64 64">
+     <path d="M59.58 40.89L41.193 9.11C39.135 5.382 35.723 3 31.387 3c-3.11 0-6.52 2.382-8.58 6.11L4.42 40.89c-2.788 4.635-3.126 8.81-1.225 12.22C5.015 56.208 7.572 58 13 58h36.773c5.428 0 9.21-1.792 11.03-4.89 1.9-3.41 1.565-7.583-1.224-12.22zm-2.452 11c-.635 1.694-3.802 2.443-7.354 2.443H13c-3.59 0-5.493-.75-6.13-2.444-1.71-2.41-1.374-5.263 0-8.557l18.387-31.777c2.116-3.168 4.394-4.89 6.13-4.89 2.96 0 5.238 1.722 7.354 4.89l18.387 31.777c1.374 3.294 1.713 6.146 0 8.556zm-25.74-33c-.405 0-1.227.835-1.227 2.443v15.89c0 1.608.823 2.444 1.227 2.444 1.628 0 2.452-.836 2.452-2.445v-15.89c0-1.607-.825-2.443-2.453-2.443zm0 23.22c-.405 0-1.227.79-1.227 1.223v2.445c0 .434.823 1.222 1.227 1.222 1.628 0 2.452-.788 2.452-1.222v-2.445c0-.434-.825-1.222-2.453-1.222z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="info-circle" viewbox="0 0 44 44">
+     <circle cx="13.828" cy="19.63" r="1.938"></circle>
+     <circle cx="21.767" cy="19.63" r="1.938"></circle>
+     <circle cx="29.767" cy="19.63" r="1.938"></circle>
+     <path d="M22.102 4.16c-9.918 0-17.958 7.147-17.958 15.962 0 4.935 2.522 9.345 6.48 12.273v5.667l.04.012a2.627 2.627 0 1 0 4.5 1.455h.002l5.026-3.54c.628.06 1.265.094 1.91.094 9.92 0 17.96-7.146 17.96-15.96C40.06 11.306 32.02 4.16 22.1 4.16zm-.04 29.902c-.902 0-1.78-.08-2.642-.207l-5.882 4.234c-.024.024-.055.04-.083.06l-.008.005a.51.51 0 0 1-.284.095.525.525 0 0 1-.525-.525l.005-6.375c-3.91-2.516-6.456-6.544-6.456-11.1 0-7.628 7.107-13.812 15.875-13.812s15.875 6.184 15.875 13.812-7.107 13.812-15.875 13.812z"></path>
+    </symbol>
+    <symbol id="question-circle" viewbox="0 0 44 44">
+     <g fill-rule="evenodd">
+      <path d="M21.186 3c-10.853 0-19.36 8.506-19.36 19.358C1.827 32.494 10.334 41 21.187 41c10.133 0 18.64-8.506 18.64-18.642C39.827 11.506 31.32 3 21.187 3m15.64 19c0 8.823-7.178 16-16 16s-16-7.177-16-16 7.178-16 16-16 16 7.177 16 16z"></path>
+      <path d="M22.827 31.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m4-15.48c0 .957-.203 1.822-.61 2.593-.427.792-1.117 1.612-2.073 2.457-.867.734-1.453 1.435-1.754 2.096-.302.7-.453 1.693-.453 2.98a.828.828 0 0 1-.823.854.828.828 0 0 1-.584-.22.877.877 0 0 1-.24-.635c0-1.305.168-2.38.506-3.227.336-.883.93-1.682 1.78-2.4 1.01-.883 1.71-1.692 2.1-2.428.336-.645.503-1.38.503-2.21-.02-.935-.3-1.7-.85-2.288-.655-.717-1.62-1.075-2.897-1.075-1.506 0-2.596.535-3.27 1.6-.46.754-.688 1.645-.688 2.677a.92.92 0 0 1-.266.66.747.747 0 0 1-.56.25.73.73 0 0 1-.584-.194c-.16-.164-.24-.393-.24-.69 0-1.82.585-3.272 1.755-4.357C18.645 11.486 19.928 11 21.434 11h.293c1.452 0 2.638.414 3.56 1.24 1.028.903 1.54 2.163 1.54 3.78z"></path>
+     </g>
+    </symbol>
+    <symbol id="voice" viewbox="0 0 38 33">
+     <g fill-rule="evenodd">
+      <path d="M17.838 28.8c-.564-.468-1.192-.983-1.836-1.496-4.244-3.385-5.294-3.67-6.006-3.67-.014 0-.027.005-.04.005-.015 0-.028-.006-.042-.006H3.562c-.734 0-.903-.203-.903-.928v-12.62c0-.49.057-.8.66-.8H9.1c.694 0 1.76-.28 6.4-3.63.83-.596 1.638-1.196 2.337-1.722V28.8zM19.682.19c-.463-.22-1.014-.158-1.417.157-.02.016-1.983 1.552-4.152 3.125C10.34 6.21 9.243 6.664 9.02 6.737H3.676c-.027 0-.053.003-.08.004H1.183c-.608 0-1.1.487-1.1 1.086V25.14c0 .598.492 1.084 1.1 1.084h8.71c.22.08 1.257.55 4.605 3.24 1.947 1.562 3.694 3.088 3.712 3.103.25.22.568.333.89.333.186 0 .373-.038.55-.116.48-.213.79-.684.79-1.204V1.38c0-.506-.294-.968-.758-1.19z" mask="url(#mask-2)"></path>
+      <path d="M31.42 16.475c0-3.363-1.854-6.297-4.606-7.876-.125-.067-.42-.193-.625-.193-.613 0-1.11.488-1.11 1.09 0 .404.22.764.55.952 2.13 1.19 3.566 3.44 3.566 6.024 0 2.627-1.486 4.913-3.677 6.087-.32.19-.53.54-.53.935 0 .602.495 1.09 1.106 1.09.26.002.568-.15.568-.15 2.835-1.556 4.754-4.538 4.754-7.96" mask="url(#mask-4)"></path>
+      <path d="M30.14 3.057c-.205-.122-.41-.22-.658-.22-.608 0-1.1.485-1.1 1.084 0 .434.26.78.627.978 4.042 2.323 6.76 6.636 6.76 11.578 0 4.938-2.715 9.248-6.754 11.572-.354.19-.66.55-.66.993 0 .6.494 1.085 1.102 1.085.243 0 .438-.092.65-.213 4.692-2.695 7.848-7.7 7.848-13.435 0-5.723-3.142-10.718-7.817-13.418" mask="url(#mask-6)"></path>
+     </g>
+    </symbol>
+    <symbol id="plus" viewbox="0 0 30 30">
+     <path d="M14 14H0v2h14v14h2V16h14v-2H16V0h-2v14z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="minus" viewbox="0 0 30 2">
+     <path d="M0 0h30v2H0z" fill-rule="evenodd"></path>
+    </symbol>
+    <symbol id="dislike" viewbox="0 0 72 72">
+     <g fill="none" fill-rule="evenodd">
+      <path d="M36 72c19.882 0 36-16.118 36-36S55.882 0 36 0 0 16.118 0 36s16.118 36 36 36zm0-2c18.778 0 34-15.222 34-34S54.778 2 36 2 2 17.222 2 36s15.222 34 34 34z" fill="#FFF"></path>
+      <path fill="#FFF" d="M47 22h2v6h-2zm-24 0h2v6h-2z"></path>
+      <path d="M21 51s4.6-7 15-7 15 7 15 7" stroke="#FFF" stroke-width="2"></path>
+     </g>
+    </symbol>
+    <symbol id="fail" viewbox="0 0 72 72">
+     <g fill="none" fill-rule="evenodd">
+      <path d="M36 72c19.882 0 36-16.118 36-36S55.882 0 36 0 0 16.118 0 36s16.118 36 36 36zm0-2c18.778 0 34-15.222 34-34S54.778 2 36 2 2 17.222 2 36s15.222 34 34 34z" fill="#FFF"></path>
+      <path d="M22 22l28.304 28.304m-28.304 0L50.304 22" stroke="#FFF" stroke-width="2"></path>
+     </g>
+    </symbol>
+    <symbol id="success" viewbox="0 0 72 72">
+     <g fill="none" fill-rule="evenodd">
+      <path d="M36 72c19.882 0 36-16.118 36-36S55.882 0 36 0 0 16.118 0 36s16.118 36 36 36zm0-2c18.778 0 34-15.222 34-34S54.778 2 36 2 2 17.222 2 36s15.222 34 34 34z" fill="#FFF"></path>
+      <path stroke="#FFF" stroke-width="2" d="M19 34.54l11.545 11.923L52.815 24"></path>
+     </g>
+    </symbol> 
+   </defs> 
+  </svg> 
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+  <div id="app">
+   <div class="dream-container" id="home-content" style="width: 100%; height: 100vh; background-color: rgb(255, 255, 255);">
+    <div class="dream-header">
+     <div>
+      <img id="index-logo" alt="" src="<?php echo IMG_PATH?>saas_551bb018-0d90-40a9-9452-d6c50946eabb.png" />
+      <p id="index-name"><title><?php echo _lang('云鼎国际')?></title></p>
+     </div>
+    </div>
+    <div class="home-container">
+     <div style="width: 100%; height: 0.9rem; background-color: rgb(255, 255, 255);"></div>
+     <div class="slider-pic">
+      <div class="slider am-carousel" style="position: relative; display: block; width: 100%; height: auto; box-sizing: border-box; visibility: visible;">
+       <div class="slider-frame" style="position: relative; display: block; overflow: hidden; height: auto; margin: 0px; padding: 0px; transform: translate3d(0px, 0px, 0px); box-sizing: border-box;">
+        <ul class="slider-list" style="transform: translate3d(0px, 0px, 0px); position: relative; display: block; margin: 0px; padding: 0px; height: 182px; width: 1125px; cursor: inherit; box-sizing: border-box;">
+         <li class="slider-slide" style="position: absolute; left: 0px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 375px; height: auto; box-sizing: border-box; margin: auto 0px;">
+          <div index="0">
+           <img src="<?php echo IMG_PATH?>1_369b22ca-d84c-4d31-ae7e-6cac0c228c9f.png" style="width: 100%; height: 100%;" />
+          </div></li>
+         <li class="slider-slide" style="position: absolute; left: 375px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 375px; height: auto; box-sizing: border-box; margin: auto 0px;">
+          <div index="1">
+           <img src="<?php echo IMG_PATH?>1_1140a463-b501-407a-9cc2-0cd94e0e0eb0.jpg" style="width: 100%; height: 100%;" />
+          </div></li>
+         <li class="slider-slide" style="position: absolute; left: 750px; top: 0px; display: inline-block; list-style-type: none; vertical-align: top; width: 375px; height: auto; box-sizing: border-box; margin: auto 0px;">
+          <div index="2">
+           <img src="<?php echo IMG_PATH?>1_7adb69d7-d0da-4950-9322-65074beb52b9.png" style="width: 100%; height: 100%;" />
+          </div></li>
+        </ul>
+       </div>
+       <div class="slider-decorator-0" style="position: absolute; bottom: 0px; width: 100%; text-align: center;">
+        <div class="am-carousel-wrap">
+         <div class="am-carousel-wrap-dot am-carousel-wrap-dot-active">
+          <span style="background: rgb(254, 200, 13); margin-bottom: 25px;"></span>
+         </div>
+         <div class="am-carousel-wrap-dot">
+          <span style="margin-bottom: 25px; background: rgb(15, 18, 22);"></span>
+         </div>
+         <div class="am-carousel-wrap-dot">
+          <span style="margin-bottom: 25px; background: rgb(15, 18, 22);"></span>
+         </div>
+        </div>
+       </div>
+       <style type="text/css">.slider-slide > img {width: 100%; display: block;}</style>
+      </div>
+     </div>
+     <a href="#/notice">
+      <div class="tips">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAqCAYAAAAeeGN5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABPUlEQVRo3u2aQQ7EIAhFq+na4/QIHrpH8Di9QGfVycQMForgdzJ/2VjhBaQEGxYHHft21s9SLqG3ndUbwlLxV0CWxSAyVhDXvq307Ja3UgjJman3pt7tkmbeKUXZU8Ec+3aOOBsU0KM06wEgLc2Uzc99Vs4LCEq5hDv/3mmGDNLSp98rCginYt1FJyKAcOBakNdasw7AEogSDIykupl+NEcA1Tr27YSCoZzkroWHofQtinAwmlSDg9FoChjuuZkChqs/DKqmgOFWuClguIKD0XTxcDAaaHgYSUcABaNJsZRLgIGRgJjMzawlbTqjxdWCJUjreiS0Fo1wtqW7IUesH8wmcqLJBRoxnuLYVEVDW0q1duo9VNUs5RJGpafZDMAbiLLX3Qlu6j290nC5BpRCWUTTrAMYcZZcDHr91PACnbmqvAku2qIAAAAASUVORK5CYII=" />
+       <div style="overflow: hidden;">
+        <section class="tips-content" style="width: 323px; transform: translate3d(85px, 0px, 0px);">
+         <div class="dec" style="width: 323px;">
+          
+          <?php echo _lang('线下充值银行卡不定期更换')?>
+          ！！！
+         </div>
+        </section>
+       </div>
+      </div></a>
+     <div class="tabs">
+      <div>
+       <img src="<?php echo IMG_PATH?>7338c98e.recharge.png" />
+       <div>
+        
+        <?php echo _lang('立即充值')?>
+       </div>
+      </div>
+      <div>
+       <img src="<?php echo IMG_PATH?>dff76b0d.putForward@3x.png" />
+       <div>
+        
+        <?php echo _lang('余额提现')?>
+       </div>
+      </div>
+      <div>
+       <img src="<?php echo IMG_PATH?>25f1a982.PersonalFroms.png" />
+       <div>
+        
+        <?php echo _lang('个人报表')?>
+       </div>
+      </div>
+      <div>
+       <img src="<?php echo IMG_PATH?>c3a25a34.clong.png" />
+       <div>
+        
+        <?php echo _lang('长龙提醒趣')?>
+       </div>
+      </div>
+     </div>
+     <div></div>
+     <section class="lotteryTitle">
+      <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAABL5JREFUWAnVmd9rXFUQx2fOBtzsRpBmBS3+BeIPUBTRlhqJhaRdSit5FfQf6KMFH5oXiz72H4jQPi5WyrYJxGAqVhGFgij9CyQKpkVoN4mQvcfvzLm7e865u/HqZjd35yF77ty5Zz459/yYmct0yGKXlmZo969niZIakdmm6ad+50bj8WG64WE6A+A07Wy/S4k5R2TfIrbHydKTmT6ZHpHlLSL+jkxykyq1r/CP7Gbscir+F7Q9O/82JclF+DhN1lZy+uqZMe/gYp2Mucq3Nu70buRr/Sdoe+b0C5Tsf4ZRXczXfR4rXiUz9RHfXv81j7XY5IK29XqF2q2rsP8QI2vydp7bjjmB7QqVqhe52ZS3cKD8K7S9sPAc7f59E6P7ysCexKm132MIfiRrtjC3t6hED6hNs5jLx4kTmeuvE/ObB//TfI+mnzjHN9Z+G+gLNw6EtvX5N6jd/hIOnxnQyV0y9DlVyk1urP05wKartksLT9POXp0S+gDKE90bfoPpDyqVznNz4wdf7bcHQivwfnsTxmX/Adfm+xjJS3zr62b2Xj6NPftOHW/iU7zB5/s8sUdTpblB4H3np04JGeEssMWKv0wzsy8NAyyQ+jz60f5AHoGX5Q0rR3RDn411uuj2W99m5zC3yNj3+fbmjfiZYa/tmbkLlPA1+KyGfWGOT1VPxoszO9K6S8SLToFPjQJYILVfY0+h1QqhweF2rUAdzGndh+3+z9EKt1Ti9/A6ZbqMVDDPz1PbfgEnPS7ZmXjqZX8fD0daDo7sPnx5HMAyGurHmGVpd0V49EDrarBhpaJHc+akwy4xU7vSsRnLb+XYJ8C/H/qyi47PabvQaSwR2sq21mi0Q+Vor9Qf/Ga8uFhH1Tp3NFprPdjG1PCDn7u8tnky8/CYFHZhDjuYdwBJkFWdrUl06EZawssQGKEwTrqjlNi/8AknxEFrPOwRyorF0expxt8U/y6Q6vlOOdM5jQDeFwQ/eWIJ/5HDbqt/CcICcZwOWjIOXyRaK4LEHCmn0ZwuTpEkvCyCxBzgFF5DrYfhKAusxMNFkH4c4DVYirMZPgngiyD9OMCLI7IPoGQcRZC+HGbbUPVYdipIilQE6ceBOorBCfMYMdWjgFFyuiJIzAFO4XVbnhZSPEpJQosgMUfKmR4uqPz4gqxZk1BfN+a2+pfsPRDH6aClVOWLxLCSNR+liP84tk85HTRqazjnwyKJS/OPDjv2L3zCCVFoCffQXo8IT2iaHynHcZn6jesi6ylnGuUJCYqBGSDUJXBsljL6ESrUn9ZDIiceX7oQJT/buIO/q6EpCik7Dz8OdSO+Un9xAYdX/epqF1pR2FzKxrDJsmbJI2aV7l39I1kOXElMjaqqrwugeXXjF9xc8Q3QZpSvrqPDVyP9oV5q/1qw8coHzsOKXz4QVQCtNii3gvOes+/8ReUn4W9GNeLaL/rvW2FSng6H++0VRTy91tD29n7qUy2VmhtqebUrWMlDZ+m66GQOJzolQhapnpbLr/Ur+4aGPriUeQtaNR0ILfwTV5/uDPrEfQnogk/aN5cOuPzaxfkXySZSvS/+1y0fXOEn6TtiBn6SvtjG8P611CW0LCFZviTNyEElRfJthm3/A3ncGd318VPiAAAAAElFTkSuQmCC" alt="" /></span>
+      <p> <?php echo _lang('系列彩种')?></p>
+     </section>
+     <div class="lotteryHall-page">
+      <div class="hallContent">
+       <div class="block">
+        <header>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_729ecffd-f19c-4e1f-b27b-8a9d53e08531.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('幸运28')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('时时彩')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_da0ba8b8-8240-4093-8aad-3bf0a37a93d7.png" alt="" />
+           </div>
+           <div>
+            <span> <?php echo _lang('PK拾')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+        </header>
+        <ul style="height: 0px;">
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_99165f6b-ac66-44a8-9c80-48cc823e75bf.png" alt="" />
+           <p><?php echo _lang('北京28')?><span><?php echo _lang('20分钟一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_185b3274-78d4-4c47-b6d0-10149cd34bc5.png" alt="" />
+           <p><?php echo _lang('台湾宾果28')?><span><?php echo _lang('3分钟一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_c398d03e-e5ae-4746-960f-aa3bfa7f5555.png" alt="" />
+           <p><?php echo _lang('新加坡幸运28')?><span><?php echo _lang('5分钟一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_45b1b139-43d1-46d1-b211-3062c5a6f0c6.png" alt="" />
+           <p><?php echo _lang('重庆时时彩')?><span><?php echo _lang('玩法多样化')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_bf7c89cf-1c60-4705-9d40-16ec63b4586a.png" alt="" />
+           <p><?php echo _lang('新疆时时彩')?><span><?php echo _lang('玩法多样化')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_1cf2e843-524f-4864-92b2-91f9161d875c.png" alt="" />
+           <p><?php echo _lang('天津时时彩')?><span><?php echo _lang('玩法多样化')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_87b07bc2-b299-4ab3-a0ad-a47281e41c74.png" alt="" />
+           <p><?php echo _lang('台湾时时彩')?><span><?php echo _lang('1分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_657dbdaf-20a4-4857-bf16-0e01a825bbe9.png" alt="" />
+           <p><?php echo _lang('新加坡时时彩')?><span><?php echo _lang('2分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_eaf0de66-821f-4278-89f4-5a928c82e4a7.png" alt="" />
+           <p><?php echo _lang('幸运时时彩')?><span><?php echo _lang('5分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_027352ff-8a4a-4410-b768-151233871595.png" alt="" />
+           <p><?php echo _lang('幸运飞艇')?><span><?php echo _lang('猜冠军')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_3665bfe5-70a9-4abd-87ce-dd698916b848.png" alt="" />
+           <p><?php echo _lang('北京赛车')?><span><?php echo _lang('猜冠军')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_2ebdedc6-415a-4903-8761-a558fa7a85dd.png" alt="" />
+           <p><?php echo _lang('台湾PK10')?><span><?php echo _lang('猜冠军')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_b2665f27-bd38-40a4-ad38-2510997d5660.png" alt="" />
+           <p><?php echo _lang('新加坡PK10')?><span><?php echo _lang('猜冠军')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_b9ac14ee-7c4b-4399-89ab-e1ee3c501777.png" alt="" />
+           <p><?php echo _lang('幸运PK10')?><span><?php echo _lang('猜冠军')?></span></p>
+          </div></li>
+        </ul>
+       </div>
+       <div class="block">
+        <header>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_5e4d3b31-b1ea-483b-ad7f-6c291131696f.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('11选5')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_55e12faa-91fa-4dae-81b9-01c180b23a15.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('快3')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_de5423d1-2b67-497e-b183-efead57b5e06.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('快乐十分')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+        </header>
+        <ul style="height: 0px;">
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_d188acad-012e-4cdd-b4bc-7bcfcfd8d343.png" alt="" />
+           <p><?php echo _lang('广东')?><?php echo _lang('11选5')?><span><?php echo _lang('轻松中奖')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_00c1ae34-2ad6-42c7-96e6-8787b21b518c.png" alt="" />
+           <p><?php echo _lang('山东')?><?php echo _lang('11选5')?><span><?php echo _lang('轻松中奖')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_9b470756-bf5a-4dc3-b50b-2f66efa47835.png" alt="" />
+           <p><?php echo _lang('台湾')?><?php echo _lang('11选5')?><span><?php echo _lang('轻松中奖')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_946ff6e4-0f10-4edf-b8e7-9436581acaab.png" alt="" />
+           <p><?php echo _lang('新加坡')?><?php echo _lang('11选5')?><span><?php echo _lang('轻松中奖')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_46b3d26e-80f1-4d5e-ad04-ce56797eb998.png" alt="" />
+           <p><?php echo _lang('幸运')?><?php echo _lang('11选5')?><span><?php echo _lang('轻松中奖')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_2366c3e8-4978-4cdb-9af9-c055d659b004.png" alt="" />
+           <p><?php echo _lang('湖北快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_e450f00d-193a-42bd-b296-0236bff27260.png" alt="" />
+           <p><?php echo _lang('安徽快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_df664edd-1e25-4bc9-8be6-61e39cf4622d.png" alt="" />
+           <p><?php echo _lang('江苏快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_4a738fe7-f0d6-4a1e-b836-5e9bb5077b48.png" alt="" />
+           <p><?php echo _lang('贵州快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_d4c57a72-bffa-4b7a-802d-70309fc14a12.png" alt="" />
+           <p><?php echo _lang('广西快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_8f082917-ffb9-4812-a56f-031151e9f253.png" alt="" />
+           <p><?php echo _lang('北京快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_2c4a227b-aeee-4c06-b1bb-3ce40d6a81a8.png" alt="" />
+           <p><?php echo _lang('上海快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_52dd8ad4-543a-4f82-a2a8-305dd824e849.png" alt="" />
+           <p><?php echo _lang('河北快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_cb91653d-84c0-4b24-8b6d-7aed40abb3ae.png" alt="" />
+           <p><?php echo _lang('台湾快3')?><span><?php echo _lang('3分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_f91b7bef-c3eb-4b6a-a2d0-2209b36467c4.png" alt="" />
+           <p><?php echo _lang('甘肃快3')?><span><?php echo _lang('猜骰子')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_74e82012-e372-45ef-a0ea-9e33c207aef9.png" alt="" />
+           <p><?php echo _lang('新加坡快3')?><span><?php echo _lang('1分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_15d61309-f265-4df3-9a61-7cb92f617316.png" alt="" />
+           <p><?php echo _lang('幸运快3')?><span><?php echo _lang('2分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_93f8253f-2b19-44aa-a313-c2dbd1897609.png" alt="" />
+           <p><?php echo _lang('越南快3')?><span><?php echo _lang('5分一期')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_e99f8040-9da7-49ea-b58b-5c4137ff375c.png" alt="" />
+           <p><?php echo _lang('广东')?><?php echo _lang('快乐十分')?><span><?php echo _lang('幸运等着你')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_e99f8040-9da7-49ea-b58b-5c4137ff375c.png" alt="" />
+           <p><?php echo _lang('幸运快3')?><?php echo _lang('湖南快乐十分')?><span><?php echo _lang('幸运等着你')?></span></p>
+          </div></li>
+        </ul>
+       </div>
+       <div class="block">
+        <header>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_59652547-a8de-4ac9-b716-b6c1e5a6dc3b.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('快乐8')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+         <div class="">
+          <div>
+           <div>
+            <img src="<?php echo IMG_PATH?>1_3b88a78a-6e45-4512-99fd-5c87c3d0824f.png" alt="" />
+           </div>
+           <div>
+            <span><?php echo _lang('六合彩')?></span>
+           </div>
+          </div>
+          <p style="display: none;"></p>
+         </div>
+        </header>
+        <ul style="height: 0px;">
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_fcfb07e4-c68c-458a-b740-f17ac82a1a7c.png" alt="" />
+           <p><?php echo _lang('北京快乐8')?><span><?php echo _lang('keno彩')?></span></p>
+          </div></li>
+         <li style="display: none;">
+          <div>
+           <img src="<?php echo IMG_PATH?>1_9e0adbf3-224c-4caa-a59b-d035f8930d1c.png" alt="" />
+           <p><?php echo _lang('六合彩8')?><span><?php echo _lang('最盛行的港彩')?></span></p>
+          </div></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="home-zhanweibox"></div>
+    </div>
+    <div></div>
+    <div class="footer-Dowload">
+     <div>
+      <img src="data:image/png;base64,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" alt="" />
+      <span><?php echo _lang('下载客户端 &nbsp; &nbsp; 体验更多乐趣')?></span>
+     </div>
+     <div class="download-btn">
+      <span><?php echo _lang('下载')?></span>
+     </div>
+    </div>
+    <footer class="footer-nav">
+     <div>
+      <li><a class="footer-link active" aria-current="page" href="#/home"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAAAXNSR0IArs4c6QAAA/tJREFUaAXtmstPE1EUh8+Z8hDBB0F8L32iUTfGGImxpWAoUoHEhTHqjpi4c2lc8B+4MboyMT5ItMQQ0RKEAgtfIS4wRtSVSzUYFQVb7HSO505Tgn3MqzN02nCTpp055957vvO75047U4QlaNTm9wPRWQA6yK9aAPzBxxPgKbuDj4cjToeATk5AweAqkGdvM1BH7nlwACpXn8P+/p+5ffKzOAZJnU11MK+MAMEB/RBxCsrRh48iX/V9zXs4ApkEpAgruN94SM6BSsaDMOZJ7e3rIEaj5gDF2NQAcRqlYNMGYzMZ97JVSRVQnuONhPYZDyHNE/E9lKHXzqVrm5J0qrUeEnOjeQEKXqLdINOYnYraoqQKOBfjJQp703SxfmijonlDOgKYSo1NoHlBUmfLeojJYonuScVl+7sNoJZrckkARcZSNRoIbLSaQEtKqpsCb/ccQYPViU33Q/gAUOXFcPiL2b6mIVVA3v3UDJudLV9/i6CmliuJJVMoQJEggl0A0TE1DhMJM6xkcuAoKygmKnAzqaghJanr+CaRQVcAivyaVFRXSRUwGh/jkXcWWL/M6Q0qqgmpAsbi47zJ7MicwS1n8CPgimNau27O5UrB5s3gekCRaF5hFBtPllT2xGdVUgWUE0LB7dm7ufEsK1pV7sWHQ5/To8uApBO+LaCAuA4WEWAKKzvof5AqYILGucu2VLfie88EXahJ6mrdCkUPKCThGuWrweIaVZVU78nElFfsUcQKpq05cXmprjiCoaHvEhEhxJS+kgIUvOILw1y8T/AhBfwngRL9aXkonUMPdnFNJlpKhygLSQKaGRLns5hK55QEfxjS0wuISulQLSJBTAB57koYHn7NkN2AEF1kLv6Pggepm/kmF74MUEfHWvj7u5G3pXo2Js8TnuFvPj73E+NTkOi+GifxqkRpGsprnqceIi1AZgOhgPcab8UXs9lcdQ7xKoZHL+WKiWuy9FuZw4gy1/tLnmNWY54aLonDbHcsFscGVqEk6QI+idzUAFRN1NZ0HhTllp6fVbuzy1XCd4YCk/iXg4PNWUiFyg3FnpDIkJ9FJ2chJcnZ8Q1CuyIIg7FadluGtJw6l3VcVtJlglgOZ1lJy6lzWcdlJV0mSO5wkO/5azRtJQkd++eiRkzmTYSftDppQ0rIf0YohkZvtaLUhlxZMeT+u3k4A7WVk5YhMTQ4zZ1vaA3gAtsVvDf4SysObSVFz5q6y/zr/o3WIAWzIU7AoaPX9ebXhcRQKAqeaj+DvtAbbIntz6ASA9jTo7mzipgM3f7AgYFv/OCkEdp8p7lG+cX/pSNcowslg6zrIxwwLvNdQVEaem2Gnaf41QvhkQfIj3L0Ogj7P2ICaSGaqBe9AAAAAElFTkSuQmCC" style="transform: scale(1);" /><span style="color: red;"><?php echo _lang('首页')?></span></a><span></span></li>
+      <li><a class="footer-link" href="#/home/lottery"><img src="data:image/png;base64,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" style="transform: scale(1);" /><span><?php echo _lang('开奖')?></span></a><span></span></li>
+      <li><a class="footer-link" href="#/home/buyLotteryhall"><img src="<?php echo IMG_PATH?>f20d6545.hall.png" style="transform: scale(1.2);" /><span><?php echo _lang('大厅')?></span></a><span></span></li>
+      <li><a class="footer-link" href="#/home/active"><img src="data:image/png;base64,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" style="transform: scale(1);" /><span><?php echo _lang('优惠')?></span></a><span></span></li>
+      <li><a class="footer-link" href="#/home/my"><img src="data:image/png;base64,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" style="transform: scale(1);" /><span><?php echo _lang('我的')?></span></a><span></span></li>
+     </div>
+     <p></p>
+    </footer>
+   </div>
+  </div>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+  <script type="text/javascript" src="<?php echo JS_PATH?>vendor.023c3.js"></script>
+  <script type="text/javascript" src="<?php echo JS_PATH?>app.cc8ec.js"></script>
+  <script type="text/javascript" src="<?php echo JS_PATH?>f.txt"></script>
+  <style>#drager {   position: fixed;   width: 1.2rem;   height: 1.2rem;   background-color: transparent;   z-index: 10000;   cursor: pointer;   top: 0px;   left: 0px;   border-radius: 50%;   padding: .1rem;   box-sizing: border-box }#drager>img{width: 100%;height: 100%;border-radius:50%; } </style>
+  <a href="#/Customer" id="drager" style="top: calc(100% - 4rem); left: 315px; visibility: initial;"><img id="drager-img" src="<?php echo IMG_PATH?>1_dc66af9c-ea94-453c-aa96-394465e18593.png" /></a>
+ </body>
+</html>
+<script>
+	$(".hallContent").find("header").find()
+</script>

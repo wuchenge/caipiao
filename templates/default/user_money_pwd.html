@@ -1,0 +1,93 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="?a=user" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="user_box">
+			<form action="?a=user_money_pwd" method="post" id="send_form" onsubmit="return false;">
+				<input type="hidden" name="dosubmit" id="dosubmit" value="yes" />
+				<div class="form_div">
+					<ul>
+						<li>
+							<input class="inputxt" type="password" id="oldpassword" name="oldpassword" value="" placeholder="<?php echo _lang('旧密码（初次设置无需填写）')?>" />
+							<b class="tp-btn btn-off"></b>
+						</li>
+						<li>
+							<input class="inputxt" type="password" id="newpassword" name="newpassword" value="" placeholder="<?php echo _lang('新密码')?>" />
+							<b class="tp-btn btn-off"></b>
+						</li>
+						<li class="password_two">
+							<input class="inputxt" type="password" id="confirmpassword" name="confirmpassword" value="" placeholder="<?php echo _lang('确认密码')?>" />
+							<b class="tp-btn btn-off"></b>
+						</li>
+						<li>
+							<input class="inputxt yzm" type="text" id="code" name="code" value="" placeholder="<?php echo _lang('验证码')?>" />
+							<span class="code"><?php echo form::checkcode('code_img', '4', '14', 84, 34, '' , '', '#FFFFFF', true)?></span>
+						</li>
+					</ul>
+				</div>
+				<div class="submit"><input type="submit" id="submit" name="submit" value=" <?php echo _lang('保存')?> "></div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="<?php echo JS_PATH?>Validform_v5.3.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	var Vform = $("#send_form").Validform();
+	Vform.config({
+		tiptype:1,
+		ajaxPost:true,
+		callback:function(data){
+			if(data.status == 'y'){
+				Vform.resetForm();//初始化表单
+				setTimeout(function(){//2秒后刷新
+					top.location.href = '?a=user';
+				}, 2000);
+			} else {
+				Vform.resetForm();//初始化表单
+				$('#code_img').click();
+			}
+		}
+	});
+	Vform.addRule([
+		{
+			ele:'#newpassword',
+			datatype:'s6-20',
+			nullmsg:'<?php echo _lang('请输入新密码')?>！',
+			errormsg:'<?php echo _lang('密码长度6-20位')?>！'
+		},
+		{
+			ele:'#confirmpassword',
+			datatype:'s6-20',
+			recheck:"newpassword",
+			nullmsg:'<?php echo _lang('请确认新密码')?>！',
+			errormsg:'<?php echo _lang('两次输入的密码不一致')?>！'
+		},
+		{
+			ele:'#code',
+			datatype:'s4-4',
+			nullmsg:'<?php echo _lang('请输入验证码')?>！',
+			errormsg:'<?php echo _lang('请输入4位验证码')?>！'
+		}
+	]);
+	$('.btn-off').on('click',function() {
+		if ($(this).hasClass('btn-on')) {
+			$(this).removeClass('btn-on');
+			$(this).prev()[0].type = 'password';
+		} else {
+			$(this).addClass('btn-on');
+			$(this).prev()[0].type = 'text';
+		}
+	});
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

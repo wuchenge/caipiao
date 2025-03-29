@@ -1,0 +1,67 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="user_box">
+			<div class="user_pic">
+				<a class="pic" href="?a=user_pic" title="修改头像">
+    		<?php
+				if ($user['pic']) {
+					if(preg_match('/^\d*$/',$user['pic'])){
+						echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
+					} else {
+						echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
+					}
+				} else {
+					echo '<img class="pic" src="statics/images/userpic.png" alt="PIC" />';
+				}
+				?>
+				</a>
+				<h4>ID:<?= $user['uid']?></h4>
+				<h4><?php echo $user['nickname'] ? $user['nickname'].'('.$user['username'].')' : $user['username']?></h4>
+			</div>
+			<div class="min_nav">
+				<a style="width: 33%;" title="余额" class="n1"><i style="font-size: 14px;margin-top: 5px;" class="iconfont"><?=$user['money']?></i>余额</a>
+				<a style="width: 33%;" title="今日收益" class="n1"><i style="font-size: 14px;margin-top: 5px;" class="iconfont"><?=sprintf("%.2f",$data[3])?></i>今日收益</a>
+				<a style="width: 33%;" title="今日盈亏" class="n1"><i style="font-size: 14px;margin-top: 5px;" class="iconfont"><?=sprintf("%.2f",$data[2]-$data[3]+$data[4])?></i>今日盈亏</a>
+			</div>
+			<div style="padding-top: 10px;" class="min_nav">
+				<a href="?a=pay" title="充值" class="n1"><i class="iconfont icon-chongzhi"></i>充值</a>
+				<a href="?a=cash" title="提款" class="n2"><i class="iconfont icon-tikuan"></i>提款</a>
+				<a href="<?= $this -> setting['applink'] ?>" target="_blank" title="APP下载" class="n5"><i class="iconfont icon-app"></i>APP</a>
+				<a href="?a=user_edit" title="资料" class="n3"><i class="iconfont icon-ziliao"></i>资料</a>
+				<a href="?a=user_pwd" title="修改密码" class="n4"><i class="iconfont icon-gaimi"></i>修改密码</a>
+			</div>
+			<div class="user_nav">
+				<a href="?a=pay_list" title="充值订单" class="n1"><i class="iconfont icon-chongzhiliebiao"></i>充值订单</a>
+				<a href="?a=cash_list" title="提款订单" class="n2"><i class="iconfont icon-tixianliebiao"></i>提款订单</a>
+				<a href="?a=account" title="流水记录" class="n3"><i class="iconfont icon-liushui"></i>流水记录</a>
+				<a href="?a=user_nav" title="注单记录" class="n4"><i class="iconfont icon-dingdanliebiao"></i>注单记录</a>
+				<a href="?a=user_money_pwd" title="资金密码" class="n4"><i class="iconfont icon-dingdanliebiao"></i>资金密码</a>
+			</div>
+			<div class="user_btn">
+				<a href="?a=logout" title="安全退出">安全退出</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer menu">
+		<a class="foot_btn" href="?a=init"><i class="iconfont icon-dating"></i>游戏大厅</a>
+		<a class="foot_btn" href="?a=pay"><i class="iconfont icon-chongzhi"></i>充值存款</a>
+		<a class="foot_btn" href="?a=kefu"><i class="iconfont icon-kefu"></i>在线客服</a>
+		<a class="foot_btn a" href="?a=user"><i class="iconfont icon-user"></i>会员中心</a>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-110});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

@@ -1,0 +1,234 @@
+
+<html style="font-size: 50px;" lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+   <link rel="shortcut icon" id="link-icon" href="/images/shop.png" />
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+  <?php include template("header"); ?>
+  
+  <style>
+    #tips_layer{
+    	position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);display:none;z-index: 9999;
+	    height: 100%;
+	    width: 100%;
+    }
+  </style>
+ </head>
+ <body> 
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+  <div id="app">
+   <div class="Register">
+    <header class="header-nav">
+     <div class="header-back active-opacity">
+      <a href ="?a=login"><img class="HeaderImg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABCCAYAAAA/rXTfAAAAAXNSR0IArs4c6QAAA1ZJREFUaAXFmk2ITWEYx+8dZhpmTFOimYymqCmKMsWCohihUFgwhcWwGFOG8rEZFigNCyyQSGHBggULFqOGhcJCMmVC46tEpEHIt/F7dN+6ne7pfTb/M0/9e8/7vs97/r9zztx7nnPu5HLDEENDQ3m0GfWjT6gXNQ8DSi6H8Qh0ASXjJwMzMoXCsAydS5IU9XsyA8LULtPpIvNSmx+zBDpeiiAxNpAJEKZHEsZp3f1yIJwPprknxu/Rr5QCYbAvYZrW7WNirBpmd5p7Yty+i8arYXYmTNO6T5ioV8NsTXNPjD+l36CG6UiYpnVfMNGohtmIyd80gqLxV2xPUsOsx+RPkWna5hsmmtQwrU6Yt+RNUcOswuQXisV7EqapYZZjYiVDLD6QoC0rMFiCfsRImLfia6b6zLRg8s0B85mc2WqYeZh8dcBYzlw1zBxM7KhjYWdvgRpmFib29xCL7yQsVsM0Y2KflFjYJ26ZGmY6JvYdEgv7LlqphpmKybsYCfO/0Ro1TBMmdt+Jhd2/1qlhJmNid+RY2J19gxqmEZOXMZLC/CY1TANGz5wwW9Qw9YBYfeuJHWqYaiis8vfELimM7RyKQx4ScvbKYQpAzx1ABzKBKQANRoC+MK8tyouOtozt20X9UptVDPYCpX1sCc4Y2S3CU3ANkDchrJO2GM13Qj0mr04KE3aO0SJk9UwsHpIwLqyTthgtRZ4niQfkaV+fhCPFaAXyPGvZC6basE7aYrQaWZ0Ti7sk1Ehhws4xWos8z+u3yKsO66QtRm3I6p5Y3CRhtBQm7Byj9hhNYf46rfalZRFUpxPqGnkVYZ20xWi7E+oKeeVSmLBzjLqcUJfIGxnWSVuM9jihzpNnN299YNTthDqbJZS30jwFVF5/mnDA6KjzTB3LCsh+AzvphDqcJdQZJ1R3VlD206V9qjyR2dOL/bh70UNETldWZ6ocs8tOKO0TcDhiYCrQVSdUZ1gnbYGpRD1OqHYpTNg5MKPQDQeU1VttYZ20xagKWUUZC6tMW6UwYecYjUF3YkTM2zvwiWGdtMWoFtlTSiy2ZVIe5PN5+xeKhagvcuT1mQAZBFCDNC2o3/opcT9lXDfMNatDj0pcO7uk2VSZycPDuAadQK8Lsorh/1PwP29T2eqMB1TeAAAAAElFTkSuQmCC" /></a>
+     </div>
+     <div class="header-title">
+      <?php echo _lang("免费注册")?>
+     </div>
+     <div class="header-right" style="visibility: hidden;"></div>
+    </header>
+    <div class="content-tab">
+     <div class="tab-title">
+      <span class="active"><?php echo _lang("账号注册")?></span>
+      <div onclick="window.open('?a=login','_self')"><span class=""><?php echo _lang("账号登录")?></span></div>
+     </div>
+     <div class="tab-transform">
+      <p class="active" style="left: 0px;"></p>
+     </div>
+    </div>
+	<form action="?a=register" method="post" id="reg_form" onsubmit="return false;">
+				<input type="hidden" name="dosubmit" id="dosubmit" value="yes" />
+    <div class="content">
+     <div class="NameRegister">
+      <div class="LoginInput">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAMAAABcfiZ7AAAAeFBMVEUAAABhYWFiYmJlZWVlZWVlZWVgYGBlZWVlZWVmZmZlZWVlZWVmZmZmZmZlZWVkZGRkZGRlZWVlZWVlZWVmZmZlZWVlZWVaWlplZWVmZmZlZWVlZWVmZmZlZWVkZGRkZGRiYmJmZmZlZWVmZmZmZmZiYmJlZWVmZmbwQ5diAAAAJ3RSTlMADB7x5ocP4NzWxKR7VU5GQjztx7aAbQW7qZaPcmhSJxnOsK1kNDA90Z/nAAAAnUlEQVQY003MVxKDMAxF0We50DGd0Enf/w6T8Qjw+ZDu6ENwjK6rWguc3kFiySbBB0yEL7eXqOfL3HDcOo5h4egSjjjnyG4cU8uhNUehjNu7KsHGmP6T6hGHvpXN1Mi0x4WyNCOcRBorKaWKU8GPg2e+EdGWP0L32lYrDllVAEbluKyBgU7gG1pEBXz2DrnDRxJhJzxmjlCGX19U/gAkDQjMVctQlAAAAABJRU5ErkJggg==" />
+       <input placeholder="<?php echo _lang("输入账号")?>" type="text" id="username" name="username" value="" />
+       <div></div>
+      </div>
+      <div class="NameReg-title">
+       
+	   <?php echo _lang("请输入6~20位字母、数字或组合")?>
+      </div>
+      <div class="LoginInput">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAMAAACqTK3AAAAAV1BMVEUAAACZmZmVlZWYmJiZmZmYmJiWlpaZmZmYmJiZmZmYmJiZmZmYmJiYmJiZmZmZmZmYmJiZmZmXl5eWlpaWlpaLi4uYmJiYmJiZmZmZmZmZmZmWlpaZmZlgZZ36AAAAHHRSTlMA8jUq+khO6mF/V97QwoqEeGpcIhkL37WljA8ISoCCigAAAHVJREFUGNN9jUkOhDAMBG3IjLOHsMzq/78TFEGQg0Rd2iq12lD4GU/ovzNUNLk42uRxOMzI5l+OrHbXK1Pr/Cj5cVAJoQTFU2W1bF1kAWpA0wsSwTYoeKo7ZXWrJuaubb3D0qo8XLbm6fbjVWHqBJHAvlDg7ApzdQbYC0I+zAAAAABJRU5ErkJggg==" />
+       <input type="password" type="password" id="password" name="password" placeholder="<?php echo _lang("输入密码")?>" value="" />
+       <div>
+       </div>
+      </div>
+      <div class="NameReg-title">
+       
+	    <?php echo _lang("请输入6~16位的字母、数字组合")?>
+      </div>
+      <div class="LoginInput">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAMAAACqTK3AAAAAclBMVEUAAACYmJiZmZmYmJiZmZmXl5eYmJiJiYmAgICZmZmZmZmYmJiYmJiYmJiZmZmYmJiYmJiYmJiYmJiYmJiYmJiZmZmYmJiYmJiZmZmXl5eYmJiZmZmYmJiWlpaYmJiYmJiZmZmYmJiXl5eQkJCZmZmZmZmHGoIrAAAAJnRSTlMA9f4w4DVEBgLr3Go8GObSuH1dHuLEpJuMgnVkVCKysKxKKQ/KmHThZdgAAAC1SURBVBjTVY9XDoMwEERn3QBj00KHUJP7XzHEtoR4P5ae1juz8MSpzscIN9HcZLP6iCpIMzQkyvOarAQ1vQK+9VbKOHw/pi7rwSQeqASMP5W8lc+V4A8VtWwEz5yq3L6zYCUga6dyUoDN2QRACegZeAlSh6AdF2OBtoNzSeLbFCUM2b/T+u3Mi13vsri0cF63ArDJcDfbyQ1zGuJgDFXhhnq1vjylCNiNesPTXCjcmFZnxeQjfhbtCG2V6MrrAAAAAElFTkSuQmCC" />
+       <input placeholder=" <?php echo _lang("输入验证码")?>" type="text" id="code" name="code" value="" />
+       <div>
+        <div class="active-opacity">
+         <span class="code"><?php echo form::checkcode('code_img', '4', '14', 84, 34, '' , '', '#FFFFFF', true)?></span>
+        </div>
+       </div>
+      </div>
+	        <div class="NameReg-title">
+       
+	    <?php echo _lang("请输入4位的字母、数字的验证码")?>
+      </div>
+	            <div class="LoginInput">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAMAAACqTK3AAAAAclBMVEUAAACYmJiZmZmYmJiZmZmXl5eYmJiJiYmAgICZmZmZmZmYmJiYmJiYmJiZmZmYmJiYmJiYmJiYmJiYmJiYmJiZmZmYmJiYmJiZmZmXl5eYmJiZmZmYmJiWlpaYmJiYmJiZmZmYmJiXl5eQkJCZmZmZmZmHGoIrAAAAJnRSTlMA9f4w4DVEBgLr3Go8GObSuH1dHuLEpJuMgnVkVCKysKxKKQ/KmHThZdgAAAC1SURBVBjTVY9XDoMwEERn3QBj00KHUJP7XzHEtoR4P5ae1juz8MSpzscIN9HcZLP6iCpIMzQkyvOarAQ1vQK+9VbKOHw/pi7rwSQeqASMP5W8lc+V4A8VtWwEz5yq3L6zYCUga6dyUoDN2QRACegZeAlSh6AdF2OBtoNzSeLbFCUM2b/T+u3Mi13vsri0cF63ArDJcDfbyQ1zGuJgDFXhhnq1vjylCNiNesPTXCjcmFZnxeQjfhbtCG2V6MrrAAAAAElFTkSuQmCC" />
+       <input type="text" id="name" name="name" value="" placeholder=" <?php echo _lang("真实姓名（提款使用不可修改）")?>" />
+      </div>
+      <li style="display:none;">
+			<input class="inputxt name" type="text" id="agent" name="agent" value="<?= empty($_GET['agent'])?'':$_GET['agent'] ?>" placeholder="请填写您的代理人邀请码" />
+     	</li>
+	  
+      <div class="NameReg-title"></div>
+      <div class="NameReg-title"></div>
+      <div class="Register-clause">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAQlBMVEUAAAD/Tlb/TlX/TlX/TVn/VVX/TlX/TVX/////UFj/vsH/xcj/6+z/ZWz/h4z/8fL/3t//tbn/i5H/c3n/b3b/WmFPaxKUAAAAB3RSTlMAkvPVKwa9zEb/gAAAAJZJREFUOMud080OAiEMBOAW2IWuiv/v/6oGPYyY2kl2rvMFDm1lpGhO9Scpa5FPFrXqxnR592v9m3UIrUFUpFgErIwH4idyDLKkGCSpJD6wRwzs0DqA27crgNtvzhfm9gD3c/d6gEtrHb0DTsch0AN8ixt6gEmgB5gEeoBJbGQWTzqsHYAuDF05urR07dnh0NPjx0vP/wWSlxtlOgJ6qAAAAABJRU5ErkJggg==" />
+       <div>
+        
+		<?php echo _lang("我已年满18周岁且同意接受")?>
+        <a class="active-opacity" href="#/RegisterText">《<?php echo _lang("注册条款")?>》</a>
+       </div>
+      </div>
+	  <div class="submit">
+					<input type="submit" id="submit" name="submit" value="<?php echo _lang("立即注册")?>"/>
+					
+				</div>
+      <!--div class="Button active-opacity active" style="border-radius: 2rem;">
+       免费注册
+      </div-->
+     </div>
+    </div>
+	</form>
+   </div>
+  </div>
+  
+  
+ <div id='tips_layer'>
+    <div>
+    
+    
+    
+    11111111111111111
+   
+    
+    </div> 	
+ </div>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+		<script type="text/javascript" src="<?php echo JS_PATH?>Validform_v5.3.2.js"></script>
+		<script type="text/javascript">
+$(function(){
+	
+	//判断微信或者QQ
+	/* function is_wx_qq(){
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+			return 1;
+		}
+		
+		if(ua.indexOf("mqqbrowser") > -1){
+			return 1;
+		}else if(ua.indexOf("iphone")>-1 || ua.indexOf("mac")>-1){
+			if(ua.indexOf("qq") > -1){
+				return 1;
+			}
+		}
+		return 0;
+	}
+	
+	$(function(){
+		if(is_wx_qq() == 1){
+			$("#tips_layer").show();
+		}
+	})
+	*/
+	
+	
+	var Vform = $("#reg_form").Validform();
+	Vform.config({
+		tiptype:1,
+		ajaxPost:true,
+		callback:function(data){
+			if (data.status == 'y') {
+				Vform.resetForm();//初始化表单
+				setTimeout(function(){//2秒后跳转到登录页
+					location.href = '?a=login';
+				}, 2000);
+			}
+		}
+	});
+	Vform.addRule([
+		{
+			ele:'#username',
+			datatype:USERNAME_TYPE,
+			ajaxurl:INDEX_PATH+'a=ajax_username',
+			nullmsg:'<?php echo _lang("请输入用户名！")?>',
+			errormsg:'<?php echo _lang("用户名格式错误！")?>'
+		},
+		{
+			ele:'#name',
+			datatype:'s2-5',
+			nullmsg:'<?php echo _lang("请输入真实的姓名！")?>',
+			errormsg:'<?php echo _lang("姓名应该为2-5个字！")?>'
+		},
+		{
+			ele:'#password',
+			datatype:'s6-20',
+			nullmsg:'<?php echo _lang("请输入密码！")?>',
+			errormsg:'<?php echo _lang("密码长度6-20位！")?>'
+		},
+		/*{
+			ele:'#confirmpassword',
+			datatype:'s6-20',
+			recheck:"password",
+			nullmsg:'请确认密码！',
+			errormsg:'两次输入的密码不一致！'
+		},*/
+		/*{
+			ele:'#agent',
+			datatype:'*1-20',
+			nullmsg:'请输入邀请码！',
+			errormsg:'邀请码长度1-20位！'
+		},*/
+		{
+			ele:'#code',
+			datatype:'s4-4',
+			nullmsg:'请输入验证码！',
+			errormsg:'请输入4位验证码！'
+		}
+	]);
+	$('.btn-off').on('click',function() {
+		if ($(this).hasClass('btn-on')) {
+			$(this).removeClass('btn-on');
+			$(this).prev()[0].type = 'password';
+		} else {
+			$(this).addClass('btn-on');
+			$(this).prev()[0].type = 'text';
+		}
+	});
+	placeholder('.reg_box');//表单提示IE兼容
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+
+</script>
+
+<?php include template("footer"); ?>
+<!--客服浮标-->
+<div id="indexbtn" onclick="window.open('http://kefu.ydgj28.shop/index/index/home?visiter_id=&visiter_name=&avatar=&groupid=0&business_id=1')"></div>
+  <script type="text/javascript" src="kffb.js"></script>
+ </body>
+</html>

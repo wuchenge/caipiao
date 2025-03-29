@@ -1,0 +1,110 @@
+<html style="font-size: 50px;" lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+  <link rel="shortcut icon" id="link-icon" href="https://pic.weilukeji.top/1/logo/saas_f8d07747-3b86-42bd-9eb4-12800acda42c.png" />
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+  <title><?php echo _lang('云鼎国际')?></title>
+ </head>
+ <body> 
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+  <div id="app">
+   <div class="lottery-wrap">
+    <div class="lottery-header-container">
+     <div class="lottery-header-title">
+      开奖
+     </div>
+    </div>
+    <div class="lottery-header-right" onclick="obj=document.getElementById('shuaixuan');obj.style.display=obj.style.display=='none'?'':'none'">
+     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAZCAYAAADaILXQAAAAAXNSR0IArs4c6QAAAcVJREFUSA3NlD1LA0EQhu80foCgIIhCCgVJYQobC0EQFEXUToV0diKI4C8Qf4CNSLpUWttY+IESG2sbMamCBiQQEIyIjZHo+cyRHMne5s7jFBx4LjvvvDNsNnsxLMvqhwsoQ5jI0Dxv1IWJcEY+AYdQrqsFWZqY5yAGUdM0X+xmhpfgwE5CPJgxBRLTzhiSc3iGYUcMuKC3FS5BjrbHaSeJgew+C91OIcCCvn2QWHe1Ic5CBU6gxWXwEPCvgUSyqY3ilm2xrN2mJqWAfxI+IA0RpdyYYkiBxGpjxZ3hGYQnyEGv26EomNrgGt5hXCk7KbUuuIVXGHEKfgvMfZCHB+jQ+dGT8AmLunpNk8vvCppmENOQ4IU4qjdQ6yR/gxS1TfI467F6T3V9r9EMg4YISGyrBrS4XbGshNRYy/3WRUH7C7MjuZbS2yYPJWo9laq+wueQ4pG0WDNqaj+T2Igc0Z3OHXo437CdwQOa4aXQwxl6DAua4Y+/MXyHwaea4bnQwznzGwYLrgj0J+Xq9hG8di538cunX+75Hp4ljS/jNXyDhitNkyplEKKqSJ7VaN4SOx0FiWVvp2H86Zn/u+FFjqMAeb9j+QYST34qcYOTgAAAAABJRU5ErkJggg==" />
+    </div>
+	    <div class="lottery-Tab" style="display: none;" id="shuaixuan">
+     <div class="triangle_3"></div>
+     <div onclick="window.open('?a=kaijiang','_self')">
+      <span>全部</span>
+     </div>
+     <div onclick="window.open('?a=kaijiang28','_self')">
+      <span>幸运28</span>
+     </div>
+     <div onclick="window.open('?a=kaijiangssc','_self')">
+      <span>时时彩</span>
+     </div>
+     <div onclick="window.open('?a=kaijiangpk10','_self')">
+      <span>PK拾</span>
+     </div>
+	 <div onclick="window.open('?a=kaijiang11x5','_self')">
+      <span><?php echo _lang('11选5')?></span>
+     </div>
+	 <div onclick="window.open('?a=kaijiangk3','_self')">
+      <span>快3</span>
+     </div>
+	 <div onclick="window.open('?a=kaijiangklsf','_self')">
+      <span>快乐十分</span>
+     </div>
+	 <div style="color: rgb(255, 73, 65);">
+      <span>快乐8</span>
+     </div>
+     <div onclick="window.open('?a=kaijianglhc','_self')">
+      <span>六合彩</span>
+     </div>
+    </div>
+    <div style="position: relative; overflow: auto; height: calc(-1.1rem + 100vh); padding-top: 0.88rem;" class="am-list-view-scrollview">
+     <div style="position: absolute; min-width: 100%;" class="am-list-view-scrollview-content am-list">
+      <div class="am-pull-to-refresh-content-wrapper">
+       <div class="am-pull-to-refresh-content am-pull-to-refresh-down am-pull-to-refresh-transition">
+        <div class="am-pull-to-refresh-indicator">
+         下拉可以刷新
+        </div>
+        <div>
+         <ul class="lottery-list" id="lottery">
+          <div class="list-view-section-body">
+          <li class="lottery-list-item active-opacity" onclick="window.open('?a=haoma&gameid=52','_self')"><img src="/statics/images/1_fcfb07e4-c68c-458a-b740-f17ac82a1a7c.png" />
+            <div class="right-arrow"></div>
+            <div class="lottery-change">
+             <div class="fs-16 lottery-name">
+              极速快乐8
+             </div>
+             <div class="fs-15 lottery-periods">
+              <span class="fs-13 lottery-time"></span>
+              <span class="fs-13 lottery-zoushitu"><?php echo _lang('走势图')?></span>
+             </div>
+            </div><div class="ball-list null">
+             <?php echo _lang('进入查看开奖')?>
+            </div></li>
+           
+          </div>
+         </ul>
+         <div class="am-list-footer">
+          <div style="padding: 30px; text-align: center;"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <footer class="footer-nav">
+    <div>
+      <li><a class="footer-link active" aria-current="page" href="?a="><img src="/zhuyetu/zy.png" style="transform: scale(1);" /><span><?php echo _lang('首页')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=kaijiang"><img src="/zhuyetu/kj1.png" style="transform: scale(1);" /><span style="color: red;"><?php echo _lang('开奖')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=dating"><img src="/zhuyetu/dt.png" style="transform: scale(1.2);" /><span><?php echo _lang('大厅')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=youhui"><img src="/zhuyetu/yh.png" style="transform: scale(1);" /><span><?php echo _lang('优惠')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=user"><img src="/zhuyetu/wd.png" style="transform: scale(1);" /><span><?php echo _lang('我的')?></span></a><span></span></li>
+     </div>
+     <p></p>
+    </footer>
+   </div>
+  </div>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+  </div><div id="indexbtn" onclick="window.open('?a=kefu','_self')"></div>
+  <script type="text/javascript" src="kffb.js"></script>
+ </body>
+</html>

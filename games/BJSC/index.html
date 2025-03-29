@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="description" content="<?php echo _lang('北京赛车')?>-开奖直播" />
+	<meta name="keywords" content="<?php echo _lang('北京赛车')?>-开奖直播" />
+	<link type="text/css" href="./css/page.min.css" rel="stylesheet" />
+	<title><?php echo _lang('北京赛车')?>-开奖直播</title>
+</head>
+<body>
+	<div class="drawing-video pk10">
+		<div class="loading"><img src="./images/loading.gif" width="50" /></div>
+		<!-- 声音播放器 -->
+		<audio id="sound" autoplay="autoplay" loop="false" src=""></audio>
+		<!-- 头部信息 -->
+		<div class="head clearfix">
+			<div class="cai-num fl pk10-num">
+				等待开奖
+			</div>
+			<div class="fr clearfix">
+				<p class="next"><em>下期：</em><span>--</span></p>
+				<a href="javascript:;" class="voice-btn"></a>
+			</div>
+		</div>
+		<!-- 过终点闪光效果 -->
+		<div class="shan"></div>
+		<!-- 显示结果 -->
+		<div class="result clearfix">
+			<div class="car one">
+				<img src="./images/result1.png" width="20%" />
+				<p><img src="./images/winner1.png" /><img src="./images/winner2.png" /></p>
+			</div>
+			<div class="car two">
+				<img src="./images/result2.png" width="20%" />
+				<p><img src="./images/winner3.png" /><img src="./images/winner4.png" /></p>
+			</div>
+			<div class="car three">
+				<img src="./images/result3.png" width="20%" />
+				<p><img src="./images/winner5.png" /><img src="./images/winner6.png" /></p>
+			</div>
+			<div class="car four">
+				<img src="./images/result4.png" width="20%" />
+				<p><img src="./images/winner7.png" /><img src="./images/winner8.png" /></p>
+			</div>
+			<div class="car five">
+				<img src="./images/result5.png" width="20%" />
+				<p><img src="./images/winner9.png" /><img src="./images/winner10.png" /></p>
+			</div>
+		</div>
+		<!-- 运动 -->
+		<div class="runing">
+			<!-- 风景 -->
+			<div class="scenary pore">
+				<div class="box poas"><img src="./images/scenery.jpg" height="100%" /></div>
+			</div>
+			<!-- 赛道 -->
+			<div class="road pore">
+				<div class="ready">
+					<p class="count">00:00</p>
+					<div class="light">
+						<img src="./images/trafficlight.png" width="100%" />
+						<p class="red"><img src="./images/lightred.png" width="100%"  /></p>
+						<p class="yellow"><img src="./images/lightyellow.png" width="100%" /></p>
+						<p class="green"><img src="./images/lightgreen.png" width="100%" /></p>
+					</div>
+				</div>
+				<div class="road-start poas"><img src="./images/finisher.png" height="100%" /></div>
+				<div class="road-run poas"><img src="./images/road.jpg" height="100%" /></div>
+				<div class="cars">
+					<div class="car-box car1">
+						<img src="./images/car1.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car2">
+						<img src="./images/car2.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car3">
+						<img src="./images/car3.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car4">
+						<img src="./images/car4.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car5">
+						<img src="./images/car5.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car6">
+						<img src="./images/car6.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car7">
+						<img src="./images/car7.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car8">
+						<img src="./images/car8.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car9">
+						<img src="./images/car9.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+					<div class="car-box car10">
+						<img src="./images/car10.png" class="car-img" />
+						<p class="q-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="h-wheel wheel"><img src="./images/wheel.gif"></p>
+						<p class="wind jiasu"><img src="./images/wind.png" /></p>
+						<p class="flame jiasu"><img src="./images/flame.png" /></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/tweenmax.js"></script>
+	<script type="text/javascript" src="./js/pk10.min.js"></script>
+</body>
+</html>

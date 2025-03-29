@@ -1,0 +1,114 @@
+<?php include template("header"); ?>
+<link type="text/css" rel="stylesheet" href="<?php echo CSS_PATH?>pkpj.css" />
+<div class="main haoma">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="table">
+			<div class="hd">
+				<div class="sethaoma"><a href="javascript:;" class="a">号码</a></div>
+				<div class="title">
+					<input type="hidden" id="win" value="<?php echo $win ?>" />
+					<?php echo form::date('daytime',$daytime, 0);?>
+					<button name="gosearch" id="gosearch" type="button">GO</button>
+					<a class="load" href="javascript:location.reload();">刷新</a>
+				</div>
+				<a class="search" href="javascript:;" title="搜索"></a>
+			</div>
+			<div class="list">
+				<div class="onload"></div>
+			</div>
+		</div>
+		<div id="pages"><?php echo $pages?></div>
+	</div>
+</div>
+<script type="text/javascript">
+var gameid = '<?php echo $gameid?>';//游戏ID
+var haomadata = <?php echo $haomadata?>;//获取开奖数据
+$(function(){
+	var men = ['[91][73][64]', '[101][92][83][74][65]', '[102][93][84][75]', '[103][94][85][76][21]', '[104][95][86][31]', '[105][96][87][41][32]', '[106][97][51][42]', '[107][98][61][52][43]', '[108][71][62][53]', '[109][81][72][63][54]', '[82]'];
+	var html = '';
+	$.each(haomadata,function(i,v){
+		var str = v.haoma;
+		if (str) {
+			var strs = new Array();
+			strs = str.split(',');
+			var len = strs.length;
+			var k = 0, haoma = '', haoma_type = '', haoma_order = '';
+			var rd = new Array();
+			var order = new Array();
+			for (i = 0; i < len; i++) {
+				if (i % 2 == 0) {
+					var arr = [strs[i], strs[i+1]];
+					arr.sort(function(a, b){
+						return b - a;
+					});
+					$.each(men,function(n, m){
+						if (m.indexOf('['+arr[0]+arr[1]+']') !== -1) {
+							rd[k] = n;
+							order[k] = n+'.'+((arr[0]+arr[1]).length == 2 ? '0'+arr[0]+arr[1] : arr[0]+arr[1]);
+							return false
+						}
+					});
+					haoma_order += '<em><i>'+order[k]+'_rd</i></em>';
+					haoma_type += '<em><i>┌</i>'+rd[k]+'<i>┐</i></em>';
+					k++;
+				}
+				haoma += '<i class="'+'c'+strs[i]+'">'+strs[i]+'</i>';
+			}
+			order.sort(function(a, b){
+				return b - a;
+			});
+			$.each(order,function(o, p){
+				haoma_order = haoma_order.replace(p+'_rd', (o+1)+'rd');
+			});
+		} else {
+			haoma = '等待开奖';
+			haoma_type = '--';
+			haoma_order = '--';
+		}
+		//拼接数据
+		html += ''+
+		'<ul>'+
+			'<li class="w50 tl qishu">'+v.qishu+'</li>'+
+			'<li class="w50 tr time">'+getLocalTime(v.sendtime)+'</li>'+
+			'<li class="line">'+haoma_order+'</li>' +
+			'<li class="line">'+haoma_type+'</li>' +
+			'<li class="hm_list">'+haoma+'</li>'+
+		'</ul>';
+	});
+	setTimeout(function() {//让加载效果显示，并保证元素加载完成
+		if (html) {
+			$('.list').empty().append(html);
+		} else {
+			$('.list').empty().append('<div class="no-data">暂无数据</div>');
+		}
+	}, 100);
+	//搜索事件
+	$('#gosearch').click(function() {
+		var daytime = $('#daytime').val();
+		var win = $('#win').val();
+		if (win) win = '&win='+win;
+		location.href = '?a=haoma&daytime='+daytime+win;
+	});
+	//展开搜索
+	$('.table .hd a.search').click(function() {
+		if ($(this).hasClass('a')) {
+			$(this).removeClass('a');
+			$('.table .hd .title').slideUp();
+		} else {
+			$(this).addClass('a');
+			$('.table .hd .title').stop().slideDown();
+		}
+	});
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

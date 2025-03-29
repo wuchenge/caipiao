@@ -1,0 +1,58 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="app_box">
+			<!--h4>建议下载安装APP浏览本站，享受最优质的服务</h4-->
+			<h4>手机APP维护中，请点击继续访问即可。</h4>
+			<div class="signup">
+				<div class="form">
+					<!--div class="logo"></div-->
+					<div class="link">
+						<!--div class="btn down">
+							<a class="android" href="app/fc_mobile.apk">Android版</a>
+							<a class="ios" href="https://xmvip.vip/OC93T4">iPhone版</a>
+						</div-->
+						<div class="btn pc">
+							<a href="?a=init">继续浏览</a>
+						</div>
+						<div class="m"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+	var appurl = '<?php echo $this -> setting["weburl"]?>?a=app';
+	var u = navigator.userAgent;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+	var isSafari = /Safari/.test(u) && !/Chrome/.test(u); // Safari
+	var isWX = u.indexOf('MicroMessenger') > -1; //是否微信
+	var isQQ = u.match(/\sQQ/i) == ' qq'; //是否QQ
+	if (isiOS && !isSafari) {//IOS
+		$('.link .btn.down').html(appurl);
+		$('.link .m').html('IOS用户请长按上面的网址选择拷贝，然后在 Safari 打开、或者保存屏幕截图，然后在微信中识别。').show();
+	} else if (isiOS && isSafari) {//IOS Safari
+		$('.link .btn a.android').hide();
+		$('.link .m').html('点击 iPhone版 按钮，下载安装IOS客户端').show();
+	} else if (isWX || isQQ) {//微信 QQ
+		$('.link .m').html('QQ、微信用户请点击右上角菜单按钮，然后选择在浏览器中打开。').show();
+	} else if (isAndroid) {//android
+		$('.link .btn a.ios').hide();
+		$('.link .m').html('点击 Android版 按钮，下载安装安卓客户端').show();
+	}
+});
+</script>
+<?php include template("footer"); ?>

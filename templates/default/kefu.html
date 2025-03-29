@@ -1,0 +1,24 @@
+<?php include template("header"); ?>
+<meta http-equiv='Content-Security-Policy' content='block-all-mixed-content'>
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<!--<iframe name="kefu_iframe" id="kefu_iframe" src="<?php echo $kefulj ?>" frameborder="false" scrolling="auto" width="100%" height="100%" allowtransparency="true"></iframe>-->
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box, #kefu_iframe').css({'height':h-49});
+		var w = $('.scroll_box').width();
+		$('#kefu_iframe').css({'width':w});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

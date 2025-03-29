@@ -1,0 +1,298 @@
+/*头部*/
+.header {
+	position: relative;
+	background: #cb0816;
+	height: 45px;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	min-width: 1440px;
+}
+
+.header .logo {
+	display: block;
+	float: left;
+	width: 176px;
+	height: 45px;
+	line-height: 45px;
+	margin-right: 10px;
+	_margin-right: 7px;
+	color: #FFF;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.header .rt {
+	float: right;
+	width: 230px
+}
+
+.header .tab_style {
+	padding: 16px 14px 0 0
+}
+
+.header .cut_line {
+	float: left;
+	padding-left: 10px;
+	line-height: 45px;
+	color: #fff;
+}
+
+.header .cut_line a {
+	color: #00c2ff;
+}
+
+.header .cut_line a em {
+	color: #fff;
+	font-size: 13px;
+	margin-left: 10px;
+}
+
+.header .fun {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+}
+
+.header .fun a.df {
+	width: 18px;
+	height: 18px;
+	float: left;
+	display: block;
+	margin-left: 10px;
+	background-image: url(../images/headerBtn.png);
+	background-repeat: no-repeat;
+	text-indent: -999px;
+	overflow: hidden;
+}
+
+.header .fun a.homeLink {
+	background-position: 0 -26px;
+}
+
+.header .fun a.logout {
+	background-position: 0 0;
+}
+
+.cut_line span {
+	color: #ABAEB1;
+	padding: 0 8px
+}
+
+/*框架布局*/
+.content-on {
+	background: #FAFAFA url(../images/left_bg.png) repeat-y left top;
+	overflow: hidden;
+	min-width: 1440px;
+}
+
+.content-off {
+	background-image: none;
+	overflow: hidden
+}
+
+.col-left {
+	float: left
+}
+
+.col-auto {
+	padding-left: 1px;
+	overflow: hidden;
+	position: relative;
+	_zoom: 1;
+	_float: left;
+}
+
+.col-right {
+	float: right
+}
+
+.col-auto .w_tps {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	z-index: 999;
+	width: 240px;
+	height: 100px;
+	background-color: #333c59;
+	line-height: 100px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+
+.col-auto .w_tps#cash_tps {
+	right: 280px;
+}
+
+.col-auto .w_tps a {
+	display: block;
+	color: #fff;
+}
+
+.col-auto .w_tps i {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	z-index: 1000;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	background-color: #f00;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	font-style: normal;
+	cursor:pointer;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+/*菜单样式*/
+.left_menu {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.left_menu {
+	padding: 0;
+	width: 174px;
+	position: relative;
+	display: block;
+}
+
+.left_menu_on {
+	width: 0;
+	padding: 0;
+}
+
+.left_menu_on div {
+	visibility: hidden
+}
+
+.left_menu h3 {
+	font-weight: 700;
+	color: #275d96;
+	border-bottom: 1px solid #d9e4ea;
+	line-height: 24px;
+	height: 24px;
+}
+
+.left_menu div.line-x {
+	border-bottom: 1px solid #E5E5E5;
+	height: 1px;
+	font-size: 1px;
+}
+
+.left_menu ul {
+	padding: 0;
+}
+
+.left_menu ul li {
+	width: auto;
+	color: #666;
+	line-height: 40px;
+	height: 40px;
+	position: relative;
+}
+
+.left_menu ul li.title {
+	padding-left: 10px;
+	font-weight: 700;
+	background-color: #cb0816;
+	color: #FFF;
+}
+
+.left_menu ul li a {
+	padding-left: 10px;
+	display: block;
+	line-height: 40px;
+	height: 40px;
+	text-decoration: none;
+	position: relative;
+	background: #F3F3F3;
+}
+
+.left_menu ul li a:hover,.left_menu ul li.on a {
+	background: #FFF;
+	text-decoration: none
+}
+
+.left_menu ul li a:hover:before, .left_menu ul li.on a:before {
+	display: block;
+	content: "";
+	position: absolute;
+	top: -1px;
+	bottom: 0;
+	left: 0;
+	width: 5px;
+	max-width: 5px;
+	overflow: hidden;
+	background-color: #f60;
+}
+
+.left_menu ul li a i {
+	display: inline-block;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	font-weight: normal;
+	margin: 0 15px 0 3px;
+	background: url(../images/menu.png) no-repeat;
+}
+
+.left_menu ul li a i.icon-2 {
+	background-position: 0px -18px;
+}
+
+.left_menu ul li a i.icon-3 {
+	background-position: 0px -36px;
+}
+
+.left_menu ul li a i.icon-4 {
+	background-position: 0px -54px;
+}
+
+.left_menu ul li a i.icon-5 {
+	background-position: 0px -72px;
+}
+
+.left_menu ul li a i.icon-6 {
+	background-position: 0px -90px;
+}
+
+
+/*容器*/
+.content {
+	background: #FFF;
+	min-width: 1200px;
+}
+
+/*提示框*/
+.msg .error, .msg .stop, .msg .alert, .msg .attention, .msg .tips, .msg .ok, .msg .notice, .msg .question, .msg .help, .msg .small-help {
+	background: url(../images/msg_bg.png) no-repeat scroll 0 0 transparent;
+	border: 1px solid #DDD;
+	color: #444;
+	float: left;
+	line-height: 18px;
+	padding: 2px 10px 2px 23px;
+}
+
+.msg .attention {
+	background-color: #E5F5FF;
+	background-position: 3px -147px;
+	border-color: #40B3FF;
+	float: left
+}
+
+#loading {
+	position: absolute;
+	left: 400px;
+	top: 11px;
+	display: none;
+	z-index: 999;
+}

@@ -1,0 +1,99 @@
+
+<?php include template("header"); ?>
+<style type="text/css">
+	.roomPanel{
+		padding-top: 50px;
+		background: #1b1b1b
+	}
+	.roomPanel a{
+		margin: 12px 10px;
+		display: block;
+		box-sizing: border-box;
+		border-radius: 4px;
+	}
+	.roomPanel a img{
+		width: 100%;
+		border-radius: 4px 4px 0 0;
+	}
+	.roomPanel a .binding{
+		background: #333;
+	    line-height: 2.5;
+	    padding: 0 10px;
+		border-radius: 0 0 4px 4px;
+		color: #fdfbfa;
+	}
+</style>
+
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)"><i class="iconfont icon-fanhui"></i></a>
+		<a class="pic" href="?a=user">
+			<?php
+			if ($user['pic']) {
+				if(preg_match('/^\d*$/',$user['pic'])){
+					echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
+				} else {
+					echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
+				}
+			}
+			?>
+		</a>
+		<a class="order" href="?a=order" ><i class="iconfont icon-liebiao"></i></a>
+		<h4><?php echo _lang($gamename)?></h4>
+	</div>
+	<div class="roomPanel">
+		<?php foreach($room as $key => $val){ ?>
+		<a class="jump_room" data-limit="<?= $val['minimum'] ?>" data-pass="<? if($val["pass"]){echo md5($val['pass']."9999");} ?>" data-href="/?a=game&gameid=<?= $gameid ?>&roomid=<?= $key+1 ?>" href="javascript:;">
+			<img src="/uppic/room/<?= $val['img'] ?>" class="data-img">
+			<div class="binding">
+				<?= _lang($val['name']) ?>
+                <small ng-show="defaultLanuage != 'en'" class="ng-binding"><?php echo _lang('单注') ?> <?= $val['minBetting'] ?> <?php echo _lang('元起') ?></small>
+			</div>
+		</a>
+		<?php } ?>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	var money = <?= empty($user['money'])?'-1':$user['money'] ?>;
+	/*if(money == '-1'){
+		layer.msg('请登录后再进入房间');
+		setTimeout(function(){
+			window.location.href="/?a=login";
+		},2000);
+		
+	}*/
+	$(".jump_room").mousedown(function(){
+		var url = $(this).attr("data-href");
+		var limit = $(this).attr("data-limit");
+		var pass1 = $(this).attr("data-pass");
+		
+		if(pass1){
+			layer.prompt({title: '<?php echo _lang('输入房间口令') ?>', formType: 1}, function(pass, index){
+			    if(pass){
+			    	$.post("/?a=check_roompass", {pass:pass, pass1:pass1}, function(data){
+			    	    if(data == 1){
+							if(limit > 0 && money < limit){
+								layer.msg('<?php echo _lang('温馨提示：金额限制') ?>'+limit+'<?php echo _lang('元起') ?>');
+							}else{
+								window.location.href = url;
+							}
+			    	    }else{
+			    	    	layer.msg('<?php echo _lang('房间口令下正确') ?>!');
+			    	    }
+			    		
+			    	})
+			    }else{
+			    	layer.msg('<?php echo _lang('请输入房间口令') ?>!');
+			    }
+			});
+		}else{
+			if(limit > 0 && money < limit){
+				layer.msg('<?php echo _lang('温馨提示：金额限制') ?>'+limit+'<?php echo _lang('元起') ?>');
+			}else{
+				window.location.href = url;
+			}
+		}
+	});
+</script>
+<?php include template("footer"); ?>

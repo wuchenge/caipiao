@@ -1,0 +1,330 @@
+<html style="font-size: 48px;" lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+  <link rel="shortcut icon" id="link-icon" href="/images/shop.png" />
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+  <title><?php echo _lang('云鼎国际')?></title>
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+ </head>
+ <body> 
+ 
+ 
+ 
+ 
+ 
+ 
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+  <div id="app">
+   <div class="my-content-wrapper">
+    <div class="my-content">
+    	<style>
+    	.my_top{width:100%;height:3.5rem;}
+    	.my_top_oneleft{width:4rem;height:2rem;float:left;}
+    	.my_top_one{width:100%;height:2rem;float:left;}
+    	.oneleft_img{width:1.1rem;height:2rem;float:left;margin-left: 0.3rem;margin-top: 0.2rem;}
+    	.oneleft_img img{width:1.1rem;height:1.1rem;}
+    	.oneleft_p{width:2rem;height:2rem;float:left;margin-top: 0.2rem;}
+    	.oneleft_p span{width:2rem;display:block;margin-left: 0.3rem;
+    margin-top: 0.2rem;color:#fff;}
+    
+    .my_top_oneright{width:2rem;height:2rem;float:right;}
+    .my_top_oneright a{display:block;width: 0.52rem;
+    height: 0.52rem;float: right;
+    margin-right: 0.4rem;
+    margin-top: 0.4rem;}
+   .my_top_oneright img{width: 0.52rem;
+    height: 0.52rem;}
+    
+    .my_top_two{width:100%;height:1.5rem;float:left;}
+    
+    .my_top_twoleftspan{color:#fff;}
+    	</style>
+    <div class="my_top">
+    	<div class="my_top_one">
+    	<div class="my_top_oneleft">
+    		<div class="oneleft_img">
+    			<?php
+				if ($user['pic']) {
+					if(preg_match('/^\d*$/',$user['pic'])){
+						echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
+					} else {
+						echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
+					}
+				} else {
+					echo '<img class="pic" src="statics/images/userpic.png" alt="PIC" />';
+				}
+				?>
+    		</div>
+    		<div class="oneleft_p">
+    			<span><?php echo $user['nickname'] ? $user['nickname'].'('.$user['username'].')' : $user['username']?></span>
+    			<span>ID:<?= $user['uid']?></span>
+    		</div>
+    	</div>
+    	<div class="my_top_oneright">
+    	<a href="?a=qqqqqq"><img src="data:image/png;base64,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"></a>
+    	</div>
+    	
+    	
+    	
+    	</div>
+    	<style>
+    	.my_top_twoleft{width:49%;float:left;}
+    	.my_top_tworight{width:49%;float:left;}
+    	.my_top_twoleftspan{height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;text-align: center;}
+    .my_top_twoleftspan span{color:#f4f2bd;}
+    .my_top_tworightspan{height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;text-align: center;}
+    .my_top_tworightspan span{color:#f4f2bd;}
+    .my_top_li{width:1px;background:#de9a30;height:0.8rem;float:left;    margin-top: 0.2rem;}
+    	</style>
+    	<div class="my_top_two">
+    		<div class="my_top_twoleft">
+    			<div class="my_top_twoleftspan">
+            <span><?php echo _lang('今日盈亏')?></span>
+         <span class="numberStyle"><?=sprintf("%.2f",$data[2]+$data[3]+$data[4])?></span></span>
+          </div>
+    			 </div>
+    			 <div class="my_top_li">
+    			 </div>
+    			 <div class="my_top_tworight">
+    			 	<div class="my_top_tworightspan">
+    			<span><?php echo _lang('帐户总额')?></span>
+    			<span class="numberStyle"><?=$user['money']?></span>
+         </div>
+    			 </div>
+    	</div>
+    	
+    	
+    	</div>
+    	
+    	<style>
+    	.my_center{width:90%;height:1.5rem;margin:0 auto;border-radius:5px;background:#363636;}
+    	.my_center ul{padding:0;margin:0;}
+    	.my_center ul li{
+    		width: 20%;
+    height: 1.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;float: left;
+    	}
+    	.my_center ul li a{    display: contents;width:100%;height:1.4rem;}
+    	.my_center ul li img{width: 0.5rem;
+    height: 0.5rem;
+    margin-bottom: 0.1rem;}
+    .my_center ul li a span{font-size:0.15rem;}
+    .my_bottom{width:90%;height:8rem;margin:0 auto;border-radius:5px;background:#363636;}
+    	</style>
+    <div class="my_center">	
+     <ul>
+     	<li>
+     		<a href="javascript:;"  onclick="window.open('/?a=pay','_self')"><img src="/statics/images/chongzhi.png">
+     		<span>充值</span>
+     			</a>
+     		</li>
+     		<li>
+     		<a href="javascript:;" onclick="window.open('?a=user_nav','_self')"><img src="/statics/images/gerenbaobiao.png">
+     			<span>个人报表</span>
+     			</a>
+     		</li>
+     		<li>
+     		<a href="javascript:;" onclick="window.open('?a=account','_self')"><img src="/statics/images/liushuijilu.png">
+     			<span>流水记录</span>
+     			</a>
+     		</li>
+     		<li>
+     		<a href="javascript:;" onclick="window.open('?a=daili_count','_self')"><img src="/statics/images/tuandui.png">
+     			<span>团队</span>
+     			</a>
+     		</li>
+     		<li>
+     		<a href="javascript:;" onclick="window.open('?a=daili_tuiguang','_self')"><img src="/statics/images/yaoqing.png">
+     			<span>邀请</span>
+     			</a>
+     		</li>
+     	</ul>
+     </div>
+     <style>
+     .my_bottom ul{padding:0.3rem;margin:0;}
+     .my_bottom ul li{width:100%;height:1.2rem;line-height: 1.2rem;border-bottom:1px solid #56564d;}
+     .mybottom_div{width:100%;height:1.2rem;}
+     .my_bottom ul li a{display:block;width:100%;height:1.2rem;}
+     .my_bottom ul li a img{width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    top: 0.1rem;left:0.2rem;}
+     .my_bottom ul li a span{color:#deddae;font-size:0.2rem;margin-left: 0.3rem;}
+     .mybottom_div_left{float:left;width:3rem;height:1.2rem;}
+     .mybottom_div_right{float:right;width:2rem;height:1.2rem;line-height:1.2rem;}
+     .mybottom_div_right span{color:#fff;float: right;}
+    .mybottom_div_right i{    display: block;width:20px;height:35px;background:url(/statics/images/jt.png);    float: right;
+    margin-top: 0.2rem;}
+     </style>
+     <div class="my_bottom">	
+     <ul>
+     	<li>
+     		<div class="mybottom_div">
+     		<a href="javascript:;"  onclick="window.open('?a=pay_list','_self')">
+     			<div class="mybottom_div_left">
+     			<img src="/statics/images/czjl.png">
+     		<span>充值记录</span>
+     		</div>
+     			
+     			
+     			<div class="mybottom_div_right">
+     			
+     				<i></i>
+     					
+     				</div></a>
+     				</div>
+     		</li>
+     		
+     	
+     	
+     			<li>
+     		<div class="mybottom_div">
+     		<a href="javascript:;" onclick="window.open('http://kefu.ydgj28.shop/index/index/home?visiter_id=&visiter_name=&avatar=&groupid=0&business_id=1')">
+     			<div class="mybottom_div_left">
+     			<img src="/statics/images/kfzx.png">
+     		<span>客服中心</span>
+     		</div>
+     		
+     			
+     			<div class="mybottom_div_right">
+     			
+     				<i></i>
+     				</div>	</a>
+     				</div>
+     		</li>
+     			<li>
+     		<div class="mybottom_div">
+     		<a href="javascript:;"   onclick="window.open('?a=cash_list','_self')">
+     			<div class="mybottom_div_left">
+     			<img src="/statics/images/qkjl.png">
+     		<span>取款记录</span>
+     		</div>
+     		
+     		
+     			<div class="mybottom_div_right">
+     			
+     				<i></i>
+     					</div>	</a>
+     				</div>
+     		</li>
+     			<li>
+     		<div class="mybottom_div">
+     		<a href="javascript:;" onclick="window.open('?a=user_edit','_self')">
+     			<div class="mybottom_div_left">
+     			<img src="/statics/images/zhzl.png">
+     		<span>账户资料</span>
+     		</div>
+     			
+     		
+     			<div class="mybottom_div_right">
+     			
+     				<i></i>
+     					</div></a>
+     				</div>
+     		</li>
+     			<li>
+     		<div class="mybottom_div">
+     		<a href="javascript:;">
+     			<div class="mybottom_div_left">
+     			<img src="/statics/images/dqbb.png">
+     		<span>当前版本</span>
+     		</div>
+     			
+     			
+     			<div class="mybottom_div_right">
+     			
+     			
+     				<span>1.106</span>
+     				</div></a>
+     				</div>
+     		</li>
+     		<li>
+     		<div class="mybottom_div">
+     		<a href="javascript:;" onclick="window.open('?a=daili_tuiguang','_self')">
+     			<div class="mybottom_div_left">
+     			<img src="/statics/images/fenxiang.png">
+     		<span>我要分享</span>
+     		</div>
+     			
+     		
+     			<div class="mybottom_div_right">
+     			
+     				<i></i>
+     					</div>
+     					
+     					</a>
+     				</div>
+     		</li>
+     	</ul>
+     </div>
+     
+  
+    </div>
+    <footer class="footer-nav">
+    <div>
+      <li><a class="footer-link active" aria-current="page" href="?a="><img src="/zhuyetu/zy.png" style="transform: scale(1);" /><span><?php echo _lang('首页')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=kaijiang"><img src="/zhuyetu/kj.png" style="transform: scale(1);" /><span><?php echo _lang('开奖')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=dating"><img src="/zhuyetu/dt.png" style="transform: scale(1.2);" /><span><?php echo _lang('大厅')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=youhui"><img src="/zhuyetu/yh.png" style="transform: scale(1);" /><span><?php echo _lang('优惠')?></span></a><span></span></li>
+      <li><a class="footer-link" href="?a=user"><img src="/zhuyetu/wd1.png" style="transform: scale(1);" /><span style="color: #ecb241;"><?php echo _lang('我的')?></span></a><span></span></li>
+    </div>
+     <p></p>
+    </footer>
+   </div>
+  </div>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+
+<!--客服浮标-->
+<div id="indexbtn" onclick="window.open('http://kefu.ydgj28.shop/index/index/home?visiter_id=&visiter_name=&avatar=&groupid=0&business_id=1')"></div>
+  <script type="text/javascript" src="kffb.js"></script>
+ </body>
+</html>

@@ -1,0 +1,467 @@
+<html style="font-size: 48px;" lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+   
+  <title><?php echo _lang('云鼎国际')?></title>
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+ </head>
+ <body> 
+<style>
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #324252;
+}
+
+h1 {
+  font-family: 'Century Gothic';
+  margin: 30px auto 30px auto;
+  color: #09fbd2;
+  width: 100%;
+  text-align: center;
+}
+
+ul.menu {
+  padding: 0;
+  list-style: none;
+  width: 400px;
+  margin: 20px auto;
+  font-family: 'Century Gothic';
+  box-shadow: 0px 0px 25px #00000070;
+  clear: both;
+  display: table;
+}
+ul.menu .list {
+  font-size: 14px;
+  border-bottom: 1px solid #324252;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  vertical-align: sub;
+  background: #3e5165;
+  clear: both;
+}
+ul.menu .list:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .list:before {
+  content: '\f07b';
+  font-family: FontAwesome;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .list a {
+  text-decoration: none;
+  color: #fff;
+  padding: 17px 0px 17px 45px;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+ul.menu .list a:hover {
+  background-color: #324252;
+  transition: 300ms all;
+  color: #09fbd2;
+}
+ul.menu .list .items {
+  height: 0px;
+  overflow: hidden;
+}
+ul.menu .list .items a {
+  padding: 17px;
+}
+ul.menu .list .items a:hover {
+  background-color: #3f5d79;
+  color: #fff;
+  transition: 300ms all;
+}
+ul.menu .list:last-child {
+  border-bottom: none;
+}
+ul.menu .active:after {
+  content: "\f106";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .active:before {
+  content: '\f07c';
+  font-family: FontAwesome;
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .active > .items {
+  display: block;
+  background: #23313f;
+  padding: 0px;
+  height: auto;
+  color: #fff;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms;
+  clear: both;
+  float: left;
+  width: 100%;
+}
+ul.menu .active > .items li {
+  padding: 0px;
+  border-bottom: 1px solid #324252;
+  list-style: none;
+}
+ul.menu .active > .items li:last-child {
+  border-color: transparent;
+  padding-bottom: 0px;
+}
+ul.menu .active > .items .active > .items {
+  background-color: #2f4b67;
+}
+ul.menu .active > a {
+  color: #46efa4;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+ul.menu .active .list {
+  background: #697d92;
+}
+ul.menu .active .list a {
+  padding: 17px 0px 17px 45px;
+}
+</style>
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+  <div id="app">
+   <div class="lotteryHall-page-V2 content-wrapper1">
+    <header class="header-nav">
+     <div class="header-title">
+      <?php echo _lang('购彩大厅')?>
+     </div>
+     <div class="header-right" style="visibility: hidden;"></div>
+    </header>
+    <div class="hallContent scroll-wrapper">
+     <div class="block">
+      <header style="background-image: url(&quot;images/7f1b3b12.V2Xing-Yun-28@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=27','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_729ecffd-f19c-4e1f-b27b-8a9d53e08531.png" alt="" />
+        <div>
+         <span><?php echo _lang('北京幸运28')?></span>
+         <span>简单易中奖</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	      <div class="block">
+      <header style="background-image: url(&quot;images/7f1b3b12.V2Xing-Yun-28@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=28','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_729ecffd-f19c-4e1f-b27b-8a9d53e08531.png" alt="" />
+        <div>
+         <span><?php echo _lang('加拿大幸运28')?></span>
+         <span>简单易中奖</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/7f1b3b12.V2Xing-Yun-28@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=29','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_729ecffd-f19c-4e1f-b27b-8a9d53e08531.png" alt="" />
+        <div>
+         <span><?php echo _lang('<?php echo _lang('台湾幸运28')?>')?></span>
+         <span>简单易中奖</span>
+        </div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABhdJREFUaAXdml2IVVUUx70RpRFDIpRZMUiUTIRFHyIROtAHOcpYEYFB9NRTD8kQ9BC91IMgBEUPEYgQEoVBRI4kPc1A9BCR5WhJYtOYTpPmR0OQvTT9/te9rstzzj33nLPPzB3uhv/sr7X+67/u+djn7DNLlvRoacxXXnNzcyvgvgOsBn3geqDyN5gFk+BYo9E4S117qS0xEpH4zWAQbASrQJEyjdE4GAP7SVRJR5foxEhoLSq2gy1gaaSii/iPgrdJ8FAMV+XESKifwK+DZ9sI+IdxHY0Z8HuA4q0EN4daR3UZyCp7GXyTBKeyJmsfI6HlYAc4C2YTOEJ/J9gAru4UXDbBVj7yTfL9yZhiLe/EFTVPgAEwAZIC9jB2TxQ5zuIA4kryK+ZALH+mP8RDYDoR9AD9BzMdIgbFCcTtE1TsoQjatCuEI+AvF+gU7eG0Zb0jxNgKFMsSlIaRWqKIyBErwPdgTS3kBUgUK8S05FTHJQeBTj9/pPbRn98LOSNZxQSKbclJU7XTEkfdKPw1JeKOd7oMXbUMKTbwyUlbuRsKDvqFJoD9Qjr9FvxIJX+RoEtaTJc0FteFsdYOcz5J+85kkG710aJrzt9QdhTSglM/0MJoic373a+QMGeEtmGnT1r1FJRfMNrlnA7kW3dvFo1+nduVqwRjrfx2pFTXvvjmCigxKW0JrXoYzy4Y7nbGe7KtFs8oWv3j1+5MZRj1gdMusY7Pftg+D94H92eSRg7CeyPYDh7OomLcn2HS3peyY3AbsNPwSMogMYDtbc7+DO3HEiZRXfhuBz+FGOeob8oiZNy/FWwzm6usQT3o2vtdu13zDBP2Wn8t7Y8IUu1pIBEBHi0vX4BbwtS/1Hq/yype62DKALKjwI7YhpRBxgD2uoB/c376ZaOWB/zvAscdp27nmzLCN4eY07uf6T56hR0TK9zkH7QLPzphey+Ycv7naT9zRYCCHfzWgl8dl66bR/LcmdejljRbctpEulQYXO8mDtp40Rrfu8Gk47hA+7mi/rLD/j5wwnHM0NamUMeC3UHnt14Odo2tdt7aoyhV2Jc4jINOl9PBUbzvEeyF0M+tsFuHwefghmCoLbqn4R0P/U6V19zMxRLzt0ltvJQuiND5reTMv0H7XUS/mEfG/EPMfwZMwyztJ+H7Os8vMWcxNdzkscRsM1MT3kj9wgUxxzBWcied01uIf8n1W03Gdap9Ciz+BdrD8HzTMirW8JqbXJaYd9cvXbkg6hecnwBTjkRvC9p7bBX6j9L5BFwXBs9Rb8H/u9AvU6U0W2I6p62stEbVGnEn8FVyxx3HGyTzqvrUOqofg6XqU7QmDuF3qNkr/8drbuZiiem8tqLNzOiCyFOQKIGfHdlrJPUB/Q/BNWF8hnoT9j+GfpXKa27mYolNOjafvRsu30RsUzSeXvRT9G2dbCaPnU++fKBLu8vmdzkXfsXKC7Sx5dWB/ytqW0RVHwb9eX5F5uBov0CLAIPSj1RFApsN/NpH+RIoqW/BrTYXU8OT+Uhlp6K4x10AfTmptXC6nQePQ/oAWEfbLwkxsbzWVg4+sTHHvtm1a23qegL/1UjqtY6leDmkpV80UyQLPIDmti+arSPGr6jb5KjT9oprL9am1zgackhrTfwCush7YzNHqZJM722/hcT6SU5vrbbmDKePbXdH0LbV6ZPWYushhn6LW9vJa7qbyuXo0gLKb3GLAsfe/CgRkuu9z0h24DlyQ0Af2ex626ejafMLVSsmUGzTIU1xW30QjDhCEev7lPb9FqQoVohpSakeqSW4iIA/cvpmNu93S8UA/kYhDfUkZb8MhDot/adb/XL6lFP7Ii7OwO2PkmLHnX6WTLKGWDeUCeADqq2vHh0/YiT5kn1xBK4kv2IOJO1r7RNAF7LWOb+ImxB9INgJ9I5kb8lt48sm2MrHf1wwPsVQrNI3rNTuTlsViQmCabUv+09iYtH+hKAtiFVgGcgqexms/E9ilRMzJSSoU/BloBc+23Wy6bL1RRz0hvEOT+o/lHX29tGJGRkJ9tHWS98g2Ah0NIqUaYz05jsGFs8/YiIms5BoV/91NlNULwz+D7k4C28mNoBFAAAAAElFTkSuQmCC" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/7f1b3b12.V2Xing-Yun-28@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=30','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_729ecffd-f19c-4e1f-b27b-8a9d53e08531.png" alt="" />
+        <div>
+         <span><?php echo _lang('台湾幸运28')?></span>
+         <span>简单易中奖</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/7f1b3b12.V2Xing-Yun-28@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=31','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_729ecffd-f19c-4e1f-b27b-8a9d53e08531.png" alt="" />
+        <div>
+         <span><?php echo _lang('新加坡幸运28')?></span>
+         <span>简单易中奖</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 <!--                 时时彩专区                                         -->
+	 
+	 
+	 
+     <div class="block">
+      <header style="background-image: url(&quot;images/49b49da8.V2Shi-Shi-Cai@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=32','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+        <div>
+         <span><?php echo _lang('重庆时时彩')?></span>
+         <span>最火爆的快彩</span>
+        </div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABhdJREFUaAXdml2IVVUUx70RpRFDIpRZMUiUTIRFHyIROtAHOcpYEYFB9NRTD8kQ9BC91IMgBEUPEYgQEoVBRI4kPc1A9BCR5WhJYtOYTpPmR0OQvTT9/te9rstzzj33nLPPzB3uhv/sr7X+67/u+djn7DNLlvRoacxXXnNzcyvgvgOsBn3geqDyN5gFk+BYo9E4S117qS0xEpH4zWAQbASrQJEyjdE4GAP7SVRJR5foxEhoLSq2gy1gaaSii/iPgrdJ8FAMV+XESKifwK+DZ9sI+IdxHY0Z8HuA4q0EN4daR3UZyCp7GXyTBKeyJmsfI6HlYAc4C2YTOEJ/J9gAru4UXDbBVj7yTfL9yZhiLe/EFTVPgAEwAZIC9jB2TxQ5zuIA4kryK+ZALH+mP8RDYDoR9AD9BzMdIgbFCcTtE1TsoQjatCuEI+AvF+gU7eG0Zb0jxNgKFMsSlIaRWqKIyBErwPdgTS3kBUgUK8S05FTHJQeBTj9/pPbRn98LOSNZxQSKbclJU7XTEkfdKPw1JeKOd7oMXbUMKTbwyUlbuRsKDvqFJoD9Qjr9FvxIJX+RoEtaTJc0FteFsdYOcz5J+85kkG710aJrzt9QdhTSglM/0MJoic373a+QMGeEtmGnT1r1FJRfMNrlnA7kW3dvFo1+nduVqwRjrfx2pFTXvvjmCigxKW0JrXoYzy4Y7nbGe7KtFs8oWv3j1+5MZRj1gdMusY7Pftg+D94H92eSRg7CeyPYDh7OomLcn2HS3peyY3AbsNPwSMogMYDtbc7+DO3HEiZRXfhuBz+FGOeob8oiZNy/FWwzm6usQT3o2vtdu13zDBP2Wn8t7Y8IUu1pIBEBHi0vX4BbwtS/1Hq/yype62DKALKjwI7YhpRBxgD2uoB/c376ZaOWB/zvAscdp27nmzLCN4eY07uf6T56hR0TK9zkH7QLPzphey+Ycv7naT9zRYCCHfzWgl8dl66bR/LcmdejljRbctpEulQYXO8mDtp40Rrfu8Gk47hA+7mi/rLD/j5wwnHM0NamUMeC3UHnt14Odo2tdt7aoyhV2Jc4jINOl9PBUbzvEeyF0M+tsFuHwefghmCoLbqn4R0P/U6V19zMxRLzt0ltvJQuiND5reTMv0H7XUS/mEfG/EPMfwZMwyztJ+H7Os8vMWcxNdzkscRsM1MT3kj9wgUxxzBWcied01uIf8n1W03Gdap9Ciz+BdrD8HzTMirW8JqbXJaYd9cvXbkg6hecnwBTjkRvC9p7bBX6j9L5BFwXBs9Rb8H/u9AvU6U0W2I6p62stEbVGnEn8FVyxx3HGyTzqvrUOqofg6XqU7QmDuF3qNkr/8drbuZiiem8tqLNzOiCyFOQKIGfHdlrJPUB/Q/BNWF8hnoT9j+GfpXKa27mYolNOjafvRsu30RsUzSeXvRT9G2dbCaPnU++fKBLu8vmdzkXfsXKC7Sx5dWB/ytqW0RVHwb9eX5F5uBov0CLAIPSj1RFApsN/NpH+RIoqW/BrTYXU8OT+Uhlp6K4x10AfTmptXC6nQePQ/oAWEfbLwkxsbzWVg4+sTHHvtm1a23qegL/1UjqtY6leDmkpV80UyQLPIDmti+arSPGr6jb5KjT9oprL9am1zgackhrTfwCush7YzNHqZJM722/hcT6SU5vrbbmDKePbXdH0LbV6ZPWYushhn6LW9vJa7qbyuXo0gLKb3GLAsfe/CgRkuu9z0h24DlyQ0Af2ex626ejafMLVSsmUGzTIU1xW30QjDhCEev7lPb9FqQoVohpSakeqSW4iIA/cvpmNu93S8UA/kYhDfUkZb8MhDot/adb/XL6lFP7Ii7OwO2PkmLHnX6WTLKGWDeUCeADqq2vHh0/YiT5kn1xBK4kv2IOJO1r7RNAF7LWOb+ImxB9INgJ9I5kb8lt48sm2MrHf1wwPsVQrNI3rNTuTlsViQmCabUv+09iYtH+hKAtiFVgGcgqexms/E9ilRMzJSSoU/BloBc+23Wy6bL1RRz0hvEOT+o/lHX29tGJGRkJ9tHWS98g2Ah0NIqUaYz05jsGFs8/YiIms5BoV/91NlNULwz+D7k4C28mNoBFAAAAAElFTkSuQmCC" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/49b49da8.V2Shi-Shi-Cai@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=33','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+        <div>
+         <span><?php echo _lang('新疆时时彩')?></span>
+         <span>最火爆的快彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/49b49da8.V2Shi-Shi-Cai@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=34','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+        <div>
+         <span><?php echo _lang('天津时时彩')?></span>
+         <span>最火爆的快彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/49b49da8.V2Shi-Shi-Cai@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=35','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+        <div>
+         <span><?php echo _lang('台湾时时彩')?></span>
+         <span>最火爆的快彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/49b49da8.V2Shi-Shi-Cai@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=36','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+        <div>
+         <span><?php echo _lang('新加坡时时彩')?></span>
+         <span>最火爆的快彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	      <div class="block">
+      <header style="background-image: url(&quot;images/49b49da8.V2Shi-Shi-Cai@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=37','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_20c97d94-7d05-45a9-9699-3b2732be17fa.png" alt="" />
+        <div>
+         <span><?php echo _lang('幸运时时彩')?></span>
+         <span>最火爆的快彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	 <!--pk10专区-->
+	 
+	 
+     <div class="block">
+      <header style="background-image: url(&quot;images/b5b7581b.V2PK-10@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=39','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_da0ba8b8-8240-4093-8aad-3bf0a37a93d7.png" alt="" />
+        <div>
+         <span>北京PK拾</span>
+         <span><?php echo _lang('猜冠军')?></span>
+        </div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABhdJREFUaAXdml2IVVUUx70RpRFDIpRZMUiUTIRFHyIROtAHOcpYEYFB9NRTD8kQ9BC91IMgBEUPEYgQEoVBRI4kPc1A9BCR5WhJYtOYTpPmR0OQvTT9/te9rstzzj33nLPPzB3uhv/sr7X+67/u+djn7DNLlvRoacxXXnNzcyvgvgOsBn3geqDyN5gFk+BYo9E4S117qS0xEpH4zWAQbASrQJEyjdE4GAP7SVRJR5foxEhoLSq2gy1gaaSii/iPgrdJ8FAMV+XESKifwK+DZ9sI+IdxHY0Z8HuA4q0EN4daR3UZyCp7GXyTBKeyJmsfI6HlYAc4C2YTOEJ/J9gAru4UXDbBVj7yTfL9yZhiLe/EFTVPgAEwAZIC9jB2TxQ5zuIA4kryK+ZALH+mP8RDYDoR9AD9BzMdIgbFCcTtE1TsoQjatCuEI+AvF+gU7eG0Zb0jxNgKFMsSlIaRWqKIyBErwPdgTS3kBUgUK8S05FTHJQeBTj9/pPbRn98LOSNZxQSKbclJU7XTEkfdKPw1JeKOd7oMXbUMKTbwyUlbuRsKDvqFJoD9Qjr9FvxIJX+RoEtaTJc0FteFsdYOcz5J+85kkG710aJrzt9QdhTSglM/0MJoic373a+QMGeEtmGnT1r1FJRfMNrlnA7kW3dvFo1+nduVqwRjrfx2pFTXvvjmCigxKW0JrXoYzy4Y7nbGe7KtFs8oWv3j1+5MZRj1gdMusY7Pftg+D94H92eSRg7CeyPYDh7OomLcn2HS3peyY3AbsNPwSMogMYDtbc7+DO3HEiZRXfhuBz+FGOeob8oiZNy/FWwzm6usQT3o2vtdu13zDBP2Wn8t7Y8IUu1pIBEBHi0vX4BbwtS/1Hq/yype62DKALKjwI7YhpRBxgD2uoB/c376ZaOWB/zvAscdp27nmzLCN4eY07uf6T56hR0TK9zkH7QLPzphey+Ycv7naT9zRYCCHfzWgl8dl66bR/LcmdejljRbctpEulQYXO8mDtp40Rrfu8Gk47hA+7mi/rLD/j5wwnHM0NamUMeC3UHnt14Odo2tdt7aoyhV2Jc4jINOl9PBUbzvEeyF0M+tsFuHwefghmCoLbqn4R0P/U6V19zMxRLzt0ltvJQuiND5reTMv0H7XUS/mEfG/EPMfwZMwyztJ+H7Os8vMWcxNdzkscRsM1MT3kj9wgUxxzBWcied01uIf8n1W03Gdap9Ciz+BdrD8HzTMirW8JqbXJaYd9cvXbkg6hecnwBTjkRvC9p7bBX6j9L5BFwXBs9Rb8H/u9AvU6U0W2I6p62stEbVGnEn8FVyxx3HGyTzqvrUOqofg6XqU7QmDuF3qNkr/8drbuZiiem8tqLNzOiCyFOQKIGfHdlrJPUB/Q/BNWF8hnoT9j+GfpXKa27mYolNOjafvRsu30RsUzSeXvRT9G2dbCaPnU++fKBLu8vmdzkXfsXKC7Sx5dWB/ytqW0RVHwb9eX5F5uBov0CLAIPSj1RFApsN/NpH+RIoqW/BrTYXU8OT+Uhlp6K4x10AfTmptXC6nQePQ/oAWEfbLwkxsbzWVg4+sTHHvtm1a23qegL/1UjqtY6leDmkpV80UyQLPIDmti+arSPGr6jb5KjT9oprL9am1zgackhrTfwCush7YzNHqZJM722/hcT6SU5vrbbmDKePbXdH0LbV6ZPWYushhn6LW9vJa7qbyuXo0gLKb3GLAsfe/CgRkuu9z0h24DlyQ0Af2ex626ejafMLVSsmUGzTIU1xW30QjDhCEev7lPb9FqQoVohpSakeqSW4iIA/cvpmNu93S8UA/kYhDfUkZb8MhDot/adb/XL6lFP7Ii7OwO2PkmLHnX6WTLKGWDeUCeADqq2vHh0/YiT5kn1xBK4kv2IOJO1r7RNAF7LWOb+ImxB9INgJ9I5kb8lt48sm2MrHf1wwPsVQrNI3rNTuTlsViQmCabUv+09iYtH+hKAtiFVgGcgqexms/E9ilRMzJSSoU/BloBc+23Wy6bL1RRz0hvEOT+o/lHX29tGJGRkJ9tHWS98g2Ah0NIqUaYz05jsGFs8/YiIms5BoV/91NlNULwz+D7k4C28mNoBFAAAAAElFTkSuQmCC" />
+       </div>
+      </header>
+     </div>
+	 
+	 <div class="block">
+      <header style="background-image: url(&quot;images/b5b7581b.V2PK-10@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=40','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_da0ba8b8-8240-4093-8aad-3bf0a37a93d7.png" alt="" />
+        <div>
+         <span><?php echo _lang('台湾')?>PK拾</span>
+         <span><?php echo _lang('猜冠军')?></span>
+        </div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABhdJREFUaAXdml2IVVUUx70RpRFDIpRZMUiUTIRFHyIROtAHOcpYEYFB9NRTD8kQ9BC91IMgBEUPEYgQEoVBRI4kPc1A9BCR5WhJYtOYTpPmR0OQvTT9/te9rstzzj33nLPPzB3uhv/sr7X+67/u+djn7DNLlvRoacxXXnNzcyvgvgOsBn3geqDyN5gFk+BYo9E4S117qS0xEpH4zWAQbASrQJEyjdE4GAP7SVRJR5foxEhoLSq2gy1gaaSii/iPgrdJ8FAMV+XESKifwK+DZ9sI+IdxHY0Z8HuA4q0EN4daR3UZyCp7GXyTBKeyJmsfI6HlYAc4C2YTOEJ/J9gAru4UXDbBVj7yTfL9yZhiLe/EFTVPgAEwAZIC9jB2TxQ5zuIA4kryK+ZALH+mP8RDYDoR9AD9BzMdIgbFCcTtE1TsoQjatCuEI+AvF+gU7eG0Zb0jxNgKFMsSlIaRWqKIyBErwPdgTS3kBUgUK8S05FTHJQeBTj9/pPbRn98LOSNZxQSKbclJU7XTEkfdKPw1JeKOd7oMXbUMKTbwyUlbuRsKDvqFJoD9Qjr9FvxIJX+RoEtaTJc0FteFsdYOcz5J+85kkG710aJrzt9QdhTSglM/0MJoic373a+QMGeEtmGnT1r1FJRfMNrlnA7kW3dvFo1+nduVqwRjrfx2pFTXvvjmCigxKW0JrXoYzy4Y7nbGe7KtFs8oWv3j1+5MZRj1gdMusY7Pftg+D94H92eSRg7CeyPYDh7OomLcn2HS3peyY3AbsNPwSMogMYDtbc7+DO3HEiZRXfhuBz+FGOeob8oiZNy/FWwzm6usQT3o2vtdu13zDBP2Wn8t7Y8IUu1pIBEBHi0vX4BbwtS/1Hq/yype62DKALKjwI7YhpRBxgD2uoB/c376ZaOWB/zvAscdp27nmzLCN4eY07uf6T56hR0TK9zkH7QLPzphey+Ycv7naT9zRYCCHfzWgl8dl66bR/LcmdejljRbctpEulQYXO8mDtp40Rrfu8Gk47hA+7mi/rLD/j5wwnHM0NamUMeC3UHnt14Odo2tdt7aoyhV2Jc4jINOl9PBUbzvEeyF0M+tsFuHwefghmCoLbqn4R0P/U6V19zMxRLzt0ltvJQuiND5reTMv0H7XUS/mEfG/EPMfwZMwyztJ+H7Os8vMWcxNdzkscRsM1MT3kj9wgUxxzBWcied01uIf8n1W03Gdap9Ciz+BdrD8HzTMirW8JqbXJaYd9cvXbkg6hecnwBTjkRvC9p7bBX6j9L5BFwXBs9Rb8H/u9AvU6U0W2I6p62stEbVGnEn8FVyxx3HGyTzqvrUOqofg6XqU7QmDuF3qNkr/8drbuZiiem8tqLNzOiCyFOQKIGfHdlrJPUB/Q/BNWF8hnoT9j+GfpXKa27mYolNOjafvRsu30RsUzSeXvRT9G2dbCaPnU++fKBLu8vmdzkXfsXKC7Sx5dWB/ytqW0RVHwb9eX5F5uBov0CLAIPSj1RFApsN/NpH+RIoqW/BrTYXU8OT+Uhlp6K4x10AfTmptXC6nQePQ/oAWEfbLwkxsbzWVg4+sTHHvtm1a23qegL/1UjqtY6leDmkpV80UyQLPIDmti+arSPGr6jb5KjT9oprL9am1zgackhrTfwCush7YzNHqZJM722/hcT6SU5vrbbmDKePbXdH0LbV6ZPWYushhn6LW9vJa7qbyuXo0gLKb3GLAsfe/CgRkuu9z0h24DlyQ0Af2ex626ejafMLVSsmUGzTIU1xW30QjDhCEev7lPb9FqQoVohpSakeqSW4iIA/cvpmNu93S8UA/kYhDfUkZb8MhDot/adb/XL6lFP7Ii7OwO2PkmLHnX6WTLKGWDeUCeADqq2vHh0/YiT5kn1xBK4kv2IOJO1r7RNAF7LWOb+ImxB9INgJ9I5kb8lt48sm2MrHf1wwPsVQrNI3rNTuTlsViQmCabUv+09iYtH+hKAtiFVgGcgqexms/E9ilRMzJSSoU/BloBc+23Wy6bL1RRz0hvEOT+o/lHX29tGJGRkJ9tHWS98g2Ah0NIqUaYz05jsGFs8/YiIms5BoV/91NlNULwz+D7k4C28mNoBFAAAAAElFTkSuQmCC" />
+       </div>
+      </header>
+     </div>
+	 
+	 <div class="block">
+      <header style="background-image: url(&quot;images/b5b7581b.V2PK-10@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=41','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_da0ba8b8-8240-4093-8aad-3bf0a37a93d7.png" alt="" />
+        <div>
+         <span>新加坡PK拾</span>
+         <span><?php echo _lang('猜冠军')?></span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	 <div class="block">
+      <header style="background-image: url(&quot;images/b5b7581b.V2PK-10@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=42','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_da0ba8b8-8240-4093-8aad-3bf0a37a93d7.png" alt="" />
+        <div>
+         <span>幸运PK拾</span>
+         <span><?php echo _lang('猜冠军')?></span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+	 
+	 
+	 
+	 
+     <!--div class="block">
+      <header style="background-image: url(&quot;images/d389b626.V2Shi-Yi-Xuan-Wu@3x.png&quot;);">
+       <div class="">
+        <img src="https://pic.weilukeji.top/1/activity/1_5e4d3b31-b1ea-483b-ad7f-6c291131696f.png" alt="" />
+        <div>
+         <span><?php echo _lang('11选5')?></span>
+         <span><?php echo _lang('轻松中奖')?></span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+     <div class="block">
+      <header style="background-image: url(&quot;images/324a6dea.V2Kuai-San@3x.png&quot;);">
+       <div class="">
+        <img src="https://pic.weilukeji.top/1/activity/1_55e12faa-91fa-4dae-81b9-01c180b23a15.png" alt="" />
+        <div>
+         <span>快3</span>
+         <span><?php echo _lang('猜骰子')?></span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div-->
+     <div class="block">
+      <header style="background-image: url(&quot;images/931648dd.V2Kuai-10@3x.png&quot;);">
+       <div class="" onclick="window.open('?a=game&gameid=38','_self')">
+        <img src="https://pic.weilukeji.top/1/activity/1_de5423d1-2b67-497e-b183-efead57b5e06.png" alt="" />
+        <div>
+         <span><?php echo _lang('幸运飞艇')?></span>
+         <span>幸运等着你</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+     <!--div class="block">
+      <header style="background-image: url(&quot;images/931648dd.V2Kuai-10@3x.png&quot;);">
+       <div class="">
+        <img src="https://pic.weilukeji.top/1/activity/1_59652547-a8de-4ac9-b716-b6c1e5a6dc3b.png" alt="" />
+        <div>
+         <span>快乐8</span>
+         <span>keno彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div>
+     <div class="block">
+      <header style="background-image: url(&quot;images/dd2310fa.V2Liu-He-Cai@3x.png&quot;);">
+       <div class="">
+        <img src="https://pic.weilukeji.top/1/activity/1_3b88a78a-6e45-4512-99fd-5c87c3d0824f.png" alt="" />
+        <div>
+         <span>六合彩</span>
+         <span>最盛行的港彩</span>
+        </div>
+        <img src="data:image/png;base64,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" />
+       </div>
+      </header>
+     </div-->
+    </div>
+    <footer class="footer-nav">
+     <div>
+      <li><a class="footer-link active" aria-current="page" href="?a="><img style="transform: scale(1);" src="data:image/png;base64,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" /><span>首页</span></a><span></span></li>
+      <!--li><a class="footer-link" href="#/home/lottery"><img style="transform: scale(1);" src="data:image/png;base64,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" /><span>开奖</span></a><span></span></li-->
+      <li><a class="footer-link active" aria-current="page" href="?a=dating"><img style="transform: scale(1.2);" src="images/806506e0.hall_active.png" /><span style="color: red;">大厅</span></a><span></span></li>
+      <li><a class="footer-link" href="?a=youhui"><img style="transform: scale(1);" src="data:image/png;base64,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" /><span>优惠</span></a><span></span></li>
+      <li><a class="footer-link" href="?a=user"><img style="transform: scale(1);" src="data:image/png;base64,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" /><span>我的</span></a><span></span></li>
+     </div>
+     <p></p>
+    </footer>
+   </div>
+  </div>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+<script>
+var list = document.querySelectorAll('.list');
+
+function accordion(e) {
+    e.stopPropagation();
+    if (this.classList.contains('active')) {
+        this.classList.remove('active');
+    } else
+    if (this.parentElement.parentElement.classList.contains('active')) {
+        this.classList.add('active');
+    } else
+    {
+        for (i = 0; i < list.length; i++) {
+            list[i].classList.remove('active');
+
+        }
+        this.classList.add('active');
+    }
+}
+for (i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', accordion);
+}</script>
+  <style>#drager {   position: fixed;   width: 1.2rem;   height: 1.2rem;   background-color: transparent;   z-index: 10000;   cursor: pointer;   top: 0px;   left: 0px;   border-radius: 50%;   padding: .1rem;   box-sizing: border-box }#drager>img{width: 100%;height: 100%;border-radius:50%; } </style>
+  <a href="?a=kefu" id="drager" style="top: calc(100% - 4rem); left: 302px;"><img id="drager-img" src="statics/images/1_dc66af9c-ea94-453c-aa96-394465e18593.png" /></a>
+ </body>
+</html>

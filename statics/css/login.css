@@ -1,0 +1,113 @@
+/* 后台登录 */
+body, html {
+	font: 12px/1.5 '微软雅黑';
+}
+
+body {
+	background: #f5f5f5;
+	color: #6B6B6B;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.login_box {
+	width: 100%;
+	max-width: 400px;
+	height: 300px;
+	margin: 15% auto 0 auto;
+	background: #FFF;
+	box-shadow: 0 0 10px #494949;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.login .title {
+	background: #cb0816;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #FFF;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.login_box .login_ibox {
+	margin: 20px;
+}
+
+.login_box .login_ibox .btn_box {
+	overflow: hidden;
+}
+
+.login_box .login_ibox .input_box {
+	line-height: 50px;
+	border: 1px solid #e2e2e2;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.login_box .login_ibox .btn_box .input_box {
+	float: left;
+	width: 75%;
+}
+
+.login_box .login_ibox .input_box .input_caption {
+	background: #f2f2f2;
+	width: 40px;
+	border-right: 1px solid #e2e2e2;
+	float: left;
+	text-align: center;
+}
+
+.login_box .login_ibox .input_box .input_caption .input_caption_img {
+	padding: 17px 0;
+}
+
+.login_box .login_ibox .input_box .input_value {
+	line-height: 50px;
+	float: left;
+	width: 80%;
+	/*
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;*/
+}
+
+.login_box .login_ibox .btn_box .input_box .input_value {
+	width: 40%;
+}
+
+.login_box .login_ibox .input_box input {
+	width: 80%;
+	line-height: 22px;
+	border: 0px;
+	background: none;
+	padding: 14px 10px;
+	outline: none;
+	font-size: 14px;
+	color: #130000;
+}
+
+.login_box .login_ibox .input_box #code_img {
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 14px 0px;
+}
+
+.login_box .login_ibox .login_btn {
+	float:right;
+	width: 20%;
+	height: 50px;
+	font-size:16px;
+	line-height: 50px;
+	margin-top: 20px;
+	border: 1px solid #F60;
+	text-align: center;
+	letter-spacing: 2px;
+	color: white;
+	cursor: pointer;
+	background: #cb0816;
+}

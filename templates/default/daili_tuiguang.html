@@ -1,0 +1,136 @@
+<html style="font-size: 48px;" lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="renderer" content="webkit" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+  <meta name="Robots" contect="none" />
+  <link href="<?php echo CSS_PATH?>app.cc8ec.css" rel="stylesheet" />
+  <?php include template("header"); ?>
+  <title><?php echo _lang('云鼎国际')?></title>
+    <script>
+    if(('standalone' in window.navigator)&&window.navigator.standalone){ 
+var noddy,remotes=false; 
+ document.addEventListener('click',function(event){ 
+ noddy=event.target; 
+ while(noddy.nodeName!=='A'&&noddy.nodeName!=='HTML') noddy=noddy.parentNode; 
+ if('href' in noddy&&noddy.href.indexOf('http')!==-1&&(noddy.href.indexOf(document.location.host)!==-1||remotes)){ 
+ event.preventDefault(); 
+ document.location.href=noddy.href; 
+ } 
+},false); 
+} 
+</script>
+ </head>
+ <body> 
+ <style type="text/css">
+	.header_box .user_box {
+	    position: relative;
+	    width: 100%;
+	    margin: 0;
+	    padding: 0%; 
+	    color: #666;
+	}
+	.header_box .min_nav {
+		height: 30px;
+	}
+	.header_box .min_nav a {
+	    display: block;
+	    float: left;
+	    width: 16.5%;
+	    height: 30px;
+	    font-size: 13px;
+	    text-align: center;
+	}
+	.header_box .min_nav .sel{
+		color: #f00;
+	}
+</style>
+  <!--[if lt IE 9]>
+不兼容IE9以下浏览器 请去更新浏览器,推荐使用 Chrome浏览器
+<![endif]-->
+  <div id="app">
+   <div class="share">
+    <header class="header-nav">
+     <div class="header-back active-opacity" onClick="window.open('?a=user','_self')">
+      <img class="HeaderImg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABCCAYAAAA/rXTfAAAAAXNSR0IArs4c6QAAA1ZJREFUaAXFmk2ITWEYx+8dZhpmTFOimYymqCmKMsWCohihUFgwhcWwGFOG8rEZFigNCyyQSGHBggULFqOGhcJCMmVC46tEpEHIt/F7dN+6ne7pfTb/M0/9e8/7vs97/r9zztx7nnPu5HLDEENDQ3m0GfWjT6gXNQ8DSi6H8Qh0ASXjJwMzMoXCsAydS5IU9XsyA8LULtPpIvNSmx+zBDpeiiAxNpAJEKZHEsZp3f1yIJwPprknxu/Rr5QCYbAvYZrW7WNirBpmd5p7Yty+i8arYXYmTNO6T5ioV8NsTXNPjD+l36CG6UiYpnVfMNGohtmIyd80gqLxV2xPUsOsx+RPkWna5hsmmtQwrU6Yt+RNUcOswuQXisV7EqapYZZjYiVDLD6QoC0rMFiCfsRImLfia6b6zLRg8s0B85mc2WqYeZh8dcBYzlw1zBxM7KhjYWdvgRpmFib29xCL7yQsVsM0Y2KflFjYJ26ZGmY6JvYdEgv7LlqphpmKybsYCfO/0Ro1TBMmdt+Jhd2/1qlhJmNid+RY2J19gxqmEZOXMZLC/CY1TANGz5wwW9Qw9YBYfeuJHWqYaiis8vfELimM7RyKQx4ScvbKYQpAzx1ABzKBKQANRoC+MK8tyouOtozt20X9UptVDPYCpX1sCc4Y2S3CU3ANkDchrJO2GM13Qj0mr04KE3aO0SJk9UwsHpIwLqyTthgtRZ4niQfkaV+fhCPFaAXyPGvZC6basE7aYrQaWZ0Ti7sk1Ehhws4xWos8z+u3yKsO66QtRm3I6p5Y3CRhtBQm7Byj9hhNYf46rfalZRFUpxPqGnkVYZ20xWi7E+oKeeVSmLBzjLqcUJfIGxnWSVuM9jihzpNnN299YNTthDqbJZS30jwFVF5/mnDA6KjzTB3LCsh+AzvphDqcJdQZJ1R3VlD206V9qjyR2dOL/bh70UNETldWZ6ocs8tOKO0TcDhiYCrQVSdUZ1gnbYGpRD1OqHYpTNg5MKPQDQeU1VttYZ20xagKWUUZC6tMW6UwYecYjUF3YkTM2zvwiWGdtMWoFtlTSiy2ZVIe5PN5+xeKhagvcuT1mQAZBFCDNC2o3/opcT9lXDfMNatDj0pcO7uk2VSZycPDuAadQK8Lsorh/1PwP29T2eqMB1TeAAAAAElFTkSuQmCC" />
+     </div>
+     <div class="header-title">
+     <?php echo _lang('我要分享')?>
+     </div>
+     <div class="header-right" style="visibility: inherit;"></div>
+    </header>
+<?php
+    $source_url = $this->setting['weburl'] ."/?a=register&agent=".$user['uid'];
+    
+    
+    $searchUrl='http://suo.im/api.htm?url='.$source_url.'&key=5e5748f8b1b63c667a2c680d@9840555206d0db227b4e4a44c9a2f0a7';
+    //$dst_url  = file_get_contents($searchUrl);
+    $dst_url  = $source_url;
+    
+?>
+    <div class="card"> </br></br>
+     <div class="qr" >
+      <div style="text-align: center;" ><img src="http://api.wx.urlfh.com//dwz.php?format=qrcode&type=qq&longurl=<?php echo $source_url; ?>" />
+    
+      <!--div style="text-align: center;" id="tuiguang" -->	
+      	
+     	
+      </div>
+     </div>
+     <div class="line">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAAAGCAYAAACLgfY0AAABgElEQVRoQ+2VbYrCMBCGM5MULeglvEiv1vt4My9gS0lmeWczEru7sD9EIowgSZP5CA/NUwr+cwJOwAk4gbcSoLd282ZOwAk4AScQuhHvPM88TROfz2e63W4cY0zLsvAwDLSuK4tIPB6PvG0bHw4HHXPOnFIaMIYQYoxRx/aZiFIpRfMlClOmhDlisY54/Jk5llIS5kT0WA8hIP4pTkQG1GBmXce+PaMG8tG35qGm7jfr6Gk1Na72xNp3HodI8nQOy0GtH/FNPu32/8qzuMdYz2T19d2QIEyBMO/mXfF76wQ+nUA3l0lE6Hq98uVyYYg35xzv9zufTieGeMdxVNmaeEspKlhmuDep2CBSCK8KWcXcCtDEa8Lci9ckjFomVIiwESzkqXI2wbY5iKu5KlDbgxR/EbIKu57PZG8yZiFJJt69iFuxmtBNmlXyrZhVvOBbPyo6VpFijp42Yu7i/fRb7efvnkA34u2elB/QCTgBJ/AiAi7eF4H0Mk7ACTiB/xL4Aism0jdRdTVwAAAAAElFTkSuQmCC" alt="" /><?php echo _lang('扫描二维码下载APP')?>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAAAGCAYAAACLgfY0AAABMklEQVRoQ+2YQYqEMBBFU9GAC9fezPN4KD2Pd3AjOCZVzZekcdEzdOMgvfiCRCuVqvDEJyiOBwmQAAmQwK0E5NZubEYCJEACJOBkHEcjBxIgge8gYM5UnJiZqYjg3cSZ8qinEdc4Y57HqHldMrMoIud51Ig5nkwsOnVJRLDuXOPIKzER2VU1ee+PtehlZjvmEVPVH+Qgdr4vvbz3mDvqIa/EUUdVcV/2mkIIz/1579O2bRpCUFxXVZXWddWmaXRZFm3bVruu03mete/7wuo7HuIbu6B434DEFBK4i8AF8UKYkBgk9FK8JrZn2f4l3qeEIcws038XL2qfRB4h3Rij1nW9Y/9FvBgh39/EO01TGobB8kfqrsd0uQ9/NVxGyAIkQAIk8BkBivczXswmARIggcsEHnhrLBb2xQTtAAAAAElFTkSuQmCC" alt="" />
+     </div>
+     <div class="linkContainer">
+      <div class="link">
+      	
+      	
+
+<div class="wrapper">
+<label for=""><?php echo _lang('推广连接')?>：</label>
+ <textarea id="input"><?php echo $dst_url;?></textarea>
+       <p id="text" style="display: none;"><?php echo $dst_url;?></p>
+	   </div>
+      </div>
+      <a role="button" onClick="copyText()" class="am-button am-button-primary" aria-disabled="false" style="height = 80%"><span><?php echo _lang('点击复制连接')?></span></a>
+     </div>
+    </div></br></br>
+    <div></br></br>
+     
+     <?php echo _lang('分享给好友，一起体验游戏的乐趣')?>
+    </div>
+   </div>
+  </div>
+  
+   <script type="text/javascript">
+    function copyText() {
+      var text = document.getElementById("text").innerText;
+      var input = document.getElementById("input");
+      input.value = text; // 修改文本框的内容
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("<?php echo _lang('复制成功')?>");
+    }
+  </script>
+  <script>var container = document.getElementById('app');
+        container.style.webkitOverflosScrolling = 'auto';
+        container.scrollTop = 9999;
+        container.style.webkitOverflosScrolling = 'touch';</script>
+		<script type="text/javascript">
+$(function(){
+	$("#tuiguang").qrcode({width: 256,height: 256,text: "<?php echo $dst_url?>"});
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<script type="text/javascript" src="/statics/jquery-qrcode-master/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+  <style>#drager {   position: fixed;   width: 1.2rem;   height: 1.2rem;   background-color: transparent;   z-index: 10000;   cursor: pointer;   top: 0px;   left: 0px;   border-radius: 50%;   padding: .1rem;   box-sizing: border-box }#drager>img{width: 100%;height: 100%;border-radius:50%; } </style>
+  <a href="?a=kefu" id="drager" style="top: calc(100% - 4rem); left: 302px; visibility: initial;"><img id="drager-img" src="statics/images/1_dc66af9c-ea94-453c-aa96-394465e18593.png" /></a>
+ </body>
+</html>

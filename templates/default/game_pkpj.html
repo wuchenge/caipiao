@@ -1,0 +1,168 @@
+<?php include template("header"); ?>
+<link type="text/css" rel="stylesheet" href="<?php echo CSS_PATH?>pkpj.css" />
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="pic" href="?a=user" title="会员中心">
+			<?php
+			if ($user['pic']) {
+				if(preg_match('/^\d*$/',$user['pic'])){
+					echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
+				} else {
+					echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
+				}
+			}
+			?>
+		</a>
+		<a class="order" href="?a=order" title="我的注单"><i class="iconfont icon-liebiao"></i></a>
+		<h4><?php echo $gamename?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="mj"></div>
+		<div class="dh_box">
+			<iframe frameborder="0" src="games/BJSC/index.html" width="100%" height="100%" scrolling="no" allowTransparency="true"></iframe>
+		</div>
+		<div class="pkpj_box">
+			<div class="men_list">
+				<div class="line p_1">
+					<div class="t_box">
+						<p class="all_count">0</p>
+						<div class="s_box"></div>
+						<div class="send_line">
+							<p class="select_num">0</p>
+							<a class="send" data="1门" href="javascript:;">确认</a>
+							<i class="now_count">0</i>
+						</div>
+						<em>1门</em>
+					</div>
+					<div class="d_box"><em></em></div>
+				</div>
+				<div class="line lottery">
+					<span id="qishu_next">
+						期数<i>001</i>
+					</span>
+					<span id="time"><i>00:00</i><em>封盘</em></span>
+					<a class="cancel" href="javascript:;">重置</a>
+				</div>
+				<div class="line p_2">
+					<div class="t_box">
+						<p class="all_count">0</p>
+						<div class="s_box"></div>
+						<div class="send_line">
+							<p class="select_num">0</p>
+							<a class="send" data="2门" href="javascript:;">确认</a>
+							<i class="now_count">0</i>
+						</div>
+						<em>2门</em>
+					</div>
+					<div class="d_box"><em></em></div>
+				</div>
+				<div class="line p_3">
+					<div class="t_box">
+						<p class="all_count">0</p>
+						<div class="s_box"></div>
+						<div class="send_line">
+							<p class="select_num">0</p>
+							<a class="send" data="3门" href="javascript:;">确认</a>
+							<i class="now_count">0</i>
+						</div>
+						<em>3门</em>
+					</div>
+					<div class="d_box"><em></em></div>
+				</div>
+				<div class="line p_4">
+					<div class="t_box">
+						<p class="all_count">0</p>
+						<div class="s_box"></div>
+						<div class="send_line">
+							<p class="select_num">0</p>
+							<a class="send" data="4门" href="javascript:;">确认</a>
+							<i class="now_count">0</i>
+						</div>
+						<em>4门</em>
+					</div>
+					<div class="d_box"><em></em></div>
+				</div>
+				<div class="line p_5">
+					<div class="t_box">
+						<p class="all_count">0</p>
+						<div class="s_box"></div>
+						<div class="send_line">
+							<p class="select_num">0</p>
+							<a class="send" data="5门" href="javascript:;">确认</a>
+							<i class="now_count">0</i>
+						</div>
+						<em>5门</em>
+					</div>
+					<div class="d_box"><em></em></div>
+				</div>
+			</div>
+			<div class="u_box">
+				<?php if($user) { ?>
+					<a href="?a=account" title="资金流水"><i class="iconfont icon-money"></i><?php echo $this -> setting['stamp'].' <em id="money_now">'.$user['money'].'</em>' ?></a>
+				<?php } else { ?>
+					<a href="?a=login" title="用户登录"><i class="iconfont icon-money"></i>请登录</a>
+				<?php } ?>
+				<a class="rules" href="?a=rules">怎么玩？</a>
+				<a class="go_more" href="?a=haoma"><i class="iconfont icon-kaijiangjilu"></i>历史开奖</a>
+			</div>
+			<div class="cm_box">
+				<div class="cm_bg"></div>
+				<div class="cm_line">
+					<a class="cm_1 a" data="cm_1" money="5" href="javascript:;">5</a>
+					<a class="cm_2" data="cm_2" money="10" href="javascript:;">10</a>
+					<a class="cm_3" data="cm_3" money="50" href="javascript:;">50</a>
+					<a class="cm_4" data="cm_4" money="100" href="javascript:;">100</a>
+					<a class="cm_5" data="cm_5" money="500" href="javascript:;">500</a>
+					<a class="cm_6" data="cm_6" money="1000" href="javascript:;">1K</a>
+				</div>
+			</div>
+			<i class="cm_3d cm_1"></i>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+//强制页面刷新
+window.addEventListener('pageshow', function(event) {
+	//event.persisted属性为true时，表示当前文档是从往返缓存中获取
+	if(event.persisted) location.reload();
+});
+//如下变量仅作为显示及初步验证用 一次查询多处调用
+var gameid = '<?php echo $gameid?>';//游戏ID
+var gamename = '<?php echo $gamename?>';//游戏名称
+var wanfadata = '<?php echo $wanfadata?>';//游戏玩法
+var send_money = '<?php echo $send_money?>';//投注限制
+var fptime = <?php echo $fptime?>;//提前封盘时间
+var uid = <?php echo $user ? $user['uid'] : 0?>;//用户UID
+var qishu = 0;
+var nextqishu = 0;
+var getchat = false;
+var gameshow = true;
+var sotp = <?php echo $this -> setting['stop']?>;
+$(function(){var w=0,t=!0,n=0,r=0,u,A,B,C,v=!1,D=0,E=function(c,e){t?(t=!1,$.ajax({url:"?a=ajax_haoma&gameid="+gameid+"&re="+e,dataType:"json",success:function(d){if(d.id){I(d,c);if(0==d.awartime){d=d.re;var a=1}else d=d.awartime,a=0;x(d,a)}},error:function(){x(1E3,e);t=!0;console.log("ERR")}})):x(1E3,e)},x=function(c,e){var d=Date.parse(new Date);clearTimeout(A);A=setTimeout(function(){E(d,e)},c)},I=function(c,e){if(parseInt(c.qishu)==qishu)return t=!0,!1;qishu&&c.haoma&&setTimeout(function(){J(c)},
+8E3);qishu&&playSound();qishu=parseInt(c.qishu);$("#qishu_now i").html(qishu);w=parseInt(c.sendtime);nextqishu=parseInt(c.nextqishu);r=parseInt(c.awartime)/1E3;n=r-fptime;0<n?(layer.close(u),getchat=!0,u=layer.msg(nextqishu+" \u671f\u6b63\u5728\u6295\u6ce8\u4e2d...",{icon:1,time:800}),v=!1):(getchat=!1,u=layer.msg(nextqishu+" \u671f\u5373\u5c06\u5f00\u5956\uff0c\u73b0\u5728\u5c01\u76d8...",{icon:4}),v=!0);$("#qishu_next i, .order_box h4 span").text(nextqishu);B||(B=setInterval(function(){n=0>n-1?
+0:n-1;r=0>r-1?0:r-1;0!=n||v||(getchat=!1,u=layer.msg(nextqishu+" \u671f\u5373\u5c06\u5f00\u5956\uff0c\u73b0\u5728\u5c01\u76d8...",{icon:4}),v=!0);0<w&&0==r?$("#time i").text("\u5f00\u5956\u4e2d..."):0==n&&0<r&&$("#time i").text(getTime(r));0<w&&0==n?$("#time em").text("\u5df2\u5c01\u76d8"):(4==n&&playSound_Djs(),$("#time em").text("\u6295\u6ce8\u4e2d"),$("#time i").text(getTime(n)))},1E3));!sotp&&F(e,1);t=!0},J=function(c){gameshow=!1;$("a.cancel").click();var e="[91][73][64] [101][92][83][74][65] [102][93][84][75] [103][94][85][76][21] [104][95][86][31] [105][96][87][41][32] [106][97][51][42] [107][98][61][52][43] [108][71][62][53] [109][81][72][63][54] [82]".split(" "),
+d=[];d=c.haoma.split(",");c=d.length;var a=$(window).width(),q=0;750<a&&(q=(a-750)/2);a=$(".scroll_box .mj").offset();var b=1,g="",f=[],h=[],l=[],m=[];for(i=0;i<c;i++){if(0==i%2){var p=[d[i],d[i+1]];p.sort(function(a,b){return b-a});$.each(e,function(a,c){if(-1!==c.indexOf("["+p[0]+p[1]+"]"))return f[b]=a,h[b]=a+"."+(2==(p[0]+p[1]).length?"0"+p[0]+p[1]:p[0]+p[1]),l[b]=h[b],!1});b++}g+='<i style="left:'+(a.left+20*i-q)+'px" class="s_'+i+" m_"+d[i]+'">'+d[i]+"</i>"}$(".scroll_box .mj").html(g);l.sort(function(a,
+b){return b-a});var z=$(".men_list .p_1").width(),k=$(".men_list .p_1 .s_box").width(),n=$(".men_list .p_1 .s_box").height();b=0;$(".scroll_box .mj i").each(function(a,c){var d=42.5;0==a%2&&(d=0,b++);var e=$(".men_list .p_"+b+" .s_box"),p=$(".men_list .p_"+b+" .d_box"),g=f[b],y=l.indexOf(h[b])+1;m[b]=y;e.removeClass("rd_1,rd_2,rd_3,rd_4,rd_5").addClass("rd_"+y);setTimeout(function(){var a=p.offset(),b=e.offset(),h=b.left-q+(k-90)/2+d;b=b.top-49+(n-50)/2;var l=a.left-q+z/2,f=a.top-49;$(c).animate({left:h+
+"px",top:b+"px",height:"50px",width:"40px"},200,function(){var a=$(this);setTimeout(function(){$(c).animate({left:l+"px",top:f+"px",height:"3px",width:"2px"},200,function(){0<=g&&p.find("em").html(g+"\u70b9 <i>"+y+"rd</i>").show();a.remove()})},13E3)})},300*a)});setTimeout(function(){K(m)},2E4)},G=function(c){$.ajax({url:"?a=ajax_gomoney",data:{},type:"POST",dataType:"json",success:function(c){"n"==c.err&&$("#money_now").text(c.money)},error:function(){console.log("ERR")}})},F=function(c,e){$.ajax({url:"?a=ajax_chat_order&gameid="+
+gameid,data:{id:D,qishu:nextqishu,all:e},type:"POST",dataType:"json",success:function(a){"n"==a.err&&0!=a.id&&(D=a.id,$.each(a.order,function(a,b){a=$(".men_list .p_"+parseInt(b.wanfa));var c=parseInt(b.money);if(uid&&uid==b.uid)if(1==e)a.find(".now_count").text(parseInt(a.find(".now_count").text())+c);else return!0;-1!==b.wanfa.indexOf("@\u5e84")&&a.find(".all_count").addClass("lock");a.find(".all_count").text(parseInt(a.find(".all_count").text())+c);k(a.find(".s_box"),c,0)}))},error:function(){console.log("ERR")}});
+var d=Date.parse(new Date);clearTimeout(C);C=setTimeout(function(){F(d,0)},5E3)},k=function(c,e,d){var a=$(".men_list .p_1 .s_box").width()-24,q=$(".men_list .p_1 .s_box").height()-24,b=!0,g=e;d&&(c.empty(),g=d>e?e:d);for(var f=0;5E3>f&&!(0>=e);f++){var h="cm_1",l=5,k=" to",p=Math.ceil(Math.random()*a),z=Math.ceil(Math.random()*q);1E3<=g?(l=1E3,h="cm_6"):500<=g?(l=500,h="cm_5"):100<=g?(l=100,h="cm_4"):50<=g?(l=50,h="cm_3"):10<=g&&(l=10,h="cm_2");d&&(0==g?(g=e,b=!1):b&&(k=" re"));g-=l;e-=l;c.append('<i class="cm '+
+h+k+'" style="top: '+z+"px;left: "+p+'px;">'+l+"</i>")}},f=function(c,e){var d=c.offset(),a=c.detach();$(a).appendTo(".pkpj_box").css({left:d.left,top:d.top-269});c=$(window).width();d=$(e).width()-24;var f=$(e).height()-24,b=Math.ceil(Math.random()*d),g=Math.ceil(Math.random()*f);d=$(e).offset();f=0;750<c&&(f=(c-750)/2);c=d.left+b-f;d=d.top+g-269;$(a).animate({left:c+"px",top:d+"px"},1E3,function(){$($(a).detach()).appendTo(e).css({top:g,left:b})})},K=function(c){var e=[];e[1]=parseInt($(".all_count").eq(0).text());
+e[2]=parseInt($(".all_count").eq(1).text());e[3]=parseInt($(".all_count").eq(2).text());e[4]=parseInt($(".all_count").eq(3).text());e[5]=parseInt($(".all_count").eq(4).text());var d=[];$.each(c,function(a,b){if(0==a)return!0;d[b]=a});var a=[];a[1]=e[d[1]];a[2]=e[d[2]];a[3]=e[d[3]];a[4]=e[d[4]];a[5]=e[d[5]];var q=0;$.each(a,function(a,b){if(0==a)return!0;0==b&&q++});if(4<=q)var b=1E3;else if(a[2]+a[3]+a[4]+a[5]<=a[1])$(".s_box.rd_5 i,.s_box.rd_4 i,.s_box.rd_3 i,.s_box.rd_2 i").each(function(a,b){f($(this),
+".s_box.rd_1")}),b=3E3;else if(a[3]+a[4]+a[5]<=a[1]){$(".s_box.rd_5 i,.s_box.rd_4 i,.s_box.rd_3 i").each(function(a,b){f($(this),".s_box.rd_1")});var g=a[1]-(a[3]+a[4]+a[5]);0<g&&(setTimeout(function(){k($(".s_box.rd_2"),a[2],g)},1E3),setTimeout(function(){$(".s_box.rd_2 i.re").each(function(a,b){f($(this),".s_box.rd_1")})},2E3));b=5E3}else if(a[4]+a[5]<=a[1]){$(".s_box.rd_5 i,.s_box.rd_4 i").each(function(a,b){f($(this),".s_box.rd_1")});g=a[1]-(a[4]+a[5]);if(0<g){setTimeout(function(){k($(".s_box.rd_3"),
+a[3],g)},1E3);setTimeout(function(){$(".s_box.rd_3 i.re").each(function(a,b){f($(this),".s_box.rd_1")})},2E3);var n=a[3]+a[4]+a[5]-a[1]}else n=a[3];setTimeout(function(){k($(".s_box.rd_3"),n,a[2])},3E3);setTimeout(function(){$(".s_box.rd_3 i.re").each(function(a,b){f($(this),".s_box.rd_2")})},4E3);b=7E3}else if(a[5]<=a[1]){$(".s_box.rd_5 i").each(function(a,b){f($(this),".s_box.rd_1")});g=a[1]-a[5];if(0<g){setTimeout(function(){k($(".s_box.rd_4"),a[2],g)},1E3);setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,
+b){f($(this),".s_box.rd_1")})},2E3);var h=a[4]+a[5]-a[1]}else h=a[4];setTimeout(function(){k($(".s_box.rd_4"),h,a[2])},3E3);setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,b){f($(this),".s_box.rd_2")})},4E3);b=7E3;if(h<a[2]){var l=a[2]-h;setTimeout(function(){k($(".s_box.rd_3"),a[3],l)},5E3);setTimeout(function(){$(".s_box.rd_3 i.re").each(function(a,b){f($(this),".s_box.rd_2")})},6E3);b=9E3}else h-=a[2],0<h&&(setTimeout(function(){k($(".s_box.rd_4"),h,a[3])},5E3),setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,
+b){f($(this),".s_box.rd_3")})},6E3),b=9E3)}else if(a[5]>a[1]){var m=a[5]-a[1];k($(".s_box.rd_5"),a[5],a[1]);setTimeout(function(){$(".s_box.rd_5 i.re").each(function(a,b){f($(this),".s_box.rd_1")})},1E3);0<m?(setTimeout(function(){k($(".s_box.rd_5"),m,a[2])},2E3),setTimeout(function(){$(".s_box.rd_5 i.re").each(function(a,b){f($(this),".s_box.rd_2")})},3E3),m>=a[2]?(m-=a[2],0<m?(setTimeout(function(){k($(".s_box.rd_5"),m,a[3])},4E3),setTimeout(function(){$(".s_box.rd_5 i.re").each(function(a,b){f($(this),
+".s_box.rd_3")})},5E3),b=8E3,m>=a[3]&&(m-=a[3],0<m&&(setTimeout(function(){k($(".s_box.rd_5"),m,a[4])},5E3),setTimeout(function(){$(".s_box.rd_5 i.re").each(function(a,b){f($(this),".s_box.rd_4")})},6E3),b=9E3))):(setTimeout(function(){k($(".s_box.rd_4"),a[4],a[3])},4E3),setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,b){f($(this),".s_box.rd_3")})},5E3),b=8E3)):(l=a[2]-m,setTimeout(function(){k($(".s_box.rd_4"),a[4],l)},4E3),setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,
+b){f($(this),".s_box.rd_2")})},5E3),b=8E3,a[4]>=l?(h=a[4]-l,0<h&&(setTimeout(function(){k($(".s_box.rd_4"),h,a[3])},5E3),setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,b){f($(this),".s_box.rd_3")})},6E3),b=9E3)):(l-=a[4],setTimeout(function(){k($(".s_box.rd_3"),a[3],l)},5E3),setTimeout(function(){$(".s_box.rd_3 i.re").each(function(a,b){f($(this),".s_box.rd_2")})},6E3),b=9E3))):(setTimeout(function(){k($(".s_box.rd_4"),a[4],a[2])},2E3),setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,
+b){f($(this),".s_box.rd_2")})},3E3),b=6E3,a[4]>=a[2]?(h=a[4]-a[2],0<h&&(setTimeout(function(){k($(".s_box.rd_4"),h,a[3])},4E3),setTimeout(function(){$(".s_box.rd_4 i.re").each(function(a,b){f($(this),".s_box.rd_3")})},5E3),b=8E3)):(l=a[2]-a[4],setTimeout(function(){k($(".s_box.rd_3"),a[3],l)},4E3),setTimeout(function(){$(".s_box.rd_3 i.re").each(function(a,b){f($(this),".s_box.rd_2")})},5E3),b=8E3))}setTimeout(function(){$(".all_count, .select_num, .now_count").text("0");$(".men_list .d_box em").empty();
+$(".men_list .s_box").empty();$(".all_count").removeClass("lock");gameshow=!0},b+7E3)};E(0,0);uid&&setInterval(function(){var c=Date.parse(new Date);G(c)},1E4);$(window).resize(function(){var c=$(window).height();$(".scroll_box").css({height:c-50});$(".pkpj_box").css({height:c-270});$(".s_box").css({height:$(".men_list .line").height()-89})}).resize();$(".cm_line a").click(function(){$(this).addClass("a").siblings().removeClass("a");var c=$(this).attr("data");$(".cm_3d").removeClass().addClass("cm_3d "+
+c)});$(".men_list .s_box").click(function(){if(!gameshow)return layer.alert("\u8bf7\u7b49\u5f85\u7ed3\u7b97\u6f14\u793a\u5b8c\u6210...",{icon:0}),!1;var c=$(this);if(c.parent().find(".all_count").hasClass("lock"))return layer.alert("\u8be5\u73a9\u6cd5\u5df2\u6709\u73a9\u5bb6\u4e0a\u5e84\uff0c\u4e0d\u80fd\u4e0b\u6ce8",{icon:0}),!1;var e=$(".cm_line a.a").text(),d=parseInt($(".cm_line a.a").attr("money")),a=$(".cm_line a.a").attr("data"),f=$(window).height(),b=$(window).width(),g=c.width()-24,k=c.height()-
+24,h=Math.ceil(Math.random()*g),l=Math.ceil(Math.random()*k);k=$(".cm_line a.a").offset();g=c.offset();var m=0;750<b&&(m=(b-750)/2);$(".cm_3d").css({display:"block",left:k.left-m+"px"});b=g.left+h-m;f=f-g.top-l-24;$(".cm_3d").animate({left:b+"px",bottom:f+"px",height:"24px",width:"24px"},150,function(){$(this).removeAttr("style");c.append('<i class="add cm '+a+'" style="top: '+l+"px;left: "+h+'px;">'+e+"</i>")});f=c.parent().find(".select_num");f.text(parseInt(f.text())+d)});$("a.cancel").click(function(){$(".select_num").text("0");
+$(".men_list .s_box i.add").remove()});$("a.send").click(function(){if(0==nextqishu)return layer.alert("\u5c1a\u672a\u53d6\u5f97\u671f\u6570...",{icon:0}),!1;if(!getchat)return layer.alert("\u5c01\u76d8\u4e2d...",{icon:0}),!1;if(!gameshow)return layer.alert("\u8bf7\u7b49\u5f85\u7ed3\u7b97\u6f14\u793a\u5b8c\u6210...",{icon:0}),!1;var c=$(this).parent(),e=parseInt(c.find(".select_num").text());if(0==e)return layer.alert("\u8bf7\u4e0b\u7b79\u7801",{icon:0}),!1;var d=[];d=send_money.split("-");if(e<d[0]||
+e>d[1])return layer.alert("\u6295\u6ce8\u91d1\u989d\u5728"+send_money+"\u4e4b\u95f4",{icon:0}),!1;var a=$(this).attr("data");layer.confirm(a+"\uff0c\u603b\u91d1\u989d\uff1a"+e,{btn:["\u6295\u6ce8","\u4e0a\u5e84","\u53d6\u6d88"]},function(){if(0<$(".all_count.lock").length){var d=0;$(".all_count").each(function(a,b){d+=parseInt($(this).text())});var b=parseInt($(".all_count.lock").text());b-=d-b;if(0>=b)return layer.alert("\u5df2\u6709\u73a9\u5bb6\u4e0a\u5e84\uff0c\u603b\u6295\u6ce8\u91d1\u989d\u5df2\u8fbe\u5230\u9650\u5236\uff0c\u4e0d\u80fd\u6295\u6ce8",
+{icon:0}),!1;if(e>b)return layer.alert("\u5df2\u6709\u73a9\u5bb6\u4e0a\u5e84\uff0c\u603b\u6295\u6ce8\u91d1\u989d\u4e0d\u80fd\u8d85\u9650\uff0c\u5f53\u524d\u8fd8\u80fd\u6295\u6ce8\uff1a"+b,{icon:0}),!1}H(c,a,e,0)},function(){if(0<$(".all_count.lock").length)return layer.alert("\u5f53\u671f\u5df2\u7ecf\u6709\u73a9\u5bb6\u4e0a\u5e84\uff0c\u4e0d\u80fd\u7ee7\u7eed\u4e0a\u5e84",{icon:0}),!1;var d=0;$(".all_count").addClass("is");c.parent().find(".all_count").removeClass("is");$(".all_count.is").each(function(a,
+b){d+=parseInt($(this).text())});var b=2E4+d;$(".all_count").removeClass("is");if(e<b)return layer.alert("\u4e0a\u5e84\u91d1\u989d\u81f3\u5c11"+b,{icon:0}),!1;H(c,a,e,1)})});var H=function(c,e,d,a){var f=layer.load(1);$.ajax({url:"?a=ajax_touzhu",data:{gameid:gameid,gamename:gamename,qishu:nextqishu,wanfa:e,money:d,top:a,dosubmit:"yes"},type:"POST",dataType:"json",cache:!1,success:function(b){layer.close(f);"y"==b.status?(c.find(".now_count").text(parseInt(c.find(".now_count").text())+d),c.parent().find(".all_count").text(parseInt(c.parent().find(".all_count").text())+
+d),c.find(".select_num").text("0"),c.parent().find(".s_box i.add").removeClass("add"),a&&c.parent().find(".all_count").addClass("lock"),layer.msg(b.info,{icon:1}),b=Date.parse(new Date),G(b)):"y"==b.login?layer.confirm(b.info,{btn:["\u524d\u5f80\u767b\u5f55","\u53d6\u6d88"]},function(){location.href="?a=login"},function(){}):layer.msg(b.info,{icon:0})},error:function(){layer.close(f);layer.alert("\u670d\u52a1\u5668\u8bf7\u6c42\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5...",{icon:0})}})}});
+</script>
+<?php include template("footer"); ?>

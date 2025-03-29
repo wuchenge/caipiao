@@ -1,0 +1,444 @@
+.dh_box {
+	position: relative;
+	overflow: hidden;
+	height: 220px;
+	background-color: #27282a;
+}
+
+.pkpj_box {
+	position: relative;
+	overflow: hidden;
+	min-height: 396px;
+	height: 67%;
+	background: url(../images/pkpj/bg.jpg?2018) bottom;
+	background-size: cover;
+}
+
+.men_list {
+	position: relative;
+	overflow: hidden;
+	height: 76%;
+}
+
+.men_list .line {
+	float: left;
+	width: 30%;
+	height: 50%;
+}
+
+.men_list .t_box {
+	position: relative;
+	color: #cb0816;
+	background-color: rgba(255, 255, 255, 0.6);
+	box-shadow: inset 0 0 15px #2d832a;
+	padding: 3px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.men_list .d_box {
+	line-height: 20px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 14px;
+	color: #cb0816;
+	width: 100%;
+	margin: 0 auto;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.men_list .d_box em {
+	display: none;
+}
+
+.men_list .lottery {
+	margin: 0 5%;
+	text-align: center;
+}
+
+.lottery #qishu_next {
+	display: block;
+	text-align: center;
+	line-height: 30px;
+	color: #000;
+	box-shadow: inset 0 0 15px #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.lottery #qishu_next i {
+	font-style: normal;
+	color: #fff;
+	margin-left: 2px;
+}
+
+.lottery #time {
+	display: block;
+	text-align: center;
+	margin: 5px auto;
+}
+
+.lottery #time i {
+	display: inline-block;
+	font-style: normal;
+	font-size: 12px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	overflow: hidden;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 0 15px #000000;
+}
+
+.lottery #time em {
+	display: block;
+	color: #999;
+}
+
+.lottery .cancel {
+	display: block;
+	margin: 5px auto;
+	width: 60px;
+	line-height: 28px;
+	text-align: center;
+	background-color: #cb0816;
+	color: #fff;
+	font-size: 12px;
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+}
+
+.men_list .p_1 {
+}
+
+.men_list .p_2 {
+}
+
+.men_list .p_3 {
+}
+
+.men_list .p_4 {
+	margin: 0 5%;
+}
+
+.men_list .p_5 {
+}
+
+.men_list .all_count {
+	line-height: 20px;
+	font-size: 14px;
+	padding-left: 23px;
+	background: url(../images/pkpj/jb.png);
+	background-repeat: no-repeat;
+}
+
+.men_list .s_box {
+	position: relative;
+}
+
+.men_list .select_num {
+	line-height: 20px;
+	font-size: 14px;
+	padding-right: 20px;
+	margin: 0 5px 3px;
+	text-align: center;
+	background: #c88e4a url(../images/pkpj/jb.png) right;
+	background-repeat: no-repeat;
+	color: #fff;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.men_list .send_line {
+	position: relative;
+	overflow: hidden;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.men_list .send_line a {
+	float: left;
+	width: 35%;
+	text-align: center;
+	background-color: #cb0816;
+	color: #fff;
+	font-size: 12px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: inset 0 0 15px #fff;
+}
+
+.men_list .send_line i {
+	float: left;
+	font-style: normal;
+	width: 65%;
+	text-align: right;
+	font-weight: 700;
+	color: #3810d2;
+}
+
+.men_list .t_box em {
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.u_box {
+	position: relative;
+	overflow: hidden;
+	height: 10%;
+	margin: 0 2%;
+	font-size: 16px;
+}
+
+.u_box a {
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+}
+
+.u_box a.go_more {
+	float: right;
+}
+
+.u_box a.rules {
+}
+
+.u_box a i {
+	color: #fff;
+	font-size: 24px;
+}
+
+.cm_box {
+	position: relative;
+	height: 14%;
+	width: 96%;
+	margin: 0 2%;
+	text-align: center;
+}
+
+.cm_box .cm_bg {
+	position: absolute;
+	bottom: 0;
+	height: 60%;
+	width: 100%;
+	background-color: #cb0816;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 20px 20px 0 0;
+	box-shadow: inset 0 0 15px #f4c64a;
+}
+
+.cm_box .cm_line {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.cm_line a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-indent: -9999px;
+}
+
+.cm_line a.a {
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+}
+
+/*动画元素*/
+.pkpj_box .cm_3d {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	font-style: normal;
+	z-index: 20;
+    /*-webkit-transition:all 0.2s linear 0s;*/
+}
+
+.pkpj_box i.cm {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	font-style: normal;
+	text-align: center;
+	text-indent: -9999px;
+}
+
+.pkpj_box .cm_1 {
+	background: url(../images/pkpj/5.png) center;
+	background-size: cover;
+}
+
+.pkpj_box .cm_2 {
+	background: url(../images/pkpj/10.png) center;
+	background-size: cover;
+}
+
+.pkpj_box .cm_3 {
+	background: url(../images/pkpj/50.png) center;
+	background-size: cover;
+}
+
+.pkpj_box .cm_4 {
+	background: url(../images/pkpj/100.png) center;
+	background-size: cover;
+}
+
+.pkpj_box .cm_5 {
+	background: url(../images/pkpj/500.png) center;
+	background-size: cover;
+}
+
+.pkpj_box .cm_6 {
+	background: url(../images/pkpj/1000.png) center;
+	background-size: cover;
+}
+
+.scroll_box .mj {
+	position: absolute;
+	text-align: center;
+	width: 202px;
+	height: 18px;
+	margin: 0 1.5px;
+	top: 6px;
+	left: 0;
+	z-index: 10;
+}
+
+.scroll_box .mj i {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	height: 18px;
+	width: 15px;
+	margin: 0 2.5px;
+	font-style: normal;
+	text-indent: -9999px;
+	z-index: 10;
+}
+
+.scroll_box .mj i.m_1 {
+	background: url(../images/pkpj/1t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_2 {
+	background: url(../images/pkpj/2t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_3 {
+	background: url(../images/pkpj/3t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_4 {
+	background: url(../images/pkpj/4t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_5 {
+	background: url(../images/pkpj/5t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_6 {
+	background: url(../images/pkpj/6t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_7 {
+	background: url(../images/pkpj/7t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_8 {
+	background: url(../images/pkpj/8t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_9 {
+	background: url(../images/pkpj/9t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.m_10 {
+	background: url(../images/pkpj/0t.png);
+	background-size: cover;
+}
+
+.scroll_box .mj i.s_0 {
+	z-index: 19;
+}
+
+.scroll_box .mj i.s_1 {
+	z-index: 18;
+}
+
+.scroll_box .mj i.s_2 {
+	z-index: 17;
+}
+
+.scroll_box .mj i.s_3 {
+	z-index: 16;
+}
+
+.scroll_box .mj i.s_4 {
+	z-index: 15;
+}
+
+.scroll_box .mj i.s_5 {
+	z-index: 14;
+}
+
+.scroll_box .mj i.s_6 {
+	z-index: 13;
+}
+
+.scroll_box .mj i.s_7 {
+	z-index: 12;
+}
+
+.scroll_box .mj i.s_8 {
+	z-index: 11;
+}
+
+.scroll_box .mj i.s_9 {
+	z-index: 10;
+}
+
+.table ul li.line em {
+	display: block;
+	float: left;
+	width: 54px;
+	text-align: center;
+	font-size: 16px;
+	color: #cb0816;
+}
+
+.table ul li.line em i {
+	font-style: normal;
+	color: #999;
+	margin: 0 5px;
+	font-size: 12px;
+}

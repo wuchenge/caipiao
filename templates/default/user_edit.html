@@ -1,0 +1,131 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="?a=user" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="user_box">
+			<form action="?a=user_edit" method="post" id="send_form" onsubmit="return false;">
+				<input type="hidden" name="dosubmit" id="dosubmit" value="yes" />
+				<input type="hidden" name="oldnickname" id="oldnickname" value="<?php echo $user['nickname']?>" />
+				<div class="form_div">
+					<ul>
+						<li>
+							<input class="inputxt" type="text" id="nickname" name="nickname" value="<?php echo $user['nickname']?>" placeholder="<?php echo _lang('设置个性昵称') ?>" />
+						</li>
+						<li>
+							<?php
+							if ($user['name']) {
+								echo '<span class="title">'._lang('姓名').'：'.PassStart($user['name'], 1).'</span>';
+							} else {
+							?>
+							<input class="inputxt" type="text" id="name" name="name" value="<?php echo $user['name']?>" placeholder="<?php echo _lang('姓名，保存后不可修改') ?>" />
+							<?php }?>
+						</li>
+						<li>
+							<?php
+							if ($user['qq']) {
+								echo '<span class="title">QQ：'.$user['qq'].'</span>';
+							} else {
+							?>
+							<input class="inputxt" type="text" id="qq" name="qq" value="<?php echo $user['qq']?>" placeholder="<?php echo _lang('QQ，保存后不可修改') ?>" />
+							<?php }?>
+						</li>
+						<li>
+							<?php
+							if ($user['mobile']) {
+								echo '<span class="title">'._lang("手机号").'：'.PassStart($user['mobile'], 2, 2).'</span>';
+							} else {
+							?>
+							<input class="inputxt" type="text" id="mobile" name="mobile" value="<?php echo $user['mobile']?>" placeholder="<?php echo _lang('手机号，保存后不可修改') ?>" />
+							<?php }?>
+						</li>
+						<li>
+							<?php
+							if ($user['bank']) {
+								echo '<span class="title">'._lang('银行名称').'：'.PassStart($user['bank'], 2, 2).'</span>';
+							} else {
+							?>
+							<input class="inputxt" type="text" id="bank" name="bank" value="<?php echo $user['bank']?>" placeholder="<?php echo _lang('提款银行名称，保存后不可修改') ?>" />
+							<?php }?>
+						</li>
+						<li>
+							<?php
+							if ($user['card']) {
+								echo '<span class="title">'._lang('银行账号').'：'.PassStart($user['card'], 2, 2).'</span>';
+							} else {
+							?>
+							<input class="inputxt" type="text" id="card" name="card" value="<?php echo $user['card']?>" placeholder="<?php echo _lang('提款银行账号，保存后不可修改') ?>" />
+							<?php }?>
+						</li>
+						<li>
+							<?php
+							if ($user['alipay']) {
+								echo '<span class="title">'._lang('数字货币').'：'.PassStart($user['alipay'], 2, 2).'</span>';
+							} else {
+							?>
+							<input class="inputxt" type="text" id="alipay" name="alipay" value="<?php echo $user['alipay']?>" placeholder="<?php echo _lang('数字货币，保存后不可修改') ?>" />
+							<?php }?>
+						</li>
+					</ul>
+				</div>
+				<div class="submit"><input type="submit" id="submit" name="submit" value=" <?php echo _lang('保存') ?> "></div>
+			</form>
+		</div>
+		<div class="tps">
+			<h4><?php echo _lang('提示') ?>：</h4>
+			<p>1、<?php echo _lang('真实姓名需要与提款银行卡姓名对应，否则提款失败') ?></p>
+			<p>2、<?php echo _lang('除昵称外，其余资料项一经保存确认无法再次修改') ?></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="<?php echo JS_PATH?>Validform_v5.3.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	var Vform = $("#send_form").Validform();
+	Vform.config({
+		tiptype:1,
+		ajaxPost:true,
+		callback:function(data){
+			if(data.status == 'y'){
+				setTimeout(function(){//2秒后刷新
+					location.href = '?a=user';
+				}, 2000);
+			}
+		}
+	});
+	Vform.addRule([
+		{
+			ele:'#email',
+			datatype:'e',
+			ignore:'ignore',
+			nullmsg:'<?php echo _lang('请输入Email') ?>！',
+			errormsg:'<?php echo _lang('请输入正确的Email') ?>！'
+		},
+		{
+			ele:'#mobile',
+			datatype:'m',
+			ignore:'ignore',
+			nullmsg:'<?php echo _lang('请输入手机号') ?>！',
+			errormsg:'<?php echo _lang('请输入正确的手机号') ?>！'
+		},
+		{
+			ele:'#nickname',
+			datatype:'*1-10',
+			ajaxurl:INDEX_PATH+'a=ajax_nickname',
+			ajaxget:'#oldnickname',
+			ignore:'ignore',
+			nullmsg:'<?php echo _lang('请输入昵称') ?>！',
+			errormsg:'<?php echo _lang('昵称限制为1-10个字') ?>！'
+		}
+	]);
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

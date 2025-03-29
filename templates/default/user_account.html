@@ -1,0 +1,59 @@
+<?php include template("header"); ?>
+<div class="main account">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="table">
+			<div class="list">
+				<div class="onload"></div>
+			</div>
+		</div>
+		<div id="pages"><?php echo $pages?></div>
+	</div>
+</div>
+<script type="text/javascript">
+var accountdata = <?php echo $accountdata?>;//数据
+var stamp = '<?php echo $this -> setting['stamp']?>';//货币单位
+var type = new Array('<span style="color: #FFA700;"><?php echo _lang('充值')?></span>', '<span style="color: #0070FF;"><?php echo _lang('提现')?></span>', '<span style="color: #00B520;"><?php echo _lang('投注')?></span>', '<span style="color: #FF0000;"><?php echo _lang('盈利')?></span>', '<span style="color: #FF00DE;"><?php echo _lang('退单')?></span>', '<span style="color: #F60;"><?php echo _lang('红包')?></span>');
+$(function(){
+	var html = '';
+	$.each(accountdata,function(i,v){
+		var money = '';
+		if (v.money > 0) {
+			money = '<span style="color: red">+'+stamp+v.money+'</span>';
+		} else {
+			money = '<span style="color: green">'+stamp+v.money+'</span>';
+		}
+		var comment = '';
+		if (v.comment != '') {
+			comment = '<li class="msg">'+v.comment+'</li>';
+		}
+		//拼接数据
+		html += ''+
+		'<ul>'+
+			'<li class="w50 tl state">'+type[v.type]+'</li>'+
+			'<li class="w50 tr time">'+getLocalTime(v.addtime)+'</li>'+
+			'<li class="w30 val">'+money+'</li>'+
+			'<li class="w70 f12 "><?php echo _lang('资金变动')?> '+stamp+v.countmoney+'</li>'+
+			comment+
+		'</ul>';
+	});
+	setTimeout(function() {//让加载效果显示，并保证元素加载完成
+		if (html) {
+			$('.list').empty().append(html);
+		} else {
+			$('.list').empty().append('<div class="no-data"><?php echo _lang('暂无数据')?></div>');
+		}
+	}, 100);
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

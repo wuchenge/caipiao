@@ -1,0 +1,76 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<style type="text/css">
+	.zfb {
+    background: #333;
+    width: 50%;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    margin: 0 auto;
+	text-align:center;
+}
+	.wx {
+    background: rgba(51, 51, 51, 0.42);
+    width: 50%;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    margin: 0 auto;
+	text-align:center;
+}
+	.yhk {
+    background: #f3be00;
+    width: 33.333%;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    margin: 0 auto;
+	text-align:center;
+}
+</style>
+
+<div1 class="zfb" >
+<?php echo _lang('收益') ?>：<?=sprintf("%.2f",	$data['shouyi'])?>
+</br><?php echo _lang('结算减去投注') ?></div1><div1 class="wx" >
+<?php echo _lang('盈亏') ?>：<?=sprintf("%.2f",	$data['yingkui'])?><br>
+<?php echo _lang('充值总额-提现总额') ?></div1>
+		<div class="user_box">
+			<div class="user_nav">
+				<?php
+				foreach ($gamedb as $v) {
+					echo '<a href="?a=order&gameid='.$v['id'].'" title="'.$v['name'].'" class="n4"><i class="iconfont icon-dingdanliebiao"></i>'._lang($v['name']).'</a>';
+				}
+				?>
+			</div>
+		</div>
+	</div>
+	<!--div class="footer menu">
+		<a class="foot_btn" href="?a=init"><i class="iconfont icon-dating"></i>游戏大厅</a>
+		<a class="foot_btn" href="?a=pay"><i class="iconfont icon-chongzhi"></i>充值存款</a>
+		<a class="foot_btn" href="?a=kefu"><i class="iconfont icon-kefu"></i>在线客服</a>
+		<a class="foot_btn a" href="?a=user"><i class="iconfont icon-user"></i>会员中心</a>
+	</div-->
+</div>
+<script type="text/javascript">
+$(function(){
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-110});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

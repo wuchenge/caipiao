@@ -1,0 +1,2270 @@
+body {
+	background: rgba(23, 23, 23, 0.98);
+}
+
+/*顶部导航*/
+.header {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	height: 48px;
+	line-height: 48px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background-color: #171717;
+	border-bottom: solid 1px #171717;
+	z-index: 100;
+}
+
+.header h4.index {
+	float: left;
+	width: 160px;
+	background: url(../images/logo.png) center;
+	background-size: 100%;
+	text-indent: -300px;
+}
+
+.header a {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+}
+
+.header a.pic {
+	left: initial;
+	right: 10px;
+	background: url(../images/userpic.png) no-repeat center;
+	background-size: 90%;
+}
+
+.header a.pic img {
+	width: 26px;
+	height: 26px;
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
+}
+
+.header a.home {
+	left: initial;
+	right: 10px;
+}
+
+.header a.order {
+	left: initial;
+	right: 50px;
+}
+
+.header a i {
+	color: #fff;
+	font-size: 26px;
+}
+/*主容器*/
+.main {
+	width: 100%;
+	height: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.scroll_box {
+	position: relative;
+	max-width: 750px;
+	margin: 49px auto 0;
+	background: #1b1b1b;
+	overflow: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+iframe {
+	-webkit-overflow-scrolling: touch;
+}
+
+/*幻灯片*/
+.slide {
+	position: relative
+}
+
+.slide .bd {
+	min-height: 160px;
+	background: #FFF url(../images/onLoad.gif) center no-repeat;
+}
+
+.slide .bd li {
+	display: none;
+}
+
+.slide .bd li img {
+	width: 100%;
+}
+
+.slide .hd {
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	right: 0;
+	text-align: center
+}
+
+.slide .hd li {
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	border-radius: 10px;
+	display: inline-block;
+	text-indent: -999px;
+	background-color: #888;
+	overflow: hidden
+}
+
+.slide .hd li.on {
+	background-color: #ff4000
+}
+
+/*公告*/
+.m_ann {
+	position: relative;
+	overflow: hidden;
+	width: 96%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 1%;
+	background-color: #fff;
+	margin: 5px auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.m_ann i {
+	float: left;
+	width: 6%;
+	font-size: 20px;
+	color: #cb0816;
+}
+
+.m_ann marquee {
+	float: right;
+	width: 94%;
+}
+
+.m_ann em {
+	color: #cb0816;
+}
+
+/*功能菜单*/
+.min_nav {
+	position: relative;
+	overflow: hidden;
+	height: 50px;
+	background-color: #1b1b1b;
+}
+
+.min_nav a {
+	display: block;
+	float: left;
+	width: 20%;
+	height: 50px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.min_nav a i {
+	display: block;
+	font-size: 22px;
+	height: 26px;
+}
+
+.min_nav a:hover {
+	background-color: #e8e8e8;
+}
+
+.min_nav a.n1 {
+	color: #f00;
+}
+
+.min_nav a.n2 {
+	color: #2ea200;
+}
+
+.min_nav a.n3 {
+	color: #085797;
+}
+
+.min_nav a.n4 {
+	color: #dc6700;
+}
+
+.min_nav a.n5 {
+	color: #e41db8;
+}
+
+.min_nav a.money {
+	color: #cb0816;
+}
+
+.min_nav a.money i {
+	color: #f3be00;
+}
+/*游戏菜单*/
+.m_nva {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+}
+
+.m_nva ul {
+	position: relative;
+	overflow: hidden;
+}
+
+.m_nva ul li {
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	float: left;
+	margin: 10px 0;
+}
+
+.m_nva.two ul li {
+	width: 50%;
+}
+
+.m_nva ul li a.a, .m_nva ul li a:hover {
+	background-color: #fbfbfb;
+	color: #cb0816;
+}
+
+.m_nva ul li a {
+	display: block;
+	text-align: center;
+	height: 24px;
+	padding: 100px 0 0;
+	color: #000;
+	font-size: 15px;
+}
+
+.m_nva ul li a span {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -41px;
+	width: 82px;
+	height: 82px;
+	background: url(../images/index_app.png?2019) center no-repeat;
+	background-position: 0px 0px;
+	padding: 0;
+	text-indent: -200px;
+	overflow: hidden;
+}
+
+.m_nva ul li a.nav_fantan span {
+	background-position: -84px -168px;
+}
+
+.m_nva ul li a.nav_game_1 span {
+	background-position: -84px 0px;
+}
+
+.m_nva ul li a.nav_game_2 span {
+	background-position: -168px 0px;
+}
+
+.m_nva ul li a.nav_game_3 span {
+	background-position: 0px -86px;
+}
+
+.m_nva ul li a.nav_game_4 span {
+	background-position: -84px -86px;
+}
+
+.m_nva ul li a.nav_game_5 span {
+	background-position: -168px -86px;
+}
+
+.m_nva ul li a.nav_game_6 span {
+	background-position: 0px 0px;
+}
+
+.m_nva ul li a.nav_game_7 span {
+	background-position: -84px 0px;
+}
+
+.m_nva ul li a.nav_game_8 span {
+	background-position: -168px 0px;
+}
+
+.m_nva ul li a.nav_game_9 span {
+	background-position: -84px -86px;
+}
+
+.m_nva ul li a.nav_game_10 span {
+	background-position: -168px -86px;
+}
+
+.m_nva ul li a.nav_game_11 span {
+	background-position: 0px -258px;
+}
+
+.m_nva ul li a.nav_game_12 span {
+	background-position: -168px -172px;
+}
+
+.m_nva ul li a.nav_rules span {
+	background-position: 0px -170px;
+}
+
+.m_nva ul li a.nav_app span {
+	background-position: -84px -170px;
+}
+
+/*开奖结果*/
+.main .lottery_box {
+	position: relative;
+	width: 100%;
+	margin-bottom: 0;
+	border: none;
+	-moz-border-radius: initial;
+	-webkit-border-radius: initial;
+	border-radius: initial;
+}
+
+.lottery_box .lottery_top {
+	position: relative;
+	overflow: hidden;
+	border-bottom: solid 1px #eed57b;
+	height: 86px;
+}
+
+.lottery_top .lottery_now {
+	float: none;
+	padding: 8px;
+	color: #000;
+	font-size: 14px;
+}
+
+.lottery_now #qishu_now {
+	float: none;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	margin-right: 0;
+	padding: 0;
+	color: #fdfbfa;
+	text-align: left;
+}
+
+.lottery_now #qishu_now i {
+	color: #fdfbfa;
+	font-style: normal;
+}
+
+.lottery_now #haoma {
+	float: none;
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	padding: 3px 0;
+	color: #000;
+}
+
+.lottery_now #haoma i {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 13px;
+	background-color: #dcdcdc;
+	color: #000;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.lottery_now #haoma i.pk {
+	margin: 0 1px;
+}
+
+.lottery_now #haoma i.zw {
+	background-color: transparent;
+	color: #000;
+	width: auto;
+	text-shadow: none;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+}
+
+.lottery_now #haoma_type {
+	height: 20px;
+	line-height: 20px;
+}
+
+.lottery_now #haoma_type i {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+	text-align: center;
+	margin: 0 3px;
+	font-style: normal;
+	background-color: #e0b356;
+	color: #cb0816;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.lottery_now #haoma_type i.s {
+	background-color: transparent;
+	color: #000;
+	width: 16px;
+}
+
+.lottery_now #haoma_type i.c {
+	color: #eed57b;
+}
+
+.lottery_now #haoma_type i.z {
+	background-color: #e0b356;
+	color: #ff0000;
+	width: 20px;
+}
+
+.lottery_now #haoma_type i.zw {
+	background-color: transparent;
+	color:#f60;
+	width: auto;
+}
+
+.lottery_top .user {
+	position: absolute;
+	right: 18px;
+	top: 18px;
+}
+
+.lottery_top .user a {
+	display: block;
+	color: #fdfbfa;
+	height: 50px;
+	font-size: 14px;
+}
+
+.lottery_top .user a i {
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	color: #f3be00;
+	height: 30px;
+	line-height: 30px;
+}
+
+.lottery_box .lottery_next {
+	width: auto;
+	position: relative;
+	float: none;
+	background-color: #1b1b1b;
+	color: #f60;
+	padding: 5px 10px;
+	height: 24px;
+	font-size: 15px;
+}
+
+.lottery_next #qishu_next {
+	display: inline-block;
+	font-size: 15px;
+}
+
+.lottery_next #qishu_next i {
+	color: #f60;
+	font-style: normal;
+}
+
+.lottery_next #time {
+	display: inline-block;
+	color: #fdfbfa;
+}
+
+.lottery_next #time i {
+	display: inline-block;
+	font-style: normal;
+	margin-right: 6px;
+	padding: 0 8px;
+	color: #fff;
+	background-color: #f60;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 5px;
+}
+
+.lottery_next a.more {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	width: 10px;
+	height: 10px;
+	border: solid #cb0816;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+}
+
+.lottery_next a.more.a {
+	top: 14px;
+	border-width: 0 0 2px 2px;
+}
+
+.lottery_next a.go_more {
+	position: absolute;
+	right: 30px;
+	top: 5px;
+	color: #d33540;
+}
+
+.val_box {
+	position: relative;
+	overflow: hidden;
+	padding: 2px 5px;
+	font-size: 12px;
+	display: none;
+}
+
+.val_box i {
+	font-style: normal;
+	margin: 0 1px;
+	background-color: #dcdcdc;
+	display: inline-block;
+	width: 12px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: #000;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.val_box i.s1 {
+	color: red;
+}
+
+.val_box i.s2 {
+	color: yellow;
+}
+
+.val_box i.s3 {
+	color: blue;
+}
+
+.val_box i.s4 {
+	color: green;
+}
+
+.val_box em {
+	color: #999;
+}
+
+/*开奖记录阅览*/
+.lottery_box .haoma_box {
+	display: none;
+	position: absolute;
+	width: 96%;
+	padding: 2%;
+	background-color: #100701;
+	color: #fff;
+	z-index: 101;
+}
+
+.haoma_box h5 {
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	color: #e0b356;
+	background-color: #483224;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.haoma_box ul li {
+	font-size: 12px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.haoma_box li span {
+	color: #e6d756;
+}
+
+.haoma_box li span i, .haoma_box li span em {
+	font-style: normal;
+	margin: 0 1px;
+	background-color: #dcdcdc;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	color: #000;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.haoma_box li span em {
+	margin-left: 10px;
+	background-color: #e0b356;
+	color: #ff0000;
+	width: 18px;
+}
+
+.haoma_box li.fan span em {
+	width: 36px;
+}
+
+.haoma_box a.more {
+	display: block;
+	width: 100px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	margin: 10px auto 0;
+	background-color: #f60;
+	color: #fff;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+/*聊天室*/
+.chat_box {
+	overflow-y: auto;
+	background-color: #1b1b1b;
+}
+
+.chat_box ul li {
+	position: relative;
+	overflow: hidden;
+	padding: 10px 20px;
+}
+
+.chat_box ul li h5 {
+	position: absolute;
+	right: 20px;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: center;
+	width: 80px;
+	background-color: #f7f7f7;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.chat_box ul li.system {
+	text-align: center;
+}
+
+.chat_box ul li.system h5 {
+	display: inline-block;
+	position: relative;
+	right: 0;
+	width: auto;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 auto;
+	padding: 0 15px;
+	font-size: 15px;
+	background-color: #f7f7f7;
+	color: #483224;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+}
+
+.chat_box ul li.system h5 i {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../images/y.png) center center no-repeat;
+	vertical-align: middle;
+}
+
+.chat_box ul li.system h5 i.n {
+	background: url(../images/n.png) center center no-repeat;
+}
+
+.chat_box ul li h4 {
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.chat_box ul li img {
+	width: 46px;
+	height: 46px;
+	float: left;
+	margin-right: 10px;
+	background-color: #f7f7f7;
+	-moz-border-radius: 23px;
+	-webkit-border-radius: 23px;
+	border-radius: 23px;
+}
+
+.chat_box ul li .msg {
+	overflow: hidden;
+	background-color: #eed57b;
+	padding: 5px 10px;
+	margin-left: 64px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+}
+
+.chat_box ul li .msg:after {
+	position: absolute;
+	top: 42px;
+	left: 74px;
+	background-color: #1b1b1b;
+	content: ' ';
+	width: 0;
+	height: 0;
+	border-top: 1px solid transparent;
+	border-right: 10px solid #eed57b;
+	border-bottom: 10px solid transparent;
+}
+
+.chat_box ul li .msg span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #69493A;
+}
+
+.chat_box ul li .msg span.qishu {
+	width: 100px;
+}
+
+.chat_box ul li .msg span.money {
+	font-size: 20px;
+}
+
+.chat_box ul li .msg span.wanfa {
+	font-size: 20px;
+	float: right;
+}
+
+/*会员*/
+.user_box .form_div img.pic {
+	display: block;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	margin: 30px auto;
+	background-color: #e4e4e4;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.user_box .defaultpic {
+	display: block;
+	margin: 0 auto;
+	width: 270px;
+	overflow: hidden;
+}
+
+.user_box .defaultpic h6 {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.user_box .defaultpic img {
+	display: block;
+	float: left;
+	border: solid 2px #FFF;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.user_box .defaultpic img:hover, .user_box .defaultpic img.a {
+	border: solid 2px #FF6464;
+}
+
+.user_box {
+	position: relative;
+	width: 90%;
+	margin: 0;
+	padding: 5%;
+	color: #666;
+}
+
+.user_box .user_pic {
+	margin-bottom: 20px;
+}
+
+.user_box .user_pic img {
+	display: block;
+	width: 100px;
+	margin: 10px auto;
+	background-color: #e4e4e4;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.user_box .user_pic h4 {
+	color: #000;
+	text-align: center;
+}
+
+.user_box .user_nav {
+	position: relative;
+	overflow: hidden;
+}
+
+.user_box .user_nav a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fff;
+	color: #000;
+	margin: 10px 0;
+	padding: 0 10px;
+	font-size: 15px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.user_box .user_nav :hover {
+	background-color: #e8e8e8;
+}
+
+.user_box .user_nav a i {
+	font-size: 24px;
+	margin-right: 10px;
+	color: #cb0816;
+	vertical-align: middle;
+}
+
+.user_box .user_btn {
+	border-top: 1px solid #cb0816;
+	margin: 10px 0;
+}
+
+.user_box .user_btn a {
+	display: block;
+	background: #cb0816;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	color: #FFF;
+	font-size: 16px;
+	margin: 10px auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.user_box .pay_ewm {
+	text-align: center;
+}
+
+.user_box .pay_ewm p {
+	width: 90%;
+	margin: 10px 5%;
+	font-size: 14px;
+	background-color: #f60;
+	color: #fff;
+	line-height: 40px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.user_box .pay_ewm p.payid {
+	color: #000;
+	background-color: transparent;
+	font-size: 16px;
+}
+
+.user_box .pay_ewm p.payid em {
+	color: #cb0816;
+	font-weight: 700;
+}
+
+.user_box .pay_ewm .ewm {
+	margin: 30px auto 15px;
+	width: 86%;
+	height: 200px;
+}
+
+.user_box .pay_ewm .ewm li {
+	display: none;
+	height: 200px;
+}
+
+.user_box .pay_ewm .ewm li.a {
+	display: block;
+}
+
+.user_box .pay_ewm .ewm img {
+	width: 200px;
+	height: 200px;
+}
+
+.user_box .pay_ewm .ewm li div {
+	text-align: left;
+	line-height: 24px;
+	font-size: 16px;
+}
+
+.user_box .pay_ewm .btn {
+	position: relative;
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+.user_box .pay_ewm .btn a {
+	display: inline-block;
+	width: 26%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	margin: 0 2%;
+	font-size: 13px;
+}
+
+.user_box .pay_ewm .btn a.a {
+	background-color: #cb0816;
+	color: #fff;
+}
+
+/*游戏框架*/
+.main .game_box {
+	position: relative;
+	overflow-y: auto;
+	display: none;
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.game_box_shade {
+	position: fixed;
+	top: 170px;
+	left: 0;
+	z-index: 100;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity:20);
+	opacity: 0.2;
+	-moz-opacity: 0.2;
+	-khtml-opacity: 0.2;
+}
+
+/*番摊*/
+.game_box .game {
+	position: relative;
+	padding-bottom: 145px;
+	height: 381px;
+	border-left: solid 1px #fff;
+	border-top: solid 1px #fff;
+}
+
+.game a {
+	position: relative;
+	display: block;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 700;
+	width: 62px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	background-color: #077140;
+	border-right: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+}
+
+.game a:hover {
+	background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.game a.a {
+	background-color: #fff !important;
+	color: #333 !important;
+}
+
+.game a i {
+	font-style: normal;
+}
+
+.game a em {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	line-height: 20px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #ff6600;
+	font-style: normal;
+}
+
+.game a.a em {
+	color: #333 !important;
+}
+
+.game div {
+	overflow: hidden;
+}
+
+.game .line_center {
+	position: relative;
+}
+
+.game .line_center div {
+	float: left;
+}
+
+.game .line_3, .game .line_5 {
+	width: 63px;
+}
+
+.game .line_4 {
+	width: 63px;
+	height: 228px;
+	position: relative;
+	overflow: hidden;
+}
+
+.game .line_1 a, .game .line_7 a {
+	float: left;
+}
+
+.game .line_4 a {
+	height: 56px;
+	line-height: 56px;
+}
+
+.game a.C_Z1, .game a.C_Z2, .game a.C_Z3, .game a.C_Z4 {
+	background-color: #927402;
+}
+
+.game a.C_12J, .game a.C_23J, .game a.C_34J, .game a.C_41J {
+	background-color: #470283;
+}
+
+.game a.C_1L2, .game a.C_2L3, .game a.C_3L4, .game a.C_4L1, .game a.C_1L4, .game a.C_2L1, .game a.C_3L2, .game a.C_4L3 {
+	background-color: #04707d;
+}
+
+.game a.C_D, .game a.C_S {
+	background-color: #903834;
+}
+
+/*普通玩法*/
+.game_box .games {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 140px;
+	border-bottom: solid 1px #eed57b;
+}
+
+.games .title {
+	position: fixed;
+	width: 20%;
+	max-width: 145px;
+}
+
+.games .title a {
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	background-color: #171717;
+	border-top: solid 1px #eed57b;
+	color: #fdfbfa;
+}
+
+.games .title a.a {
+	background-color: #171717;
+	color: #eed57b;
+}
+
+.games .line_box {
+	float: right;
+	overflow: hidden;
+	width: 80%;
+}
+
+.line_box .line {
+	display: none;
+}
+
+.line_box .line.a {
+	display: block;
+}
+
+.line_box .line h4 {
+	text-align: center;
+	color: #fdfbfa;
+	background-color: #171717;
+	line-height: 30px;
+}
+/*
+.line_box .line h4:after {
+	content:' ';
+	width: 10px;
+	height: 10px;
+	border: solid #cb0816;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+}*/
+
+.line_box .line .tab {
+	position: relative;
+	overflow: hidden;
+	line-height: 36px;
+	border-top: solid 1px #eed57b;
+	border-left: solid 1px #eed57b;
+}
+
+.line_box .line .tab a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	color: #fdfbfa;
+	background-color: #1b1b1b;
+	border-right: solid 1px #eed57b;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.line_box .line .tab a i {
+	display: inline-block;
+	font-style: normal;
+	float: left;
+	width: 40px;
+	font-size: 15px;
+}
+
+.line_box .line .tab a i.m {
+	width: 20px;
+}
+
+.line_box .line .tab a em, .line_box .line .tab a o {
+	display: inline-block;
+	font-style: normal;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+	color: #999;
+}
+
+.line_box .line .tab a o {
+	color: #988a5a;
+	margin-right: 3px;
+}
+
+
+.line_box .line .tab a.a {
+	background-color: #eed57b;
+	color: #fff;
+}
+
+.line_box .line .tab a.a em {
+	color: #fff;
+}
+
+.line_box .line .tab.n2 a {
+	width: 50%;
+}
+
+.line_box .line .tab.n2 a i {
+	width: 80px;
+}
+
+.line_box .line .tab.num a i {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	margin: 6px;
+	font-weight: 700;
+	background-color: #1b1b1b;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.line_box .line .tab.num a.hb i {
+	color: #fff;
+	background-color: #cb0816;
+}
+
+.line_box .line .tab.num a.lvb i {
+	color: #fff;
+	background-color: #2fcb08;
+}
+
+.line_box .line .tab.num a.lb i {
+	color: #fff;
+	background-color: #0856cb;
+}
+
+.line_box .line .tab.num a.a i {
+	background-color: #fdfbfa;
+	color: #000;
+}
+
+.line_box .line .tab.n2.num a i {
+	margin-left: 30px;
+}
+
+/*快捷投注*/
+.send_box {
+	display: none;
+	position: fixed;
+	bottom: 49px;
+	width: 96%;
+	max-width: 692px;
+	background-color: #eed57b;
+	color: #1b1b1b;
+	padding: 5px 2% 10px;
+	-moz-border-radius: 12px 12px 0 0;
+	-webkit-border-radius: 12px 12px 0 0;
+	border-radius: 12px 12px 0 0;
+}
+
+.send_box a.hide {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	border: solid #fff;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+}
+
+.send_box h4 {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.send_box h5 {
+	position: absolute;
+	width: 160px;
+	top: -10px;
+	left: 50%;
+	margin-left: -80px;
+	font-weight: 400;
+	text-align: center;
+	color: #fff;
+	background-color: #cc8f12;
+	line-height: 24px;
+	padding: 0 8px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.send_box .fast_li {
+	margin: 0 0 10px;
+	text-align: center;
+}
+
+.send_box .fast_li a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin: 1px;
+	background-color: #f54b09;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.send_box .btn_li {
+	text-align: center;
+	line-height: 30px;
+}
+
+.send_box .btn_li span {
+	font-size: 14px;
+}
+
+.send_box .btn_li input {
+	height: 30px;
+	border: none;
+	width: 80px;
+	padding: 0 8px;
+	vertical-align: bottom;
+	outline: none;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	color: #1b1b1b;
+}
+
+.send_box .btn_li a {
+	display: inline-block;
+	color: #fff;
+	padding: 0 18px;
+	background-color: #171717;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.send_box .btn_li a.cancel {
+	background-color: #f60;
+	padding: 0 12px;
+}
+
+.game_box a.rules {
+	position: fixed;
+	bottom: 50px;
+	left: 5px;
+	z-index: 101;
+	display: block;
+	width: 16px;
+	height: 56px;
+	line-height: 14px;
+	padding: 5px 0;
+	background-color: #f60;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+
+/*登录注册*/
+.main .login_box, .main .reg_box {
+	position: relative;
+	width: 90%;
+	margin: 5%;
+}
+
+.login_box .form_div li .inputxt.name {
+	padding-left: 30px;
+	background: #FFF url(../images/user.png) no-repeat 6px 10px;
+}
+
+.login_box .form_div li .inputxt.pwd {
+	padding-left: 30px;
+	background: #FFF url(../images/pwd.png) no-repeat 6px 10px;
+}
+
+.login_box .form_div li .inputxt.yzm {
+	padding-left: 30px;
+	background: #FFF url(../images/yzm.png) no-repeat 6px 10px;
+}
+
+.login_box .submit a.pwd {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+/*表单按钮全局*/
+.form_div ul li {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.form_div li .inputxt {
+	display: block;
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 10px;
+    background: #1b1b1b;
+    line-height: 36px;
+    font-size: 14px;
+    border: 1px solid #fdfbfa;
+    color: #fbfbfb;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+	box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form_div input.radio, .form_div input.checkbox {
+	height: 18px;
+	width: 18px;
+}
+
+.form_div li span.title {
+	margin-left: 0px;
+	color: #666;
+	font-size: 14px;
+}
+
+.form_div li strong {
+	display: inline-block;
+	line-height: 22px;
+}
+
+.form_div .input-text {
+	height: 36px;
+	padding-left: 10px;
+	background: #fff;
+	line-height: 36px;
+	font-size: 14px;
+	border: 1px solid #dadada;
+	-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+	box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+	color: #444;
+	width: 200px;
+}
+
+.form_div input.date {
+	background: #FFF url(../images/input_date.png) no-repeat right 10px;
+}
+
+.form_div .button {
+	*margin-left: -3px;
+	width: 160px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	border: solid 1px #DADADA;
+	background: #F0F0F0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.form_div .button:hover {
+	border: solid 1px #002CFF;
+	background: #647FFF;
+	color: #FFF;
+}
+
+.form_div .code {
+	display: block;
+	position: absolute;
+	right: 2px;
+	top: 4px;
+	width: 84px;
+	height: 34px;
+	padding-left: 6px;
+	border-left: 1px solid #d7d7d7;
+	z-index: 999;
+}
+
+/*提交按钮*/
+.submit {
+	overflow: hidden;
+	position: relative;
+	padding-top: 20px;
+	border-top: 1px solid #1b1b1b;
+}
+
+.submit a {
+	display: block;
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.submit input {
+	background: #ecb241;
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	color: #FFF;
+	font-size: 16px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+.submit input:hover {
+	background: #dfc64a;
+}
+
+.form_div .tp-btn {
+	display: block;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	width: 52px;
+	height: 32px;
+	z-index: 999;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.form_div .tp-btn.btn-off, .form_div .tp-btn.btn-on {
+	background: url(../images/pw.png);
+	background-position: 0px 0px;
+	background-size: 100%;
+}
+
+.form_div .tp-btn.btn-on {
+	background-position: 0px -35px;
+}
+
+.form_div li strong {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/*底部提示信息*/
+.tps {
+	position: relative;
+	width: 90%;
+	padding: 5%;
+	color: #f8f8f8;
+	background: #1b1b1b;
+	line-height: 24px;
+}
+
+.tps h4 {
+	font-size: 14px;
+}
+
+.tps p {
+	font-size: 14px;
+}
+
+/*列表通用*/
+.table {
+	position: relative;
+	overflow: hidden;
+}
+
+.table .load {
+	position: absolute;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+	display: inline-block;
+	top: 9px;
+	right: 0px;
+	background: #eed57b;
+	color: #69493A;
+	font-weight: 400;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.table .hd {
+	background: #171717f5;
+	padding: 10px 8px;
+	border-bottom: solid 1px #eed57b;
+}
+
+.table .hd a.search {
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	width: 10px;
+	height: 10px;
+	border: solid #ffee6e;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+}
+
+.table .hd a.search.a {
+	top: 16px;
+	border-width: 0 0 2px 2px;
+}
+
+.table .title {
+	position: relative;
+	display: none;
+	text-align: center;
+	line-height: 40px;
+	color: #eed57b;
+	font-size: 14px;
+}
+
+.title .input-text {
+	min-width: 100px;
+	height: 18px;
+	padding: 2px 2px 2px 5px;
+	border: 1px solid #BDBDBD;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.title .date {
+	background: #FFF url(../images/input_date.png) no-repeat right 3px;
+	padding-right: 2px;
+}
+
+.title button {
+	vertical-align: middle;
+	padding: 0 8px;
+	border: 1px solid #eed57b;
+	height: 24px;
+	background: #6c4828;
+	color: #FFF;
+	outline: none;
+	cursor: pointer;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.table .list {
+	padding: 10px;
+}
+
+.table .list .onload {
+	background: url(../images/onLoad.gif) no-repeat center;
+	width: 100%;
+	height: 200px;
+}
+
+.table .list .no-data {
+	text-align: center;
+	line-height: 200px;
+	color: #999;
+	font-size: 14px;
+}
+
+.table .list ul {
+	line-height: 30px;
+	font-size: 13px;
+	border-bottom: 1px solid #eed57b;
+	padding: 0 8px 5px;
+	overflow: hidden;
+}
+
+.table .list ul:hover {
+	background: #21130b;
+}
+
+.table .list ul li {
+	height: 30px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	color: #d29a9a;
+}
+
+.table .list ul li a {
+	color: #F60;
+}
+
+.table .list ul li a:hover {
+	color: #F00;
+}
+
+.table ul li.w50 {
+	float: left;
+	width: 50%;
+}
+
+.table ul li.w30 {
+	float: left;
+	width: 30%;
+}
+
+.table ul li.w33 {
+	float: left;
+	width: 33.33%;
+}
+
+.table ul li.w70 {
+	float: left;
+	width: 70%;
+}
+
+.table ul li.tl {
+	text-align: left;
+}
+
+.table ul li.tr {
+	text-align: right;
+}
+
+.table ul li.qishu {
+	font-size: 13px;
+	color: #f60;
+	font-weight: 700;
+}
+
+.table ul li.hm_list {
+	width: 100%;
+	text-align: left;
+}
+
+.table ul li.line {
+	width: 100%;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+}
+
+.table ul li.state {
+	font-size: 14px;
+}
+
+.table ul li.time {
+	color: #999;
+}
+
+.table ul li.val {
+	font-size: 16px;
+}
+
+.table ul li.f12 {
+	font-size: 12px;
+}
+
+.table ul li.msg {
+	text-align: left;
+	color: #999;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.table ul:hover li.msg {
+	height: auto;
+	white-space: initial;
+	text-overflow: initial;
+}
+
+.table ul li.btn {
+	text-align: right;
+	width: 100%;
+}
+
+.table ul li.btn a {
+	font-size: 14px;
+	margin-left: 8px;
+}
+
+/*我的注单*/
+.order .count {
+	position: relative;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 5px;
+	color: #333;
+	font-size: 12px;
+	background: #F5F5F5;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.order .count.all {
+	display: inline-block;
+	background: #FFEE6E;
+}
+
+.order .count span {
+	margin-right: 10px;
+}
+
+.order .count span.shu {
+	color: green;
+}
+
+.order .count span.ying {
+	color: red;
+}
+
+.order .count span.ruzhang {
+	color: #f60;
+}
+
+.order .count.xiaoji {
+	background: #1b1b1b;
+	text-align: center;
+	-moz-border-radius: initial;
+	-webkit-border-radius: initial;
+	border-radius: initial;
+}
+
+/*开奖号码公用*/
+.hm_list i {
+	display: inline-block;
+	width: 23px;
+	height: 21px;
+	line-height: 21px;
+	margin: 0 2px;
+	text-align: center;
+	font-weight: 700;
+	text-shadow: #000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
+	-webkit-text-shadow: #000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
+	-moz-text-shadow: #000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
+	*filter: Glow(color=#000, strength=1);
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+	font-style: normal;
+}
+
+.hm_list i.no {
+	text-shadow: none;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+}
+
+.hm_list i.c1 {
+	background: #FFE11E !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c2 {
+	background: #53B3E4 !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c3 {
+	background: #4F5353 !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c4 {
+	background: #F2932C !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c5 {
+	background: #4DF4BB !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c6 {
+	background: #636FD0 !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c7 {
+	background: #BFBFBF !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c8 {
+	background: #F46B71 !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c9 {
+	background: #E51B27 !important;
+	color: #FFF !important;
+}
+
+.hm_list i.c10 {
+	background: #50E948 !important;
+	color: #FFF !important;
+}
+
+.hm_list i.blue, .hm_list i.orange {
+	background: url(../images/lottery/ball.png) no-repeat center;
+	background-color: transparent !important;
+	width: 24px;
+	height: 24px;
+	color: #000;
+	-moz-border-radius: 50% !important;
+	-webkit-border-radius: 50% !important;
+	border-radius: 50% !important;
+	text-shadow: none;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+}
+
+.hm_list i.orange {
+	background: url(../images/lottery/fall.png) no-repeat center;
+}
+
+.hm_list i.dxd, .hm_list i.dsd, .hm_list i.dxx, .hm_list i.dss {
+	color: #FFF;
+	text-shadow: none;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+	font-weight: 400;
+}
+
+.hm_list i.dxd, .hm_list i.dss {
+	background: #e0b356 !important;
+}
+
+.hm_list i.dxx, .hm_list i.dsd {
+	background: #755542 !important;
+}
+
+/*开奖列表*/
+.table .hd .sethaoma a {
+	display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 8px;
+	color: #f8f8f8;
+	font-weight: 400;
+	font-size: 20px;
+	margin: 0 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.table .hd .sethaoma a.a, .table .hd .sethaoma a:hover {
+	background-color: #f2ba36;
+	color: #171717f5;
+}
+
+.haoma .list ul li span {
+	display: inline-block;
+	width: 24px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin: 0 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.haoma span.dxd, .haoma span.dss {
+	background: #e0b356;
+	color: #FFF;
+}
+
+.haoma span.dxx, .haoma span.dsd {
+	background: #755542;
+	color: #FFF;
+}
+
+.haoma span.he {
+	background: #E6E6E6;
+	color: #333;
+}
+
+.haoma .list ul li span.he {
+	width: 60px;
+}
+
+.haoma span.zhi {
+	background: #ff6600;
+	color: #fff;
+}
+
+.haoma .list ul li span.zhi {
+	width: 40px;
+}
+
+.haoma span.lhl {
+	background: #FF6464;
+	color: #FFF;
+}
+
+.haoma span.lhh {
+	background: #333C59;
+	color: #FFF;
+}
+
+.haoma span.lhhe {
+	background: #9C9C9C;
+	color: #FFF;
+}
+
+/*规则*/
+.rules {
+	position: relative;
+}
+
+.rules .title {
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-bottom: solid 1px #cb0816;
+	text-align: center;
+	margin: 10px;
+}
+
+.rules .msg {
+	padding: 10px;
+	font-size: 14px;
+}
+
+.rules .msg h5 {
+	line-height: 40px;
+}
+
+.rules .msg p {
+	padding: 5px 20px;
+}
+
+.rules .msg p span {
+	color: #cb0816;
+}
+
+.rules .msg div {
+	margin-left: 30px;
+}
+
+/*客户端下载*/
+.main .app_box {
+	position: relative;
+	overflow: hidden;
+	margin: 10px auto;
+}
+
+.app_box h4 {
+	margin: 20px auto;
+	text-align: center;
+	color: #cb0816;
+}
+
+.app_box .signup {
+	margin: 45px 0 40px 0;
+	display: block;
+}
+
+.signup .form {
+	padding-top: 10px;
+	margin: 0 20px;
+}
+
+.signup .form .logo {
+	width: 200px;
+	height: 200px;
+	margin: 5px auto;
+	background: url(../images/ewm.png) no-repeat;
+}
+
+.signup .form .link {
+	text-align: center;
+	overflow: hidden;
+	height: auto;
+	border-top: solid 1px #cb0816;
+	margin-top: 20px;
+}
+
+.signup .form .link .btn {
+	line-height: 30px;
+	margin: 20px 0;
+}
+
+.signup .form .link .btn a {
+	padding: 5px 0;
+	margin: 0 2%;
+	display: inline-block;
+	background: #cb0816;
+	color: #fff;
+	width: 32%;
+	height: 30px;
+	font-size: 14px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.signup .form .link .btn.pc a {
+	background: #f60;
+	color: #fff;
+	font-size: 16px;
+	width: 68%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.signup .form .link .m {
+	display: none;
+	padding: 3px 8px;
+	font-size: 12px;
+	background: #eaeaea;
+	color: #000;
+	line-height: 20px;
+	text-align: left;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/*分页标准*/
+#pages {
+	width: auto;
+	height: 24px;
+	margin: 0 auto;
+	padding: 10px;
+	color: #e0b356;
+	text-align: right;
+}
+
+#pages a {
+	display: inline-block;
+	width: 26px;
+	height: 22px;
+	line-height: 22px;
+	background: #e0b356;
+	border: 1px solid #e0b356;
+	text-align: center;
+	color: #333
+}
+
+#pages a.a1 {
+	background: #e0b356;
+	width: 56px;
+}
+
+#pages a:hover {
+	background: #755542;
+	border: 1px solid #e0b356;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#pages span {
+	display: inline-block;
+	width: 26px;
+	height: 22px;
+	line-height: 22px;
+	background: #755542;
+	border: 1px solid #e0b356;
+	color: #fff;
+	text-align: center;
+}
+
+/*尾部*/
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+	height: 48px;
+	text-align: center;
+	background-color: #1b1b1b;
+	border-top: solid 1px #eed57b;
+}
+
+.footer a.game_btn {
+	display: block;
+	color: #fff;
+	width: 80%;
+	height: 38px;
+	margin: 4px auto;
+	line-height: 38px;
+	font-size: 15px;
+	background-color: #eed57b;
+	border: solid 1px #eed57b;
+	-moz-border-radius: 19px;
+	-webkit-border-radius: 19px;
+	border-radius: 19px;
+}
+
+.footer a.game_btn.a {
+	color: #fff;
+	background-color: #eed57b;
+	border: solid 1px #eed57b;
+}
+
+/*尾部菜单*/
+.footer.menu {
+	max-width: 750px;
+	margin: 0 auto;
+	height: 60px;
+	border-top: solid 1px #ea545f;
+}
+
+.footer a.foot_btn {
+	position: relative;
+	display: block;
+	float: left;
+	color: #ffdada;
+	width: 25%;
+	height: 30px;
+	line-height: 30px;
+	padding-top: 30px;
+	font-size: 15px;
+	background-color: #cb0816;
+}
+
+.footer a.foot_btn.a, .footer a.foot_btn:hover {
+	background-color: #f60;
+	color: #fff;
+}
+
+.footer a.foot_btn i {
+	position: absolute;
+	display: block;
+	width: 100%;
+	top: 5px;
+	font-size: 24px;
+}
+
+/*悬浮加载层*/
+.load_tps {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20000002;
+	background: #fff url(../images/loading.gif) center center no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-top: 0;
+	text-align: center;
+}

@@ -1,0 +1,62 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="rules">
+			<div class="title">番摊规则（统一规则）</div>
+			<div class="msg">
+				<h5>重要声明</h5>
+				<p>1.如果客户怀疑自己的资料被盗用，应立即通知本公司，并更改详细数据，以前的使用者名称及密码将全部无效。</p>
+				<p>2.客户有责任确保自己的账户及登入资料的保密性。以使用者名称及密码进行的任何网上投注将被视为有效。</p>
+				<p>3.公布赔率时出现的任何打字错误或非故意人为失误，本公司保留改正错误和按正确赔率结算投注的权力。您居住所在地的法律有可能规定网络博弈不合法；若此情况属实，本公司将不会批准您使用付账卡进行交易。</p>
+				<p>4.每次登入时客户都应该核对自己的账户结余额。如对余额有任何疑问，请在第一时间内通知本公司。</p>
+				<p>5.一旦投注被接受，则不得取消或修改。</p>
+				<p>6.所有号码赔率将不时浮动，派彩时的赔率将以确认投注时之赔率为准。</p>
+				<p>7.每注最高投注金额按不同[场次]及[投注项目]及[会员账号]设定浮动。如投注金额超过上述设定，本公司有权取消超过之投注金额。</p>
+				<p>8.所有投注都必须在开奖前时间内进行否则投注无效。</p>
+				<p>9.所有投注派彩彩金皆含本金。</p>
+				<h5>番摊游戏规则</h5>
+				<p>采集开奖后最后两个数；连续减4，直到剩下4或少于4个为止（最后剩下多少则为多少番，如：11-4-4=3（3满足条件3≤4），则开奖为11的时候为3番）。</p>
+				<h5>游戏规则玩法</h5>
+				<p><span>1、番</span></p>
+				<div>
+					<p>投注单一号码，开出为赢，其余为输. 如：1番，开1为赢，2、3、4为输</p>
+				</div>
+				<p><span>2、念</span></p>
+				<div>
+					<p>投注两个号码，一个为赢，一个为和，另外两个为输 如：1念2，开1为赢，开2为和，3、4为输</p>
+				</div>
+				<p><span>3、角</span></p>
+				<div>
+					<p>投注两个号码，开出为赢，其余为输 如：1.2角，开1、2为赢，3、4为输</p>
+				</div>
+				<p><span>4、正</span></p>
+				<div>
+					<p>1正 为开1番为赢，2、4走水，3为输，2正、3正、4正 规则类似</p>
+				</div>
+				<p><span>5、单</span></p>
+				<div>
+					<p>1、3为单</p>
+				</div>
+				<p><span>6、双</span></p>
+				<div>
+					<p>2、4为双</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

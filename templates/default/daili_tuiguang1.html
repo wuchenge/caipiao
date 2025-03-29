@@ -1,0 +1,76 @@
+<?php include template("header"); ?>
+<style type="text/css">
+	.header_box .user_box {
+	    position: relative;
+	    width: 100%;
+	    margin: 0;
+	    padding: 0%; 
+	    color: #666;
+	}
+	.header_box .min_nav {
+		height: 30px;
+	}
+	.header_box .min_nav a {
+	    display: block;
+	    float: left;
+	    width: 16.5%;
+	    height: 30px;
+	    font-size: 13px;
+	    text-align: center;
+	}
+	.header_box .min_nav .sel{
+		color: #f00;
+	}
+</style>
+<div class="main">
+	<div class="header">
+		<a class="back" href="javascript:history.back(-1)" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="header_box">
+		<div class="user_box">
+			<div style="padding-top: 10px;" class="min_nav">
+				<a href="?a=daili_count" title="汇总">汇总</a>
+				<a href="?a=daili_touzhu" title="投注">投注</a>
+				<a href="?a=daili_zhangbian" title="账变">账变</a>
+				<a href="?a=daili_account" title="盈亏">盈亏</a>
+				<a href="?a=daili_user" title="用户">用户</a>
+				<a class="sel" href="?a=daili_tuiguang" title="推广">推广</a>
+			</div>
+		</div>
+		</div>
+		<div class="user_box">
+			<div class="form_div">
+				<ul>
+					<li>
+						<input class="inputxt" type="text" value="<?= $this->setting['weburl'] ?>/?a=register&agent=<?= $user['uid'] ?>"  />
+					</li>
+					<li>
+						<div style="text-align: center;" id="tuiguang" ></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer menu">
+		<a class="foot_btn" href="?a=init"><i class="iconfont icon-dating"></i>首页</a>
+		<a class="foot_btn" href="?a=pay"><i class="iconfont icon-chongzhi"></i>充值存款</a>
+		<a class="foot_btn" href="?a=kefu"><i class="iconfont icon-kefu"></i>在线客服</a>
+		<a class="foot_btn a" href="?a=user"><i class="iconfont icon-user"></i>会员中心</a>
+	</div>
+</div>
+<script type="text/javascript" src="/statics/jquery-qrcode-master/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#tuiguang").qrcode({width: 256,height: 256,text: "<?= $this->setting['weburl'] ?>/?a=register&agent=<?= $user['uid'] ?>"});
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

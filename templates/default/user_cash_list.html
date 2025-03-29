@@ -1,0 +1,146 @@
+<?php include template("header"); ?>
+<link type="text/css" rel="stylesheet" href="<?php echo CSS_PATH?>style.mobile.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo CSS_PATH?>swiper.min.css" />
+<script type="text/javascript" src="<?php echo JS_PATH?>swiper.min.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH?>hSdrop.js"></script>
+<style>
+.header .container{position: absolute;
+    top: 10px;
+    right: 1%;
+    width: 20%;
+    height: 26px;
+    line-height: 26px;}
+.header .container .x12{
+    right: 10px;
+}
+.m-form-gp .m-from-input input{height:30px;}
+</style>
+<div class="main cash">
+	<div class="header">
+		<a class="back" href="?a=user" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<!--a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a-->
+		<input type="hidden" name="" id="select-value" value="">
+		<div class="container">
+		<div class="x12">
+		<div class="x12 m-form-gp">
+			<div class="x12 m-from-input select-xi sele-bp">
+			<input type="text" name="" id="select-input" value="" days="" placeholder="<?php echo _lang('全部') ?>" disabled="disabled">
+			<i class="iconfont iconqangwang-xia"></i>
+			</div>
+
+			<div class="display-none" id="days">
+			<div vid="180"><?php echo _lang('全部') ?></div>
+			<div vid="1"><?php echo _lang('今天') ?></div>
+			<div vid="7"><?php echo _lang('最近7天') ?></div>
+			<div vid="30"><?php echo _lang('最近30天') ?></div>
+			<div vid="90"><?php echo _lang('最近90天') ?></div>
+			</div>
+		</div>
+
+		</div>
+		</div>
+		<h4><?php echo $headername?></h4>
+	</div>
+<div class="scroll_box">
+<!-- 	<div>
+			<select id="days">
+			<option value="1">今天</option>
+			<option value="7">7天</option>
+			<option value="30">30天</option>
+			<option value="90">90天</option>
+			</select>
+		</div> -->
+		<div class="table">
+			<div class="list">
+				<div class="onload"></div>
+			</div>
+		</div>
+		<div id="pages"><?php echo $pages?></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var cashdata = <?php echo $cashdata?>;//数据
+var stamp = '<?php echo $this -> setting['stamp']?>';//货币单位
+var state = new Array('<span style="color: #FFA700;"><?php echo _lang('等待处理') ?></span>', '<span style="color: #0070FF;"><?php echo _lang('正在处理') ?></span>', '<span style="color: #00B520;"><?php echo _lang('提现成功') ?></span>', '<span style="color: #F00;"><?php echo _lang('提现失败') ?></span>');
+$(function(){
+	new hSdrop({
+			els:'.sele-bp'
+	});
+	var html = '';
+	$.each(cashdata,function(i,v){
+		var comment = '';
+		if (v.comment != '') {
+			comment = '<li class="msg">'+v.comment+'</li>';
+		}
+		//拼接数据
+		html += ''+
+		'<ul>'+
+			'<li class="w50 tl state">'+state[v.state]+'</li>'+
+			'<li class="w50 tr time">'+getLocalTime(v.addtime)+'</li>'+
+			'<li class="w33 val">'+stamp+v.money+'</li>'+
+			'<li class="w33 f12"><?php echo _lang('手续费') ?> '+stamp+v.service+'</li>'+
+			'<li class="w33 f12"><?php echo _lang('实到') ?> '+stamp+(v.money - v.service)+'</li>'+
+			'<li class="msg">'+v.from+'</li>'+
+			comment+
+		'</ul>';
+	});
+	setTimeout(function() {//让加载效果显示，并保证元素加载完成
+		if (html) {
+			$('.list').empty().append(html);
+		} else {
+			$('.list').empty().append('<div class="no-data"><?php echo _lang('暂无数据') ?> </div>');
+		}
+	}, 100);
+	
+	$('#select-value').click(function(){
+		var days = $('#select-value').val();
+		$.ajax({
+			url:"?a=cash_list_day&days="+days,
+			type:'GET',
+			async:true,
+			dataType:'json',
+			success:function(data){
+				var htmlx = '';
+				$.each(data,function(i,v){
+					var button = '';
+					if (v.state == 0) {
+						//button = '<li class="btn"><a href="?a=pay_ewm&payid='+v.payid+'">立即支付</a></li>';
+					}
+					var comment = '';
+					if (v.comment != '') {
+						comment = '<li class="msg">'+v.comment+'</li>';
+					}
+					//拼接数据
+					htmlx += ''+
+					'<ul>'+
+						'<li class="w50 tl state">'+state[v.state]+'</li>'+
+						'<li class="w50 tr time">'+getLocalTime(v.addtime)+'</li>'+
+						'<li class="w33 val">'+stamp+v.money+'</li>'+
+						'<li class="w33 f12"><?php echo _lang('手续费') ?>  '+stamp+v.service+'</li>'+
+						'<li class="w33 f12"><?php echo _lang('实到') ?> 实到 '+stamp+(v.money - v.service)+'</li>'+
+						'<li class="msg">'+v.from+'</li>'+
+						comment+
+					'</ul>';
+				});
+				setTimeout(function() {//让加载效果显示，并保证元素加载完成
+					if (htmlx) {
+
+						$('.list').empty().append(htmlx);
+					} else {
+						$('.list').empty().append('<div class="no-data"><?php echo _lang('暂无数据') ?></div>');
+					}
+				}, 100);
+			}
+		});
+		
+	});
+	
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>

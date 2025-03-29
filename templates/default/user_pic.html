@@ -1,0 +1,111 @@
+<?php include template("header"); ?>
+<div class="main">
+	<div class="header">
+		<a class="back" href="?a=user" title="返回"><i class="iconfont icon-fanhui"></i></a>
+		<a class="home" href="?a=init" title="首页"><i class="iconfont icon-home"></i></a>
+		<h4><?php echo $headername?></h4>
+	</div>
+	<div class="scroll_box">
+		<div class="user_box">
+			<form enctype="multipart/form-data" action="?a=user_pic" method="post" id="send_form" onsubmit="Submit();">
+				<input type="hidden" name="dosubmit" id="dosubmit" value="yes" />
+				<div class="form_div">
+					<ul>
+						<li>
+							<?php
+							if ($user['pic']) {
+								if(preg_match('/^\d*$/',$user['pic'])){
+									echo '<img class="pic" src="statics/images/pic/'.$user['pic'].'.jpg" alt="PIC" />';
+								} else {
+									echo '<img class="pic" src="uppic/user/'.$user['pic'].'" alt="PIC" />';
+								}
+							} else {
+								echo '<img class="pic" src="statics/images/userpic.png" alt="PIC" />';
+							}
+							?>
+							<strong class="filetps">设置个性头像，点击头像选择图片上传</strong>
+							<input type="file" id="file" name="file" accept="image/*" style="display:none;"/>
+						</li>
+						<li>
+							<div class="defaultpic">
+								<h6>也可以选择下面已有系统头像：</h6>
+								<img src="statics/images/pic/101.jpg" alt="" />
+								<img src="statics/images/pic/102.jpg" alt="" />
+								<img src="statics/images/pic/103.jpg" alt="" />
+								<img src="statics/images/pic/104.jpg" alt="" />
+								<img src="statics/images/pic/105.jpg" alt="" />
+								<img src="statics/images/pic/106.jpg" alt="" />
+								<img src="statics/images/pic/107.jpg" alt="" />
+								<img src="statics/images/pic/108.jpg" alt="" />
+								<img src="statics/images/pic/109.jpg" alt="" />
+								<img src="statics/images/pic/110.jpg" alt="" />
+								<img src="statics/images/pic/111.jpg" alt="" />
+								<img src="statics/images/pic/112.jpg" alt="" />
+								<img src="statics/images/pic/113.jpg" alt="" />
+								<img src="statics/images/pic/114.jpg" alt="" />
+								<img src="statics/images/pic/15.jpg" alt="" />
+								<img src="statics/images/pic/116.jpg" alt="" />
+								<img src="statics/images/pic/117.jpg" alt="" />
+								<img src="statics/images/pic/118.jpg" alt="" />
+								<img src="statics/images/pic/119.jpg" alt="" />
+								<img src="statics/images/pic/120.jpg" alt="" />
+								<img src="statics/images/pic/121.jpg" alt="" />
+								<img src="statics/images/pic/122.jpg" alt="" />
+								<img src="statics/images/pic/123.jpg" alt="" />
+								<img src="statics/images/pic/124.jpg" alt="" />
+								<img src="statics/images/pic/125.jpg" alt="" />
+							</div>
+						</li>
+					</ul>
+				</div>
+				<input type="hidden" name="dpic" id="dpic" value="" />
+				<div class="submit"><input type="submit" id="submit" name="submit" value=" 保存 "></div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+var msg = <?php echo $msg?>;
+if (msg.ico) {
+	layer.msg(msg.info, {icon: msg.ico});
+	if (msg.ico == 6) {
+		setTimeout(function(){//2秒后刷新
+			location.href = '?a=user';
+		}, 2000);
+	}
+}
+
+function Submit(){
+	layer.msg('正在保存资料，请耐心等待...', {icon: 16, time: 0, shade: 0.2});
+}
+
+$(function(){
+	$('.form_div img.pic').click(function() {
+		var file = $('#file').val();
+		if (file) {
+			$('#file').val('');
+			$('.filetps').text('点击左边的头像选择图片文件');
+		} else {
+			$('#file').trigger('click');
+		}
+	});
+	$('#file').change(function() {
+		$('.filetps').text('已选择图片文件，再次点击可撤销选择');
+		$('#dpic').val('');
+		$('.defaultpic img').removeClass('a');
+	});
+	$('.defaultpic img').click(function(){
+		$(this).addClass('a').siblings().removeClass();
+		var srcid = $(this).attr('src').replace(/statics\/images\/pic\/([0-9]+)\.jpg/g, '$1');
+		$('#dpic').val(srcid);
+		$('#file').val('');
+		$('.filetps').text('点击左边的头像选择图片文件');
+	});
+	//自动调整窗口
+	$(window).resize(function() {
+		var h = $(window).height();
+		$('.scroll_box').css({'height':h-49});
+	}).resize();
+});
+</script>
+<?php include template("footer"); ?>
