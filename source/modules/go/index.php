@@ -137,7 +137,7 @@ class index extends go {
 		//投注限制
 		$send_money = empty($user['send_money']) ? $this -> setting['send_money'] : $user['send_money'];
 		$title = _lang($gamename).' - '.$title;
-		//echo $gametemplate;die;
+		// echo $gametemplate;die;
 		$template = 'game_'.$gametemplate;
 	
 		if (file_exists('templates' . DIRECTORY_SEPARATOR . 'default' . DIRECTORY_SEPARATOR . $template . '.html')) {

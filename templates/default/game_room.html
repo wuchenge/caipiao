@@ -43,7 +43,11 @@
 	</div>
 	<div class="roomPanel">
 		<?php foreach($room as $key => $val){ ?>
-		<a class="jump_room" data-limit="<?= $val['minimum'] ?>" data-pass="<? if($val["pass"]){echo md5($val['pass']."9999");} ?>" data-href="/?a=game&gameid=<?= $gameid ?>&roomid=<?= $key+1 ?>" href="javascript:;">
+		<a 
+		class="jump_room" 
+		data-limit="<?= $val['minimum'] ?>" 
+		data-pass="<?php if($val['pass']){echo md5($val['pass'].'9999');} ?>" 
+		data-href="/?a=game&gameid=<?= $gameid ?>&roomid=<?= $key+1 ?>" href="javascript:;">
 			<img src="/uppic/room/<?= $val['img'] ?>" class="data-img">
 			<div class="binding">
 				<?= _lang($val['name']) ?>
