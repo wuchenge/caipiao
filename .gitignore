@@ -1,3 +1,4 @@
 *.log
 /configs/database.php
+/caches/*
 .user.ini

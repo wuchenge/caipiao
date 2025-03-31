@@ -12,6 +12,21 @@ function new_addslashes($string) {
 	return $string;
 }
 
+function set_log($content, $filename = 'test') {
+	$file_dir = CACHE_PATH . DIRECTORY_SEPARATOR . date('Ymd');
+	if(!is_dir($file_dir)) {
+		mkdir($file_dir, 0777, true);
+	}
+
+	$file_name = $file_dir . DIRECTORY_SEPARATOR . $filename . '.log';
+	if(is_array($content)) {
+		$content = json_encode($content);
+	}
+
+	$content = "[" . date("Y-m-d H:i:s") . "]: " . $content . "\r\r";
+	file_put_contents($file_name, $content, FILE_APPEND); 
+}
+
 /**
  * 返回经stripslashes处理过的字符串或数组
  *
