@@ -139,7 +139,7 @@ class index extends go {
 		$title = _lang($gamename).' - '.$title;
 		// echo $gametemplate;die;
 		$template = 'game_'.$gametemplate;
-	
+		// echo $template;die;
 		if (file_exists('templates' . DIRECTORY_SEPARATOR . 'default' . DIRECTORY_SEPARATOR . $template . '.html')) {
 			
 			include template($template);
