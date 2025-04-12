@@ -265,7 +265,8 @@ class index extends go {
 		}
 		$db = base::load_model('order_model');
 		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
-		$list = $db->listinfo($where, 'id DESC', $page, 50, 1, $this -> page, 0);
+		// $list = $db->listinfo($where, 'id DESC', $page, 50, 1, $this -> page, 0);
+		$list = $db->listinfo($where, 'id DESC', $page, 5, 0, $this -> page, 0);
 		foreach ($list as &$val) {
 			if(empty($val['show_wanfa'])) $val['show_wanfa'] = $val['wanfa'];
 		}
@@ -296,7 +297,8 @@ class index extends go {
 		$where = "uid = '$user[uid]'";
 		$db = base::load_model('account_model');
 		$page = isset($_GET['page']) && intval($_GET['page']) ? intval($_GET['page']) : 1;
-		$list = $db->listinfo($where, 'id DESC', $page, 50, 1, $this -> page, 0);
+		// $list = $db->listinfo($where, 'id DESC', $page, 50, 1, $this -> page, 0);
+		$list = $db->listinfo($where, 'id DESC', 1, 5, 0, $this -> page, 0);
 		$pages = $db->pages;
 		$accountdata = json_encode($list);
 		include template('user_account');
