@@ -18,7 +18,7 @@
 <script type="text/javascript">
 var accountdata = <?php echo $accountdata?>;//数据
 var stamp = '<?php echo $this -> setting['stamp']?>';//货币单位
-var type = new Array('<span style="color: #FFA700;"><?php echo _lang('充值')?></span>', '<span style="color: #0070FF;"><?php echo _lang('提现')?></span>', '<span style="color: #00B520;"><?php echo _lang('投注')?></span>', '<span style="color: #FF0000;"><?php echo _lang('盈利')?></span>', '<span style="color: #FF00DE;"><?php echo _lang('退单')?></span>', '<span style="color: #F60;"><?php echo _lang('红包')?></span>');
+var type = new Array('<span style="color: #FFA700;"><?php echo _lang('充值')?></span>', '<span style="color: #0070FF;"><?php echo _lang('提现')?></span>', '<span style="color: #00B520;"><?php echo _lang('投注')?></span>', '<span style="color: #FF0000;"><?php echo _lang('盈利')?></span>', '<span style="color: #FF00DE;"><?php echo _lang('退单')?></span>', '<span style="color: #F60;"><?php echo _lang('红包')?></span>', '<span style="color: #F60;"><?php echo _lang('返利')?></span>');
 $(function(){
 	var html = '';
 	$.each(accountdata,function(i,v){

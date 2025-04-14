@@ -2081,5 +2081,60 @@ public function qqqqqq() {// 注单记录 - 游戏选择
 		echo $game['name'];
 	}
 
+	public function rebates()
+	{
+		$db = base::load_model('settings_model');
+		$rebates = $db->get_one(array('name' => 'rebates'))['data'];
+
+		$account_db = base::load_model('account_model');
+		$date 		= date('Y-m-d');
+		// $date 		= '2025-04-12';
+		$start 		= strtotime($date . " 00:00:00");
+		$end 		= strtotime($date . " 23:59:59");
+
+		// echo $start . '-' . $end . date('Y-m-d H:i:s', $start) . date('Y-m-d H:i:s', $end);
+		$sql 		= "
+			SELECT `uid`, sum(`money`) as total_bet 
+			FROM `bc_account` 
+			WHERE `type` = 2 AND `addtime` >= '{$start}' AND `addtime` <= '{$end}'
+			GROUP BY uid
+			";
+
+		// 为每一个用户返点
+		$bets = $account_db->querys($sql);
+		$data = array();
+		foreach ($bets as $val) {
+			echo $val['uid'];
+			$this->rebate($val['uid'], abs($val['total_bet']), $rebates);
+		}
+
+		return true;
+	}
+
+	private function rebate($uid, $total_bet, $rate)
+	{
+		$add_money 	= number_format($total_bet * $rate / 100, 2);
+		if($add_money <= 0) {
+			return false;
+		}
+
+		// 帐号余额增加
+		$user_db 	= base::load_model('user_model');
+		$user 		= $user_db->get_one(array('uid' => $uid));
+		$last_money = $user['money'] + $add_money;
+		$user_db->update(['money' => $last_money], ['uid' => $uid]);
+
+		// 记录增加
+		$account_db = base::load_model('account_model');
+		$account_db->insert([
+			'uid' 			=> $uid,
+			'money' 		=> $add_money,
+			'countmoney' 	=> $last_money,
+			'type' 			=> 6,
+			'addtime' 		=> time(),
+			'comment' 		=> '投注返利'
+		]);
+	}
+
 }
 ?>
