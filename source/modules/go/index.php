@@ -2092,6 +2092,7 @@ public function qqqqqq() {// 注单记录 - 游戏选择
 		$start 		= strtotime($date . " 00:00:00");
 		$end 		= strtotime($date . " 23:59:59");
 
+		$this->log('开始返利');
 		// echo $start . '-' . $end . date('Y-m-d H:i:s', $start) . date('Y-m-d H:i:s', $end);
 		$sql 		= "
 			SELECT `uid`, sum(`money`) as total_bet 
@@ -2104,11 +2105,21 @@ public function qqqqqq() {// 注单记录 - 游戏选择
 		$bets = $account_db->querys($sql);
 		$data = array();
 		foreach ($bets as $val) {
-			echo $val['uid'];
 			$this->rebate($val['uid'], abs($val['total_bet']), $rebates);
 		}
 
 		return true;
+	}
+
+	private function log($data, $name = 'test') {
+		$file_name = $name . '.log';
+		if(is_array($data)) {
+			$data = json_encode($data);
+		}
+
+		$content = "[" . date('Y-m-d H:i:s') . "]\r\n" . $data . "\r\n";
+		file_put_contents($file_name, $content);
+
 	}
 
 	private function rebate($uid, $total_bet, $rate)
