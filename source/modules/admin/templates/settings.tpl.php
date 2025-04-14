@@ -66,6 +66,10 @@ include $this->admin_tpl('header');
 						<td><input class="input-text" type="text" name="setting[applink]" value="<?php echo $applink;?>"></td>
 					</tr>
 					<tr>
+						<th>返点设置:</th>
+						<td><input class="input-text" type="text" name="setting[rebates]" value="<?php echo $rebates;?>">%</td>
+					</tr>
+					<tr>
 						<th>汇率设置：</th>
 						<td style='line-height:30px;'><div>名称：<input class="input-text" type="text" name="setting[hbname1]" value="<?php echo $hbname1;?>">   
 						         汇率：<input class="input-text" type="text" name="setting[hblv1]" value="<?php echo $hblv1;?>"></div>
