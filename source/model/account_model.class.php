@@ -38,7 +38,7 @@ class account_model extends model {
 		$account_db->query($sql);
 		$data = $account_db->fetch_array()[0];
 
-		return $data['total_bet'] ?? 0;
+		return $data['total_bet'] ? $data['total_bet'] : 0;
 	}
 }
 
