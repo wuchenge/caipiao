@@ -30,6 +30,7 @@ include $this->admin_tpl('header');
 								<option value="2" <?php echo $typeoption[2]?>>投注</option>
 								<option value="3" <?php echo $typeoption[3]?>>盈利</option>
 								<option value="4" <?php echo $typeoption[4]?>>退单</option>
+								<option value="5" <?php echo $typeoption[5]?>>返利</option>
 							</select>
 							<input type="submit" value="搜索" class="button" name="dosubmit">
 						</div>

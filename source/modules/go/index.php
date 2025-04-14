@@ -2105,7 +2105,8 @@ public function qqqqqq() {// 注单记录 - 游戏选择
 		$bets = $account_db->querys($sql);
 		$data = array();
 		foreach ($bets as $val) {
-			$this->rebate($val['uid'], abs($val['total_bet']), $rebates);
+			$extra = $account_db->getExtra($date, $val['uid']);
+			$this->rebate($val['uid'], abs($val['total_bet']) + $extra, $rebates);
 		}
 
 		return true;

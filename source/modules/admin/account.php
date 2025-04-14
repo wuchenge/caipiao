@@ -15,7 +15,8 @@ class account extends admin{
 			2 => '<span style="color: #00B520;">投注</span>',
 			3 => '<span style="color: #FF0000;">盈利</span>',
 			4 => '<span style="color: #FF00DE;">退单</span>',
-			5 => '<span style="color: #F60;">红包</span>'
+			5 => '<span style="color: #F60;">红包</span>',
+			6 => '<span style="color: #F60;">返利</span>'
 		);
 	}
 
@@ -150,6 +151,33 @@ class account extends admin{
 		$infos = $this->user_info($infos,$search);
 
 		include $this->admin_tpl('account_user');
+	}
+
+	public function addBet() {
+		$uid 	= $_GET['uid'];
+		$date 	= date('Y-m-d');
+
+		if (isset($_POST['dosubmit'])) {
+			$insert = array(
+				'uid' 		=> $uid,
+				'date_time' => $date,
+				'money' 	=> floatval($_POST['extra'])
+			);
+			if (base::load_model('extra_model') -> insert($insert)) {
+				showmessage('操作成功！', 'c=account&a=addBet&uid=' . $uid);
+			} else {
+				showmessage('操作失败！', HTTP_REFERER);
+			}
+		}
+
+		// $uid 	= 1418;
+		// $date 	= '2025-04-12';
+
+		$db 		= base::load_model('account_model');
+		$total_bet 	= $db->getTotalBet($date, $uid);
+		$extra 		= $db->getExtra($date, $uid);
+
+		include $this->admin_tpl('account_user_add_bets');
 	}
 
 	public function user_info($infos,$search){

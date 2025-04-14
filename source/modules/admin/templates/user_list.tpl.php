@@ -78,6 +78,7 @@ include $this->admin_tpl('header');
 					<td align="center">
 						<p>
 							<a href="<?php echo ADMIN_PATH?>&c=order&a=search&search[uid]=<?php echo $v['uid']?>">[注单]</a>
+							<a href="<?php echo ADMIN_PATH?>&c=account&a=addBet&uid=<?php echo $v['uid']?>">[增加流水]</a>
 							<a href="<?php echo ADMIN_PATH?>&c=account&a=search&search[uid]=<?php echo $v['uid']?>">[流水]</a>
 							<a href="<?php echo ADMIN_PATH?>&c=pay&a=search&search[uid]=<?php echo $v['uid']?>">[充值单]</a>
 							<a href="<?php echo ADMIN_PATH?>&c=cash&a=search&search[uid]=<?php echo $v['uid']?>">[提现单]</a>
